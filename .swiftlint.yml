@@ -1,0 +1,10 @@
+line_length: 
+  - 500 # warning
+  - 600 # Error
+disabled_rules:
+  - trailing_whitespace
+excluded:
+  - Pods
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly

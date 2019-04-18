@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" rowHeight="316" id="KGk-i7-Jjw" customClass="BerandaTVC" customModule="MU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="316"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="315.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i0y-Yi-ipF">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="315.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-zY-yeH">
+                                <rect key="frame" x="0.0" y="10" width="300" height="250.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcp-j6-Run" userLabel="Feed Label">
+                                <rect key="frame" x="10" y="265.5" width="280" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="TuX-q7-J5r"/>
+                                </constraints>
+                                <string key="text">Chupa chups topping topping gingerbread cake gingerbread pastry brownie powder. Jelly-o bear claw apple pie sesame snaps chocolate powder sugar plum apple pie tart. Caramels muffin powder cake candy canes danish apple pie cake macaroon.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pil-MY-kdZ">
+                                <rect key="frame" x="0.0" y="305.5" width="300" height="10"/>
+                                <color key="backgroundColor" white="0.82332356770833337" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="vLc-Eo-pWO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Pil-MY-kdZ" firstAttribute="leading" secondItem="i0y-Yi-ipF" secondAttribute="leading" id="8bz-Bz-bgc"/>
+                            <constraint firstAttribute="trailing" secondItem="dcp-j6-Run" secondAttribute="trailing" constant="10" id="9q7-Oc-JgJ"/>
+                            <constraint firstItem="NZy-zY-yeH" firstAttribute="leading" secondItem="i0y-Yi-ipF" secondAttribute="leading" id="YcX-i9-k8A"/>
+                            <constraint firstItem="NZy-zY-yeH" firstAttribute="top" secondItem="i0y-Yi-ipF" secondAttribute="top" constant="10" id="eAg-Wr-obH"/>
+                            <constraint firstItem="dcp-j6-Run" firstAttribute="leading" secondItem="i0y-Yi-ipF" secondAttribute="leading" constant="10" id="kEZ-88-AwK"/>
+                            <constraint firstAttribute="trailing" secondItem="Pil-MY-kdZ" secondAttribute="trailing" id="xe6-v0-lKy"/>
+                            <constraint firstAttribute="trailing" secondItem="NZy-zY-yeH" secondAttribute="trailing" id="zeX-q2-hvA"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="i0y-Yi-ipF" secondAttribute="bottom" id="H6k-Bh-Zmy"/>
+                    <constraint firstAttribute="trailing" secondItem="i0y-Yi-ipF" secondAttribute="trailing" id="M9u-lO-hfE"/>
+                    <constraint firstItem="i0y-Yi-ipF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="N2n-KH-Sqp"/>
+                    <constraint firstItem="i0y-Yi-ipF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="x4o-9K-ixD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="feedImageView" destination="NZy-zY-yeH" id="V4s-qP-6dY"/>
+                <outlet property="feedLabel" destination="dcp-j6-Run" id="PLS-xp-7Il"/>
+                <outlet property="feedStackView" destination="i0y-Yi-ipF" id="2Zl-Bz-yIv"/>
+            </connections>
+            <point key="canvasLocation" x="76.799999999999997" y="159.22038980509745"/>
+        </tableViewCell>
+    </objects>
+</document>
