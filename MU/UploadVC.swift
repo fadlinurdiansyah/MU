@@ -133,12 +133,12 @@ class UploadVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     }
     
     func firebaseLogin() {
-        Auth.auth().signIn(withEmail: "nurdiansyah.fadli@yahoo.co.id", password: "fadlinurdiansyah") { (user, err) in
+        Auth.auth().signIn(withEmail: "nurdiansyah.fadli@yahoo.co.id", password: "fadlinurdiansyah") { (usr, err) in
+    
             if err != nil {
                 print("Error login \(err)")
             } else {
-                let user = user
-                print(user)
+                print(usr)
             }
         }
     }

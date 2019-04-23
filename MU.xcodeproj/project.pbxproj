@@ -23,6 +23,9 @@
 		2540ECCE2263369F003EF6F3 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2540ECCD2263369F003EF6F3 /* UIExtension.swift */; };
 		25977F91225A06130014033C /* SaveOnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25977F90225A06130014033C /* SaveOnBoarding.swift */; };
 		25A7ECF42258E14600E7F51C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A7ECF32258E14600E7F51C /* GoogleService-Info.plist */; };
+		25F2E9F0226897AD00DA3E00 /* SwiftyJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F2E9EF226897AD00DA3E00 /* SwiftyJSONHelper.swift */; };
+		25F2E9F3226A126800DA3E00 /* LoadingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F2E9F1226A126800DA3E00 /* LoadingTVC.swift */; };
+		25F2E9F4226A126800DA3E00 /* LoadingTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F2E9F2226A126800DA3E00 /* LoadingTVC.xib */; };
 		E787C2D826FF93272550F9F5 /* Pods_MU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E7E5A93920469DD28A4FF6 /* Pods_MU.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,9 @@
 		2540ECCD2263369F003EF6F3 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		25977F90225A06130014033C /* SaveOnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOnBoarding.swift; sourceTree = "<group>"; };
 		25A7ECF32258E14600E7F51C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25F2E9EF226897AD00DA3E00 /* SwiftyJSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSONHelper.swift; sourceTree = "<group>"; };
+		25F2E9F1226A126800DA3E00 /* LoadingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTVC.swift; sourceTree = "<group>"; };
+		25F2E9F2226A126800DA3E00 /* LoadingTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTVC.xib; sourceTree = "<group>"; };
 		6806D2F667552E69E759CE9F /* Pods-MU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MU/Pods-MU.debug.xcconfig"; sourceTree = "<group>"; };
 		93E7E5A93920469DD28A4FF6 /* Pods_MU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,6 +146,8 @@
 			children = (
 				2540ECC222615510003EF6F3 /* BerandaTVC.swift */,
 				2540ECC322615510003EF6F3 /* BerandaTVC.xib */,
+				25F2E9F1226A126800DA3E00 /* LoadingTVC.swift */,
+				25F2E9F2226A126800DA3E00 /* LoadingTVC.xib */,
 			);
 			path = Beranda;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				2540ECCD2263369F003EF6F3 /* UIExtension.swift */,
+				25F2E9EF226897AD00DA3E00 /* SwiftyJSONHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 			files = (
 				2516969C22588CA80024DBC8 /* LaunchScreen.storyboard in Resources */,
 				2540ECC522615510003EF6F3 /* BerandaTVC.xib in Resources */,
+				25F2E9F4226A126800DA3E00 /* LoadingTVC.xib in Resources */,
 				25A7ECF42258E14600E7F51C /* GoogleService-Info.plist in Resources */,
 				2516969922588CA80024DBC8 /* Assets.xcassets in Resources */,
 				2540ECC022615462003EF6F3 /* Beranda.storyboard in Resources */,
@@ -263,11 +273,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MU/Pods-MU-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -277,11 +286,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -323,7 +331,9 @@
 				25977F91225A06130014033C /* SaveOnBoarding.swift in Sources */,
 				2540ECC422615510003EF6F3 /* BerandaTVC.swift in Sources */,
 				253C9417225901FD007A8C00 /* UploadVC.swift in Sources */,
+				25F2E9F0226897AD00DA3E00 /* SwiftyJSONHelper.swift in Sources */,
 				2540ECC722615E51003EF6F3 /* BerandaVC.swift in Sources */,
+				25F2E9F3226A126800DA3E00 /* LoadingTVC.swift in Sources */,
 				2516969222588CA20024DBC8 /* AppDelegate.swift in Sources */,
 				2540ECCE2263369F003EF6F3 /* UIExtension.swift in Sources */,
 				2540ECCB2262EA21003EF6F3 /* BerandaModel.swift in Sources */,

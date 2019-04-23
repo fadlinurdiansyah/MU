@@ -154,7 +154,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PpX-Z3-7tp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PpX-Z3-7tp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -162,11 +162,17 @@
                                     <outlet property="delegate" destination="dic-jK-UCx" id="kuK-Za-MrS"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4L4-u3-cMN">
+                                <rect key="frame" x="169" y="300.5" width="37" height="37"/>
+                                <color key="color" red="0.80000000000000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qfC-13-aaL" firstAttribute="bottom" secondItem="PpX-Z3-7tp" secondAttribute="bottom" id="4FW-0E-gGb"/>
                             <constraint firstItem="PpX-Z3-7tp" firstAttribute="top" secondItem="qfC-13-aaL" secondAttribute="top" id="LPO-vH-vwf"/>
+                            <constraint firstItem="4L4-u3-cMN" firstAttribute="centerY" secondItem="qfC-13-aaL" secondAttribute="centerY" id="Ydp-DU-Xpz"/>
+                            <constraint firstItem="4L4-u3-cMN" firstAttribute="centerX" secondItem="qfC-13-aaL" secondAttribute="centerX" id="mom-hb-kl4"/>
                             <constraint firstItem="PpX-Z3-7tp" firstAttribute="leading" secondItem="qfC-13-aaL" secondAttribute="leading" id="qzN-6r-Aep"/>
                             <constraint firstItem="qfC-13-aaL" firstAttribute="trailing" secondItem="PpX-Z3-7tp" secondAttribute="trailing" id="yDN-9x-HX9"/>
                         </constraints>
@@ -174,6 +180,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cHn-Fz-Ctn"/>
                     <connections>
+                        <outlet property="berandaLoading" destination="4L4-u3-cMN" id="49A-uV-Gwg"/>
                         <outlet property="berandaTableView" destination="PpX-Z3-7tp" id="XfI-ig-pe6"/>
                     </connections>
                 </viewController>

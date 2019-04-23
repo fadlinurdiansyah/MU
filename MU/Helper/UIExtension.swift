@@ -31,8 +31,7 @@ extension UIImage {
             let renderFormat = UIGraphicsImageRendererFormat.default()
             renderFormat.opaque = opaque
             let renderer = UIGraphicsImageRenderer(size: CGSize(width: width, height: height), format: renderFormat)
-            newImage = renderer.image {
-                (_) in
+            newImage = renderer.image { (_) in
                 self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
             }
         } else {
@@ -43,5 +42,48 @@ extension UIImage {
         }
         
         return newImage
+    }
+    
+    func resizeImageWithHeight(_ dimension: CGFloat, width: CGFloat, height: CGFloat, opaque: Bool, contentMode: UIView.ContentMode = .scaleAspectFit) -> UIImage {
+        var newWidth: CGFloat
+        var newHeight: CGFloat
+        var newImage: UIImage
+        
+        let aspectRatio =  width / height
+        
+        switch contentMode {
+        case .scaleAspectFit:
+            newWidth = dimension
+            newHeight = dimension / aspectRatio
+            print("New Height: \(newHeight)")
+        default:
+            fatalError("UIIMage.resizeToFit(): FATAL: Unimplemented ContentMode")
+        }
+        
+        if #available(iOS 10.0, *) {
+            let renderFormat = UIGraphicsImageRendererFormat.default()
+            renderFormat.opaque = opaque
+            let renderer = UIGraphicsImageRenderer(size: CGSize(width: newWidth, height: newHeight), format: renderFormat)
+            newImage = renderer.image { (_) in
+                self.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+            }
+        } else {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: newWidth, height: newHeight), opaque, 0)
+            self.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+            newImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        }
+        
+        return newImage
+    }
+    
+}
+
+extension UITableView {
+    func reloadDataWithAutoSizingCellWorkAround() {
+        self.reloadData()
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+        self.reloadData()
     }
 }

@@ -48,9 +48,13 @@ class OnBoardingVC: UIViewController, UICollectionViewDelegateFlowLayout, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = pageCollectionView.dequeueReusableCell(withReuseIdentifier: "pageCellId", for: indexPath) as! PageCell
-        cell.dataBoarding = dataBoarding[indexPath.row]
-        return cell
+        if let cell = pageCollectionView.dequeueReusableCell(withReuseIdentifier: "pageCellId", for: indexPath) as? PageCell {
+            
+            cell.dataBoarding = dataBoarding[indexPath.row]
+            return cell
+        }
+        
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

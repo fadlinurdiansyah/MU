@@ -10,9 +10,9 @@ pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'SwiftyJSON'
-pod 'FBSDKCoreKit'
 pod 'Alamofire'
-pod 'Nuke', '~> 7.0'
+pod 'SDWebImage', '~> 5.0'
+pod 'NVActivityIndicatorView'
 
   # Pods for MU
 
