@@ -8,9 +8,11 @@
 
 import UIKit
 
-// MARK: Merhod resize uiimage dengan parameter dimensi
 extension UIImage {
-    
+    /* Resize uiimage with params
+        1. Dimension: width image you want
+     Uiimage automaticly resize image with propotional size
+    */
     func resizeImage(_ dimension: CGFloat, opaque: Bool, contentMode: UIView.ContentMode = .scaleAspectFit) -> UIImage {
         var width: CGFloat
         var height: CGFloat
@@ -44,6 +46,12 @@ extension UIImage {
         return newImage
     }
     
+    /* Resize image with params
+        1. Dimension:   width image you want,
+        2. Width:       actual width from image,
+        3. Height:      actual height from image
+     Uiimage automaticly resize image with propotional size
+    */
     func resizeImageWithHeight(_ dimension: CGFloat, width: CGFloat, height: CGFloat, opaque: Bool, contentMode: UIView.ContentMode = .scaleAspectFit) -> UIImage {
         var newWidth: CGFloat
         var newHeight: CGFloat
@@ -80,6 +88,7 @@ extension UIImage {
 }
 
 extension UITableView {
+    //Reload data with update layout for dynamic size UItableviewcell
     func reloadDataWithAutoSizingCellWorkAround() {
         self.reloadData()
         self.setNeedsLayout()

@@ -19,7 +19,6 @@ class BerandaTVC: UITableViewCell, SDWebImageManagerDelegate {
     let screenWidth = UIScreen.main.bounds.size.width
     var heightPic: CGFloat?
     var detailPost: [String: Any]?
-    
     var data: Post? {
         didSet {
             updateUI()
@@ -36,7 +35,6 @@ class BerandaTVC: UITableViewCell, SDWebImageManagerDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func prepareForReuse() {
@@ -58,24 +56,34 @@ class BerandaTVC: UITableViewCell, SDWebImageManagerDelegate {
         }
         
         if let pictureURL = data?.fullPicture {
-            if let heightString = detailPost?["height"],
-                let widthString = detailPost?["width"] {
-                
-                let heightFloat = CGFloat(heightString as? Double ?? 0)
-                let widthFloat = CGFloat(widthString as? Double ?? 0)
-                
-                print("Detail Height: \(heightFloat) & Detail Width: \(widthFloat)")
-                
-                feedImageView.sd_setImage(
-                    with: URL(string: pictureURL),
-                    placeholderImage: UIImage(named: "placeholder")?.resizeImageWithHeight(self.screenWidth, width: widthFloat, height: heightFloat, opaque: true),
-                    options: SDWebImageOptions.refreshCached)
-                { ( image, error, cacheType, url ) in
-                    self.feedImageView.image = image?.resizeImage(self.screenWidth, opaque: true)
-                }
-
+            feedImageView.sd_imageTransition = .fade
+            feedImageView.sd_setImage(
+                with: URL(string: pictureURL),
+                placeholderImage: nil,
+                options: SDWebImageOptions.refreshCached)
+            { (image, error, cacheType, url) in
+                self.feedImageView.image = image?.resizeImage(self.screenWidth, opaque: true)
             }
         }
+//        if let pictureURL = data?.fullPicture {
+//            if let heightString = detailPost?["height"],
+//                let widthString = detailPost?["width"] {
+//
+//                let heightFloat = CGFloat(heightString as? Double ?? 0)
+//                let widthFloat = CGFloat(widthString as? Double ?? 0)
+//
+//                print("Detail Height: \(heightFloat) & Detail Width: \(widthFloat)")
+//
+//                feedImageView.sd_imageTransition = .fade
+//                feedImageView.sd_setImage(
+//                    with: URL(string: pictureURL),
+//                    placeholderImage: UIImage(named: "placeholder")?.resizeImageWithHeight(self.screenWidth, width: widthFloat, height: heightFloat, opaque: true),
+//                    options: SDWebImageOptions.refreshCached)
+//                { ( image, error, cacheType, url ) in
+//                    self.feedImageView.image = image?.resizeImage(self.screenWidth, opaque: true)
+//                }
+//            }
+//        }
         
     }
 }

@@ -13,12 +13,15 @@ import NVActivityIndicatorView
 
 class BerandaVC: UIViewController {
     
+    /*------- UIComponent --------*/
     @IBOutlet weak var berandaTableView: UITableView!
     @IBOutlet weak var berandaLoading: UIActivityIndicatorView!
     
+    /*------ Declare Variable -----*/
     var fbData: FBModel?
     var nextPost: Bool = false
     let dispatchQueue = DispatchQueue(label: "SerialQueue")
+    // Token API facebook
     let tokenFB: String = "2074204692872362|h67ziJhWqSoXdfbCb6WoTAn1AWc"
     
     override func loadView() {
@@ -30,6 +33,7 @@ class BerandaVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        //Check FBmodel if nil start UIActivtyIndicator
         if fbData?.posts == nil {
             berandaLoading.startAnimating()
             
@@ -44,32 +48,32 @@ class BerandaVC: UIViewController {
         
         berandaTableView.register(BerandaTVC.nib, forCellReuseIdentifier: BerandaTVC.identifier)
         berandaTableView.register(LoadingTVC.nib, forCellReuseIdentifier: LoadingTVC.identifier)
-        berandaTableView.separatorStyle = .none
-        
-        berandaTableView.estimatedRowHeight = 350
-        berandaTableView.rowHeight = UITableView.automaticDimension
+        berandaTableView.separatorStyle = .none // Set nil separator in uitabelview
+        berandaTableView.estimatedRowHeight = 350 // Set estimated row height uitableview
+        berandaTableView.rowHeight = UITableView.automaticDimension // Set automatic dimension uitableview
 
     }
     
+    //MARK: Method fetch data from Facebook Graf API
     func fetchFirstFBPost() {
         
-        var urlString = "https://graph.facebook.com/manutd.world?fields=posts.limit(3){id,created_time,message,full_picture,object_id}&access_token=\(self.tokenFB)"
+        //cURL to get feeds from group facebook
+        var urlString = "https://graph.facebook.com/manutd.world?fields=posts.limit(6){id,created_time,message,full_picture,object_id}&access_token=\(self.tokenFB)"
         
         urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
 
+        //Start request
         Alamofire.request(urlString).responseJSON { (response) in
             
             switch response.result {
                 
             case .success(let data):
                 
+                //Pass json to FBModel
                 let json = JSON(data)
                 self.fbData = FBModel(attributes: json["posts"].dictionaryValue)
-                
-//                DispatchQueue.main.async {
-//                    self.berandaTableView.reloadDataWithAutoSizingCellWorkAround()
-//                }
-                
+    
+                //Reload tableview with delay
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     //Reload with delay
                     self.berandaTableView.reloadDataWithAutoSizingCellWorkAround()
@@ -79,6 +83,7 @@ class BerandaVC: UIViewController {
                     })
                 }
                 
+                //Stop UIActivityIndicator if request data finish
                 self.berandaLoading.stopAnimating()
                 
             case .failure(let error):
@@ -88,8 +93,8 @@ class BerandaVC: UIViewController {
         
     }
     
+    //MARK: Method fetch data from facebook API with auto generate (cURL next feeds)
     func fetchNextPost() {
-        
         nextPost = true
         
 //        berandaTableView.beginUpdates()
@@ -101,15 +106,18 @@ class BerandaVC: UIViewController {
 //        berandaTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.none)
 //        berandaTableView.endUpdates()
         
+        //Check value next cURL from FBModel, if exists request data
         if let urlString = fbData?.paging?.next {
             guard let url = URL(string: urlString) else { return }
             
+            //Start request
             Alamofire.request(url).responseJSON { (response) in
                 
                 switch response.result {
                     
                 case .success(let data):
                     
+                    // Add FBModel from json
                     let json = JSON(data)
                     let newPost = FBModel.init(attributes: json.dictionaryValue)
                     let obj = self.fbData
@@ -120,6 +128,7 @@ class BerandaVC: UIViewController {
                     self.fbData = obj
                     self.nextPost = false
                     
+                    //Reload tableview with delay
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         //Reload with delay
                         self.berandaTableView.reloadDataWithAutoSizingCellWorkAround()
@@ -128,11 +137,6 @@ class BerandaVC: UIViewController {
                             self.berandaTableView.reloadDataWithAutoSizingCellWorkAround()
                         })
                     }
-                    
-//                    DispatchQueue.main.async {
-//                        self.berandaTableView.reloadDataWithAutoSizingCellWorkAround()
-//                    }
-                    
                 case .failure(let error):
                     print("Error Fetch Next Post: \(error)")
                 }
@@ -141,25 +145,30 @@ class BerandaVC: UIViewController {
         
     }
     
+    //MARK: Method get detail Post from group facebook with params : id object (from FBModel) and completionHandler with: dictionary object
     func getDetailPost(idObject: String, completionHandler: @escaping ( [String: Any] ) -> Void) {
+        
+        //cURL to get detail feeds from group facebook
         var urlString = "https://graph.facebook.com/\(idObject)?fields=id,link,width,height&access_token=\(self.tokenFB)"
         
         urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
         
+        //Start request
         Alamofire.request(urlString).responseJSON { (response) in
             
             switch response.result {
             
             case .success(let data):
                 
+                // Pass json to dictionary
                 let json = JSON(data)
                 guard let dict = json.dictionaryObject else { fatalError() }
 //                let heightString = json["height"].stringValue
 //                heightPic = CGFloat((heightString as NSString).floatValue)
 //                print("HeightString : \(heightPic)")
-                print(dict)
+//                print(dict)
                 
-                completionHandler(dict)
+                completionHandler(dict) // return dictionary object
                 
             case .failure(let error):
                 print("Error Get Detail Image : \(error)")
@@ -168,13 +177,16 @@ class BerandaVC: UIViewController {
         
     }
     
+    //MARK: Method load next Post after scroll on end content
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY         = scrollView.contentOffset.y
-        let contentHeight   = scrollView.contentSize.height
-        let frameHeight     = scrollView.frame.height
+        
+        let offsetY         = scrollView.contentOffset.y // Get y position
+        let contentHeight   = scrollView.contentSize.height // Get scrollview content size height
+        let frameHeight     = scrollView.frame.height // Get scrollview frame height
         
 //        print("Offset Y : \(offsetY) & Content Height : \(contentHeight) & Frame Height : \(frameHeight)")
         
+        // Run load next post if scroll position in end content
         if offsetY > contentHeight - frameHeight {
             if !nextPost {
                 fetchNextPost()
@@ -183,13 +195,17 @@ class BerandaVC: UIViewController {
     }
     
 }
+
 extension BerandaVC: UITableViewDelegate, UITableViewDataSource {
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 2 // Set total section in tableview
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        //Set total cell in section tableview
         if section == 0 {
             if let count = fbData?.posts?.count {
                 return count
@@ -206,6 +222,7 @@ extension BerandaVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // Set content of cell in section tableview
         switch (indexPath.section) {
         case 0:
             
@@ -213,12 +230,12 @@ extension BerandaVC: UITableViewDelegate, UITableViewDataSource {
         
                 if (self.fbData?.posts?.indices.contains(indexPath.row))! {
                     if let data = self.fbData?.posts?[indexPath.row] {
-                        if let idPost = data.objectId {
-                            getDetailPost(idObject: idPost) { (dataDetailPost) in
-                                cell.detailPost = dataDetailPost
-                            }
-                        }
-                            
+//                        if let idPost = data.objectId {
+//                            getDetailPost(idObject: idPost) { (dataDetailPost) in
+//                                cell.data = data
+//                                cell.detailPost = dataDetailPost
+//                            }
+//                        }
                         cell.data = data
                     }
                 }
