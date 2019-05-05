@@ -177,8 +177,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 251696A022588CA80024DBC8 /* Build configuration list for PBXNativeTarget "MU" */;
 			buildPhases = (
-				250625B72267FD5F009196C9 /* SwifLint Run Script */,
 				F952C45E79C1FC0C26CE74AA /* [CP] Check Pods Manifest.lock */,
+				250625B72267FD5F009196C9 /* SwifLint Run Script */,
 				2516968A22588CA20024DBC8 /* Sources */,
 				2516968B22588CA20024DBC8 /* Frameworks */,
 				2516968C22588CA20024DBC8 /* Resources */,
@@ -485,8 +485,9 @@
 			baseConfigurationReference = 6806D2F667552E69E759CE9F /* Pods-MU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U24YPMMYP8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MU/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,6 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nds.apps.MU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -505,8 +507,9 @@
 			baseConfigurationReference = 1FD9A7A2056FFE39366ABA55 /* Pods-MU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U24YPMMYP8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MU/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -515,6 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nds.apps.MU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
