@@ -11,8 +11,12 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'SwiftyJSON'
 pod 'Alamofire'
+pod 'AlamofireNetworkActivityLogger'
 pod 'SDWebImage', '~> 5.0'
 pod 'NVActivityIndicatorView'
+pod 'SwiftyOnboard'
+pod 'CHIPageControl'
+pod 'ReachabilitySwift'
 
   # Pods for MU
 
