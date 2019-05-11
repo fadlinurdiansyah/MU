@@ -43,10 +43,14 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="thy-MX-zfS" secondAttribute="trailing" constant="100" id="Ag1-sO-gdA"/>
                 <constraint firstAttribute="trailing" secondItem="Nzm-rP-scd" secondAttribute="trailing" constant="10" id="BIT-9Z-Yuk"/>
-                <constraint firstAttribute="bottom" secondItem="thy-MX-zfS" secondAttribute="bottom" constant="56" id="Jcv-qU-GVN"/>
+                <constraint firstAttribute="bottom" secondItem="thy-MX-zfS" secondAttribute="bottom" constant="56" id="Jcv-qU-GVN">
+                    <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                </constraint>
                 <constraint firstItem="Nzm-rP-scd" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="10" id="JiP-0X-nls"/>
                 <constraint firstItem="thy-MX-zfS" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="100" id="e1M-W6-TiA"/>
-                <constraint firstItem="thy-MX-zfS" firstAttribute="top" secondItem="Nzm-rP-scd" secondAttribute="bottom" constant="30" id="r7T-Tg-vCR"/>
+                <constraint firstItem="thy-MX-zfS" firstAttribute="top" secondItem="Nzm-rP-scd" secondAttribute="bottom" constant="30" id="r7T-Tg-vCR">
+                    <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                </constraint>
             </constraints>
             <connections>
                 <outlet property="buttonContinue" destination="thy-MX-zfS" id="eab-t6-TUu"/>

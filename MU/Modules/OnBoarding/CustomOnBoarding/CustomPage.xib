@@ -37,7 +37,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2Xe-oW-euR" secondAttribute="trailing" constant="16" id="8Nx-dM-UZW"/>
-                <constraint firstItem="2Xe-oW-euR" firstAttribute="top" secondItem="Wyg-xx-Bbf" secondAttribute="bottom" constant="60" id="GOc-9f-wxb"/>
+                <constraint firstItem="2Xe-oW-euR" firstAttribute="top" secondItem="Wyg-xx-Bbf" secondAttribute="bottom" constant="60" id="GOc-9f-wxb">
+                    <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="Wyg-xx-Bbf" secondAttribute="trailing" id="I1u-w8-9Rl"/>
                 <constraint firstItem="Wyg-xx-Bbf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K7A-ek-bn6"/>
                 <constraint firstItem="QSM-8Y-Kj1" firstAttribute="top" secondItem="2Xe-oW-euR" secondAttribute="bottom" constant="16" id="M5h-5u-AQE"/>
