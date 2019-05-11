@@ -1,9 +1,9 @@
 //
 //  CustomOverlay.swift
-//  SwiftyOnboardExample
+//  MU
 //
-//  Created by Jay on 3/27/17.
-//  Copyright © 2017 Juan Pablo Fernandez. All rights reserved.
+//  Created by fadielse on 11/05/19.
+//  Copyright © 2019 NDS. All rights reserved.
 //
 
 import UIKit
@@ -16,10 +16,6 @@ class CustomOverlay: SwiftyOnboardOverlay {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        buttonContinue.layer.borderColor = UIColor.white.cgColor
-        buttonContinue.layer.borderWidth = 1
-        buttonContinue.layer.cornerRadius = buttonContinue.bounds.height / 2
     }
     
     class func instanceFromNib() -> UIView {

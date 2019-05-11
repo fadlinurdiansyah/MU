@@ -47,7 +47,9 @@ class MUAPI {
         self.alamoFireManager = Alamofire.SessionManager(configuration: configuration)
     }
     
-    func flushBeforeRequest(_ request: URLRequestConvertible, success:@escaping SuccessResponse, exception:@escaping ErrorResponse) {
+    func flushBeforeRequest(_ request: URLRequestConvertible,
+                            success:@escaping SuccessResponse,
+                            exception:@escaping ErrorResponse) {
         alamoFireManager.session.flush { }
         alamoFireManager.session.getAllTasks(completionHandler: { (task) in
             task.forEach { $0.cancel() }
@@ -55,7 +57,9 @@ class MUAPI {
         self.request(request, success: success, exception: exception)
     }
     
-    func request(_ request: URLRequestConvertible, success:@escaping SuccessResponse, exception:@escaping ErrorResponse) {
+    func request(_ request: URLRequestConvertible,
+                 success:@escaping SuccessResponse,
+                 exception:@escaping ErrorResponse) {
         #if DEBUG
         NetworkActivityLogger.shared.startLogging()
         #endif
@@ -70,7 +74,10 @@ class MUAPI {
         }
     }
     
-    func uploadImage(_ request: URLRequestConvertible, multipartFormData: @escaping (MultipartFormData) -> Void, success: @escaping SuccessResponse, exception:@escaping ErrorResponse) {
+    func uploadImage(_ request: URLRequestConvertible,
+                     multipartFormData: @escaping (MultipartFormData) -> Void,
+                     success: @escaping SuccessResponse,
+                     exception:@escaping ErrorResponse) {
         #if DEBUG
         NetworkActivityLogger.shared.startLogging()
         #endif
@@ -87,7 +94,10 @@ class MUAPI {
         }
     }
     
-    func downloadImage(withRequest request: URLRequestConvertible, filename: String, success:@escaping SuccessResponse, exception:@escaping ErrorResponse) {
+    func downloadImage(withRequest request: URLRequestConvertible,
+                       filename: String,
+                       success:@escaping SuccessResponse,
+                       exception:@escaping ErrorResponse) {
         #if DEBUG
         NetworkActivityLogger.shared.startLogging()
         #endif
@@ -158,8 +168,7 @@ class MUAPI {
         }
     }
     
-    private func throwExceptionError(error: Error,
-                                     exception: @escaping ErrorResponse) {
+    private func throwExceptionError(error: Error, exception: @escaping ErrorResponse) {
         if let error = error as? AFError {
             switch error {
             case .invalidURL(let url):

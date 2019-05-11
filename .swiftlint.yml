@@ -3,6 +3,9 @@ line_length:
   - 600 # Error
 disabled_rules:
   - trailing_whitespace
+  - implicit_getter
+  - cyclomatic_complexity
+  - function_body_length
 excluded:
   - Pods
 force_cast: warning # implicitly

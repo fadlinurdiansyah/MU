@@ -1,9 +1,9 @@
 //
 //  CustomPage.swift
-//  SwiftyOnboardExample
+//  MU
 //
-//  Created by Jay on 3/27/17.
-//  Copyright © 2017 Juan Pablo Fernandez. All rights reserved.
+//  Created by fadielse on 11/05/19.
+//  Copyright © 2019 NDS. All rights reserved.
 //
 
 import UIKit
