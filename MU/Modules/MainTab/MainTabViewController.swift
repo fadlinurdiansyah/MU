@@ -1,8 +1,8 @@
 //
-//  HomeViewController.swift
+//  MainTabViewController.swift
 //  MU
 //
-//  Created by fadielse on 11/05/19.
+//  Created by fadielse on 12/05/19.
 //  Copyright © 2019 NDS. All rights reserved.
 //
 
@@ -10,22 +10,22 @@ import Foundation
 import UIKit
 
 extension SegueConstants {
-    enum Home {
+    enum MainTab {
         // TODO: Add segue ids
     }
 }
 
-class HomeViewController: BaseViewController {
+class MainTabViewController: BaseViewController {
     
     // MARK: Properties
     
-    var presenter: HomePresenter!
+    var presenter: MainTabPresenter!
     
     // MARK: Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        HomePresenter.config(withHomeViewController: self)
+        MainTabPresenter.config(withMainTabViewController: self)
     }
     
     override func viewDidLoad() {
@@ -33,6 +33,6 @@ class HomeViewController: BaseViewController {
     }
 }
 
-extension HomeViewController: HomeView {
+extension MainTabViewController: MainTabView {
     // TODO: implement view methods
 }
