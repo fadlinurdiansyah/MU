@@ -21,14 +21,14 @@
 		FF1DD04C2287C781001362B6 /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1DD0492287C781001362B6 /* MainTab.storyboard */; };
 		FF1DD04D2287C781001362B6 /* MainTabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DD04A2287C781001362B6 /* MainTabPresenter.swift */; };
 		FF1DD04E2287C781001362B6 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DD04B2287C781001362B6 /* MainTabViewController.swift */; };
+		FF1DD0532287CE80001362B6 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1DD0502287CE80001362B6 /* News.storyboard */; };
+		FF1DD0542287CE80001362B6 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DD0512287CE80001362B6 /* NewsPresenter.swift */; };
+		FF1DD0552287CE80001362B6 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DD0522287CE80001362B6 /* NewsViewController.swift */; };
 		FFB508322286BC1300A1E03E /* SegueConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB508312286BC1300A1E03E /* SegueConstants.swift */; };
 		FFB508342286BC5600A1E03E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB508332286BC5600A1E03E /* BaseViewController.swift */; };
 		FFB508582286C8AA00A1E03E /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB508552286C8AA00A1E03E /* OnBoarding.storyboard */; };
 		FFB508592286C8AA00A1E03E /* OnBoardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB508562286C8AA00A1E03E /* OnBoardingPresenter.swift */; };
 		FFB5085A2286C8AA00A1E03E /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB508572286C8AA00A1E03E /* OnBoardingViewController.swift */; };
-		FFB5085F2286C92D00A1E03E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB5085C2286C92D00A1E03E /* Home.storyboard */; };
-		FFB508602286C92D00A1E03E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5085D2286C92D00A1E03E /* HomePresenter.swift */; };
-		FFB508612286C92D00A1E03E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5085E2286C92D00A1E03E /* HomeViewController.swift */; };
 		FFB5086722872E3B00A1E03E /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5086322872E3B00A1E03E /* CustomOverlay.swift */; };
 		FFB5086822872E3B00A1E03E /* CustomPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5086422872E3B00A1E03E /* CustomPage.swift */; };
 		FFB5086922872E3B00A1E03E /* CustomPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFB5086522872E3B00A1E03E /* CustomPage.xib */; };
@@ -60,14 +60,14 @@
 		FF1DD0492287C781001362B6 /* MainTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTab.storyboard; sourceTree = "<group>"; };
 		FF1DD04A2287C781001362B6 /* MainTabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPresenter.swift; sourceTree = "<group>"; };
 		FF1DD04B2287C781001362B6 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		FF1DD0502287CE80001362B6 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		FF1DD0512287CE80001362B6 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
+		FF1DD0522287CE80001362B6 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		FFB508312286BC1300A1E03E /* SegueConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueConstants.swift; sourceTree = "<group>"; };
 		FFB508332286BC5600A1E03E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FFB508552286C8AA00A1E03E /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		FFB508562286C8AA00A1E03E /* OnBoardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPresenter.swift; sourceTree = "<group>"; };
 		FFB508572286C8AA00A1E03E /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		FFB5085C2286C92D00A1E03E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		FFB5085D2286C92D00A1E03E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		FFB5085E2286C92D00A1E03E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFB5086322872E3B00A1E03E /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
 		FFB5086422872E3B00A1E03E /* CustomPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPage.swift; sourceTree = "<group>"; };
 		FFB5086522872E3B00A1E03E /* CustomPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPage.xib; sourceTree = "<group>"; };
@@ -183,6 +183,16 @@
 			path = MainTab;
 			sourceTree = "<group>";
 		};
+		FF1DD04F2287CE6E001362B6 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				FF1DD0502287CE80001362B6 /* News.storyboard */,
+				FF1DD0512287CE80001362B6 /* NewsPresenter.swift */,
+				FF1DD0522287CE80001362B6 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		FFB508202286A6D500A1E03E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +204,7 @@
 		FFB508212286A6E400A1E03E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FFB5085B2286C92100A1E03E /* Home */,
+				FF1DD04F2287CE6E001362B6 /* News */,
 				FF1DD0482287C766001362B6 /* MainTab */,
 				FFB5082A2286BA6E00A1E03E /* OnBoarding */,
 			);
@@ -263,16 +273,6 @@
 				FFB5086222872E1600A1E03E /* CustomOnBoarding */,
 			);
 			path = OnBoarding;
-			sourceTree = "<group>";
-		};
-		FFB5085B2286C92100A1E03E /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				FFB5085C2286C92D00A1E03E /* Home.storyboard */,
-				FFB5085D2286C92D00A1E03E /* HomePresenter.swift */,
-				FFB5085E2286C92D00A1E03E /* HomeViewController.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		FFB5086222872E1600A1E03E /* CustomOnBoarding */ = {
@@ -349,8 +349,8 @@
 			files = (
 				2516969C22588CA80024DBC8 /* LaunchScreen.storyboard in Resources */,
 				FFB5086922872E3B00A1E03E /* CustomPage.xib in Resources */,
-				FFB5085F2286C92D00A1E03E /* Home.storyboard in Resources */,
 				FFB5086A22872E3B00A1E03E /* CustomOverlay.xib in Resources */,
+				FF1DD0532287CE80001362B6 /* News.storyboard in Resources */,
 				25A7ECF42258E14600E7F51C /* GoogleService-Info.plist in Resources */,
 				FF1DD04C2287C781001362B6 /* MainTab.storyboard in Resources */,
 				2516969922588CA80024DBC8 /* Assets.xcassets in Resources */,
@@ -428,6 +428,8 @@
 				FFB508342286BC5600A1E03E /* BaseViewController.swift in Sources */,
 				FFB508782287444200A1E03E /* ErrorExceptionAPI.swift in Sources */,
 				FFB5086822872E3B00A1E03E /* CustomPage.swift in Sources */,
+				FF1DD0552287CE80001362B6 /* NewsViewController.swift in Sources */,
+				FF1DD0542287CE80001362B6 /* NewsPresenter.swift in Sources */,
 				FFB5086C2287377500A1E03E /* ColorConstants.swift in Sources */,
 				FFB508322286BC1300A1E03E /* SegueConstants.swift in Sources */,
 				FFB50876228743F000A1E03E /* MUAPI.swift in Sources */,
@@ -437,14 +439,12 @@
 				FFB5086722872E3B00A1E03E /* CustomOverlay.swift in Sources */,
 				FFB50872228742B900A1E03E /* String+Utilities.swift in Sources */,
 				FF1DD0472287B8BD001362B6 /* UITextFieldHelper.swift in Sources */,
-				FFB508612286C92D00A1E03E /* HomeViewController.swift in Sources */,
 				FF1DD0432287B8BD001362B6 /* NSLayoutHelper.swift in Sources */,
 				FFB508592286C8AA00A1E03E /* OnBoardingPresenter.swift in Sources */,
 				FFB50874228743C700A1E03E /* SummaryDAO.swift in Sources */,
 				FFB5085A2286C8AA00A1E03E /* OnBoardingViewController.swift in Sources */,
 				FF1DD0442287B8BD001362B6 /* DeviceHelper.swift in Sources */,
 				FF1DD0462287B8BD001362B6 /* UILabelHelper.swift in Sources */,
-				FFB508602286C92D00A1E03E /* HomePresenter.swift in Sources */,
 				FF1DD04D2287C781001362B6 /* MainTabPresenter.swift in Sources */,
 				FF1DD0422287B8BD001362B6 /* UIButtonHelper.swift in Sources */,
 				FF1DD0452287B8BD001362B6 /* UITextViewHelper.swift in Sources */,

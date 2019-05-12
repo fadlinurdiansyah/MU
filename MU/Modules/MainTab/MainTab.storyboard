@@ -30,55 +30,64 @@
             </objects>
             <point key="canvasLocation" x="-413" y="-334"/>
         </scene>
-        <!--Home-->
+        <!--News-->
         <scene sceneID="tip-o8-oFE">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="euI-Ye-zwm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LKD-SR-p2B"/>
+                <viewControllerPlaceholder storyboardName="News" id="euI-Ye-zwm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Berita" image="ic-news" id="LKD-SR-p2B"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W67-fL-QhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="389" y="-565"/>
         </scene>
-        <!--Home-->
+        <!--News-->
         <scene sceneID="c4U-pq-S7W">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="3an-og-m3e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YoO-01-K6e"/>
+                <viewControllerPlaceholder storyboardName="News" id="3an-og-m3e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nonton Bareng" image="ic-nobar" id="YoO-01-K6e"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzv-qq-LsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="-452"/>
         </scene>
-        <!--Home-->
+        <!--News-->
         <scene sceneID="B5B-W3-CnW">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="Kc6-XF-O42" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dXQ-1O-mGE"/>
+                <viewControllerPlaceholder storyboardName="News" id="Kc6-XF-O42" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Merchandise" image="ic-merchandise" id="dXQ-1O-mGE"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nd2-j5-oJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="-334"/>
         </scene>
-        <!--Home-->
+        <!--News-->
         <scene sceneID="Y1I-78-HwH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="LKV-fx-kgU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jtB-Ri-RpI"/>
+                <viewControllerPlaceholder storyboardName="News" id="LKV-fx-kgU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Event" image="ic-event" id="jtB-Ri-RpI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQz-oS-lRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="-220"/>
         </scene>
-        <!--Home-->
+        <!--News-->
         <scene sceneID="Cv0-VK-Z7s">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="crz-6g-hpr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ju4-du-3Dw"/>
+                <viewControllerPlaceholder storyboardName="News" id="crz-6g-hpr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Akun" image="ic-account" id="Ju4-du-3Dw">
+                        <color key="badgeColor" red="0.89019607840000003" green="0.12941176469999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DgA-5e-Wtm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="-119"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic-account" width="28" height="28"/>
+        <image name="ic-event" width="35" height="28.5"/>
+        <image name="ic-merchandise" width="32.5" height="28"/>
+        <image name="ic-news" width="23" height="27.5"/>
+        <image name="ic-nobar" width="34.5" height="28"/>
+    </resources>
 </document>

@@ -1,8 +1,8 @@
 //
-//  HomeViewController.swift
+//  NewsViewController.swift
 //  MU
 //
-//  Created by fadielse on 11/05/19.
+//  Created by fadielse on 12/05/19.
 //  Copyright © 2019 NDS. All rights reserved.
 //
 
@@ -10,22 +10,22 @@ import Foundation
 import UIKit
 
 extension SegueConstants {
-    enum Home {
+    enum News {
         // TODO: Add segue ids
     }
 }
 
-class HomeViewController: BaseViewController {
+class NewsViewController: BaseViewController {
     
     // MARK: Properties
     
-    var presenter: HomePresenter!
+    var presenter: NewsPresenter!
     
     // MARK: Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        HomePresenter.config(withHomeViewController: self)
+        NewsPresenter.config(withNewsViewController: self)
     }
     
     override func viewDidLoad() {
@@ -33,6 +33,6 @@ class HomeViewController: BaseViewController {
     }
 }
 
-extension HomeViewController: HomeView {
+extension NewsViewController: NewsView {
     // TODO: implement view methods
 }
