@@ -15,7 +15,7 @@ extension SegueConstants {
     }
 }
 
-class MainTabViewController: BaseViewController {
+class MainTabViewController: UITabBarController {
     
     // MARK: Properties
     
