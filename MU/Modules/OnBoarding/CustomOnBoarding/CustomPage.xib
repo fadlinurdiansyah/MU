@@ -22,13 +22,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-oW-euR">
-                    <rect key="frame" x="16" y="448" width="343" height="26.5"/>
+                    <rect key="frame" x="16" y="428" width="343" height="26.5"/>
                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSM-8Y-Kj1">
-                    <rect key="frame" x="30" y="490.5" width="315" height="19.5"/>
+                    <rect key="frame" x="30" y="470.5" width="315" height="19.5"/>
                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2Xe-oW-euR" secondAttribute="trailing" constant="16" id="8Nx-dM-UZW"/>
-                <constraint firstItem="2Xe-oW-euR" firstAttribute="top" secondItem="Wyg-xx-Bbf" secondAttribute="bottom" constant="60" id="GOc-9f-wxb">
+                <constraint firstItem="2Xe-oW-euR" firstAttribute="top" secondItem="Wyg-xx-Bbf" secondAttribute="bottom" constant="40" id="GOc-9f-wxb">
                     <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="Wyg-xx-Bbf" secondAttribute="trailing" id="I1u-w8-9Rl"/>

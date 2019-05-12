@@ -6,6 +6,7 @@ disabled_rules:
   - implicit_getter
   - cyclomatic_complexity
   - function_body_length
+  - discouraged_direct_init
 excluded:
   - Pods
 force_cast: warning # implicitly
