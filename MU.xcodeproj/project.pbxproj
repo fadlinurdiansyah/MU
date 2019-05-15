@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BC4274C228BE4C700343077 /* EkMukta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BC42745228BE4C600343077 /* EkMukta-SemiBold.ttf */; };
+		1BC4274D228BE4C700343077 /* EkMukta-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BC42746228BE4C600343077 /* EkMukta-Light.ttf */; };
+		1BC4274E228BE4C700343077 /* EkMukta-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BC42747228BE4C700343077 /* EkMukta-Medium.ttf */; };
+		1BC4274F228BE4C700343077 /* EkMukta-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BC42748228BE4C700343077 /* EkMukta-ExtraBold.ttf */; };
+		1BC42750228BE4C700343077 /* EkMukta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BC42749228BE4C700343077 /* EkMukta-Regular.ttf */; };
+		1BC42751228BE4C700343077 /* EkMukta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BC4274A228BE4C700343077 /* EkMukta-Bold.ttf */; };
+		1BC42752228BE4C700343077 /* EkMukta-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BC4274B228BE4C700343077 /* EkMukta-ExtraLight.ttf */; };
 		250FCE71228B6B7000447AD0 /* Nobar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250FCE6E228B6B7000447AD0 /* Nobar.storyboard */; };
 		250FCE72228B6B7000447AD0 /* NobarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250FCE6F228B6B7000447AD0 /* NobarPresenter.swift */; };
 		250FCE73228B6B7000447AD0 /* NobarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250FCE70228B6B7000447AD0 /* NobarViewController.swift */; };
@@ -45,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BC42745228BE4C600343077 /* EkMukta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EkMukta-SemiBold.ttf"; sourceTree = "<group>"; };
+		1BC42746228BE4C600343077 /* EkMukta-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EkMukta-Light.ttf"; sourceTree = "<group>"; };
+		1BC42747228BE4C700343077 /* EkMukta-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EkMukta-Medium.ttf"; sourceTree = "<group>"; };
+		1BC42748228BE4C700343077 /* EkMukta-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EkMukta-ExtraBold.ttf"; sourceTree = "<group>"; };
+		1BC42749228BE4C700343077 /* EkMukta-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EkMukta-Regular.ttf"; sourceTree = "<group>"; };
+		1BC4274A228BE4C700343077 /* EkMukta-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EkMukta-Bold.ttf"; sourceTree = "<group>"; };
+		1BC4274B228BE4C700343077 /* EkMukta-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EkMukta-ExtraLight.ttf"; sourceTree = "<group>"; };
 		250FCE6E228B6B7000447AD0 /* Nobar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nobar.storyboard; sourceTree = "<group>"; };
 		250FCE6F228B6B7000447AD0 /* NobarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobarPresenter.swift; sourceTree = "<group>"; };
 		250FCE70228B6B7000447AD0 /* NobarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobarViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +121,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1BC42744228BE4A700343077 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BC4274A228BE4C700343077 /* EkMukta-Bold.ttf */,
+				1BC42748228BE4C700343077 /* EkMukta-ExtraBold.ttf */,
+				1BC4274B228BE4C700343077 /* EkMukta-ExtraLight.ttf */,
+				1BC42746228BE4C600343077 /* EkMukta-Light.ttf */,
+				1BC42747228BE4C700343077 /* EkMukta-Medium.ttf */,
+				1BC42749228BE4C700343077 /* EkMukta-Regular.ttf */,
+				1BC42745228BE4C600343077 /* EkMukta-SemiBold.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		250FCE6D228B6B1000447AD0 /* Nobar */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +149,10 @@
 			isa = PBXGroup;
 			children = (
 				2516969022588CA20024DBC8 /* MU */,
-				2516968F22588CA20024DBC8 /* Products */,
-				08C6BED802241726DC9C433A /* Pods */,
 				F4F391E64F444ED0B521FF5C /* Frameworks */,
+				08C6BED802241726DC9C433A /* Pods */,
+				2516968F22588CA20024DBC8 /* Products */,
+				1BC42744228BE4A700343077 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -365,13 +394,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2516969C22588CA80024DBC8 /* LaunchScreen.storyboard in Resources */,
+				1BC4274D228BE4C700343077 /* EkMukta-Light.ttf in Resources */,
+				1BC42751228BE4C700343077 /* EkMukta-Bold.ttf in Resources */,
 				FFB5086922872E3B00A1E03E /* CustomPage.xib in Resources */,
+				1BC4274C228BE4C700343077 /* EkMukta-SemiBold.ttf in Resources */,
+				1BC42750228BE4C700343077 /* EkMukta-Regular.ttf in Resources */,
 				FFB5086A22872E3B00A1E03E /* CustomOverlay.xib in Resources */,
 				FF1DD0532287CE80001362B6 /* News.storyboard in Resources */,
 				250FCE71228B6B7000447AD0 /* Nobar.storyboard in Resources */,
+				1BC4274F228BE4C700343077 /* EkMukta-ExtraBold.ttf in Resources */,
 				25A7ECF42258E14600E7F51C /* GoogleService-Info.plist in Resources */,
 				FF1DD04C2287C781001362B6 /* MainTab.storyboard in Resources */,
 				2516969922588CA80024DBC8 /* Assets.xcassets in Resources */,
+				1BC42752228BE4C700343077 /* EkMukta-ExtraLight.ttf in Resources */,
+				1BC4274E228BE4C700343077 /* EkMukta-Medium.ttf in Resources */,
 				FFB508582286C8AA00A1E03E /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
