@@ -18,8 +18,8 @@ extension SegueConstants {
 class NobarViewController: BaseViewController {
     
     // MARK: Properties
-    @IBOutlet weak var LabelLocation: UILabel!
-   
+    @IBOutlet weak var viewLocation: UIView!
+    @IBOutlet weak var labelLocation: UILabel!
     
     var presenter: NobarPresenter!
     
@@ -32,6 +32,10 @@ class NobarViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func onToggleButtonPressed(_ sender: Any) {
+        viewLocation.isHidden = !viewLocation.isHidden
     }
 }
 
