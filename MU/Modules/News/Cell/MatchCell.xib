@@ -26,18 +26,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="319" height="143.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-homeTeam" translatesAutoresizingMaskIntoConstraints="NO" id="8XT-So-XZc" userLabel="Home Team Image View">
-                                        <rect key="frame" x="0.0" y="38.5" width="66.5" height="66.5"/>
+                                        <rect key="frame" x="29" y="38.5" width="66.5" height="66.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66.700000000000003" id="0lb-YO-00l"/>
                                             <constraint firstAttribute="width" constant="66.700000000000003" id="naV-F3-Kyx"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-6I-JNQ" userLabel="Container Text View">
-                                        <rect key="frame" x="66.5" y="0.0" width="186" height="143.5"/>
+                                        <rect key="frame" x="95.5" y="0.0" width="128" height="143.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-awayTeam" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-X5-3bw" userLabel="Away Team Image View">
-                                        <rect key="frame" x="252.5" y="38.5" width="66.5" height="66.5"/>
+                                        <rect key="frame" x="223.5" y="38.5" width="66.5" height="66.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66.700000000000003" id="SHT-cB-fQZ"/>
                                             <constraint firstAttribute="height" constant="66.700000000000003" id="TNi-Th-0xX"/>
@@ -46,8 +46,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="uaH-6I-JNQ" secondAttribute="bottom" id="enm-FY-9LB"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Sq-X5-3bw" secondAttribute="trailing" constant="29" id="gVF-4x-rpZ"/>
                                     <constraint firstItem="uaH-6I-JNQ" firstAttribute="top" secondItem="wAI-dO-apd" secondAttribute="top" id="k4Y-8E-PQk"/>
                                     <constraint firstItem="4Sq-X5-3bw" firstAttribute="centerY" secondItem="wAI-dO-apd" secondAttribute="centerY" id="kIU-Vg-4ZT"/>
+                                    <constraint firstItem="8XT-So-XZc" firstAttribute="leading" secondItem="wAI-dO-apd" secondAttribute="leading" constant="29" id="utH-iP-v6P"/>
                                     <constraint firstItem="8XT-So-XZc" firstAttribute="centerY" secondItem="wAI-dO-apd" secondAttribute="centerY" id="v1q-CR-mk2"/>
                                 </constraints>
                             </stackView>
