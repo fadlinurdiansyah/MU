@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qQg-8c-tl8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qQg-8c-tl8">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,9 +18,17 @@
                         <color key="badgeColor" red="0.78039215689999997" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="afA-zi-xD3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="afA-zi-xD3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.7803921568627451" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="20"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="1dX-N7-XUl" kind="relationship" relationship="rootViewController" id="Sgj-IV-mL8"/>
@@ -35,12 +43,38 @@
             <objects>
                 <viewController storyboardIdentifier="NewsViewController" title="News" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="NewsViewController" customModule="MU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4c8-Vr-gmG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1dX-N7-XUl" id="ZdL-hj-kqO"/>
+                                    <outlet property="delegate" destination="1dX-N7-XUl" id="Okg-eo-I71"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4c8-Vr-gmG" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" id="GXC-hQ-WMJ"/>
+                            <constraint firstItem="4c8-Vr-gmG" firstAttribute="top" secondItem="DEK-3G-Vg1" secondAttribute="top" id="JEO-ra-wZt"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="4c8-Vr-gmG" secondAttribute="trailing" id="Jpu-th-wGK"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="bottom" secondItem="4c8-Vr-gmG" secondAttribute="bottom" id="yzo-RP-pM3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vls-nz-kGK"/>
+                    <navigationItem key="navigationItem" title="Berita" id="Vls-nz-kGK">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic-player" id="Y2I-FQ-ZGW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ic-schedule" id="kC7-cs-fuQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="beritaTableView" destination="4c8-Vr-gmG" id="VzJ-dB-Kb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +82,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic-news" width="23" height="27.5"/>
+        <image name="ic-news" width="23" height="27"/>
+        <image name="ic-player" width="23" height="26"/>
+        <image name="ic-schedule" width="28" height="29"/>
     </resources>
 </document>
