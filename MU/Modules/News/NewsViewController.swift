@@ -31,8 +31,8 @@ class NewsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        beritaTableView.estimatedRowHeight = 350
-        beritaTableView.rowHeight = UITableView.automaticDimension
+//        beritaTableView.estimatedRowHeight = 350
+//        beritaTableView.rowHeight = UITableView.automaticDimension
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
     }
 }
