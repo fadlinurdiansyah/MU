@@ -108,8 +108,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic-news" width="23" height="27.5"/>
-        <image name="ic-player" width="23" height="26.5"/>
-        <image name="ic-schedule" width="28.5" height="29"/>
+        <image name="ic-news" width="23" height="27"/>
+        <image name="ic-player" width="23" height="26"/>
+        <image name="ic-schedule" width="28" height="29"/>
     </resources>
 </document>

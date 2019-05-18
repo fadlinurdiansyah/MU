@@ -11,7 +11,6 @@ import UIKit
 
 extension SegueConstants {
     enum News {
-        // TODO: Add segue ids
         static let showDetailBerita = "showDetailBerita"
     }
 }
