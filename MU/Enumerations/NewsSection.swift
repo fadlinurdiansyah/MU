@@ -9,6 +9,6 @@
 import Foundation
 
 enum NewsSection: Int {
-    case match = 1
-    case news = 2
+    case match = 0
+    case news = 1
 }
