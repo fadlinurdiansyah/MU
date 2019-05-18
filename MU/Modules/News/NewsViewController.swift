@@ -18,11 +18,6 @@ extension SegueConstants {
 
 class NewsViewController: BaseViewController {
     
-    enum NewsSection: Int {
-        case match = 1
-        case news = 2
-    }
-    
     // MARK: Properties
     @IBOutlet weak var beritaTableView: UITableView!
     
@@ -55,10 +50,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        let numSection = NewsSection(rawValue: section)
-        
-        switch numSection {
+        switch NewsSection(rawValue: section) {
         case .match?:
             return 1
         case .news?:
@@ -69,19 +61,16 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let numOindexInSection = (indexPath.section)
-        
-        switch numOindexInSection {
-        case 0:
+        switch NewsSection(rawValue: indexPath.section) {
+        case .match?:
             if let matchCell = beritaTableView.dequeueReusableCell(withIdentifier: MatchCell.identifier, for: indexPath) as? MatchCell {
                 return matchCell
             }
-        case 1:
+        case .news?:
             if let newsCell = beritaTableView.dequeueReusableCell(withIdentifier: BeritaCell.identifier, for: indexPath) as? BeritaCell {
                 return newsCell
             }
-        default:
+        case .none:
             return UITableViewCell()
         }
         
@@ -89,7 +78,6 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
 //        let newsCell = beritaTableView.cellForRow(at: indexPath) as? BeritaCell
         let numOindexInSection = (indexPath.section)
         if numOindexInSection == 1 {
