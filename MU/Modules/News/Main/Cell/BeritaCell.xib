@@ -62,10 +62,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-OL-vg2" userLabel="Like Button">
                                         <rect key="frame" x="167.5" y="0.0" width="168" height="20"/>
                                         <state key="normal" image="ic-dislike"/>
+                                        <connections>
+                                            <action selector="likeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0ET-0O-N5w"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-pG-RC9" userLabel="Share Button">
                                         <rect key="frame" x="335.5" y="0.0" width="167.5" height="20"/>
                                         <state key="normal" image="ic-share"/>
+                                        <connections>
+                                            <action selector="shareButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pah-Dc-T2L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.78039215689999997" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,6 +112,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="likeButton" destination="Rgz-OL-vg2" id="fBS-1e-Nir"/>
+                <outlet property="shareButton" destination="AsY-pG-RC9" id="R9a-Sz-2N3"/>
+            </connections>
             <point key="canvasLocation" x="692" y="340.02998500749629"/>
         </tableViewCell>
     </objects>

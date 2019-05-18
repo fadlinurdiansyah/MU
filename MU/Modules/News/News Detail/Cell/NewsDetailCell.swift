@@ -1,14 +1,14 @@
 //
-//  BeritaCell.swift
+//  NewsDetailCell.swift
 //  MU
 //
-//  Created by NDS on 17/05/19.
+//  Created by NDS on 18/05/19.
 //  Copyright © 2019 NDS. All rights reserved.
 //
 
 import UIKit
 
-class BeritaCell: UITableViewCell {
+class NewsDetailCell: UITableViewCell {
     
     static var identifier: String {
         return String(describing: self)
@@ -17,7 +17,7 @@ class BeritaCell: UITableViewCell {
     static var nib: UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

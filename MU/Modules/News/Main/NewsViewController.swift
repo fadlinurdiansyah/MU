@@ -11,7 +11,7 @@ import UIKit
 
 extension SegueConstants {
     enum News {
-        static let showDetailBerita = "showDetailBerita"
+        static let showNewsDetail = "showNewsDetail"
     }
 }
 
@@ -77,10 +77,12 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let newsCell = beritaTableView.cellForRow(at: indexPath) as? BeritaCell
-        let numOindexInSection = (indexPath.section)
-        if numOindexInSection == 1 {
-            performSegue(withIdentifier: SegueConstants.News.showDetailBerita, sender: self)
+        
+        switch NewsSection(rawValue: indexPath.section) {
+        case .news?:
+            performSegue(withIdentifier: SegueConstants.News.showNewsDetail, sender: self)
+        default:
+            break
         }
     }
     
