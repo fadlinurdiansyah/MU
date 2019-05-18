@@ -94,7 +94,7 @@
         <!--View Controller-->
         <scene sceneID="ICE-pN-cCR">
             <objects>
-                <viewController id="i7H-NK-otl" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="i7H-NK-otl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQA-mY-utH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,8 +108,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic-news" width="23" height="27"/>
-        <image name="ic-player" width="23" height="26"/>
-        <image name="ic-schedule" width="28" height="29"/>
+        <image name="ic-news" width="23" height="27.5"/>
+        <image name="ic-player" width="23" height="26.5"/>
+        <image name="ic-schedule" width="28.5" height="29"/>
     </resources>
 </document>

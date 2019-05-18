@@ -18,6 +18,11 @@ extension SegueConstants {
 
 class NewsViewController: BaseViewController {
     
+    enum NewsSection: Int {
+        case match = 1
+        case news = 2
+    }
+    
     // MARK: Properties
     @IBOutlet weak var beritaTableView: UITableView!
     
@@ -51,14 +56,14 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let numSection = section
+        let numSection = NewsSection(rawValue: section)
         
         switch numSection {
-        case 0:
+        case .match?:
             return 1
-        case 1:
+        case .news?:
             return 2
-        default:
+        case .none:
             return 0
         }
     }
