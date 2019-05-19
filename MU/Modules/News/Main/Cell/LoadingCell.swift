@@ -1,25 +1,19 @@
 //
-//  BeritaCell.swift
+//  LoadingCell.swift
 //  MU
 //
-//  Created by NDS on 17/05/19.
+//  Created by NDS on 19/05/19.
 //  Copyright © 2019 NDS. All rights reserved.
 //
 
 import UIKit
 
-protocol BeritaCellDelegate: class {
-    func didTapButtonShare()
-}
-
-class BeritaCell: UITableViewCell {
+class LoadingCell: UITableViewCell {
     
-    // MARK: Properties
+    //MARK: Properties
     
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var shareButton: UIButton!
-    
-    weak var delegate: BeritaCellDelegate?
+    @IBOutlet weak var newsLoading: UIActivityIndicatorView!
+    @IBOutlet weak var textNewsLoading: UILabel!
     
     static var identifier: String {
         return String(describing: self)
@@ -32,9 +26,8 @@ class BeritaCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        newsLoading.startAnimating()
     }
-    
-    // MARK: Lifecycle
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -42,12 +35,4 @@ class BeritaCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func likeButton(_ sender: Any) {
-        
-    }
-    
-    @IBAction func shareButton(_ sender: Any) {
-        delegate?.didTapButtonShare()
-    }
-   
 }

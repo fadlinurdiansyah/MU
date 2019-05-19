@@ -29,12 +29,19 @@ class NewsViewController: BaseViewController {
         NewsPresenter.config(withNewsViewController: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        UIApplication.shared.statusBarView?.backgroundColor = ColorConstants.primaryRed
+        navigationController?.navigationBar.setColors(backgroundWithColor: ColorConstants.primaryRed, textWithColor: UIColor.white)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        beritaTableView.estimatedRowHeight = 350
 //        beritaTableView.rowHeight = UITableView.automaticDimension
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
+        beritaTableView.register(LoadingCell.nib, forCellReuseIdentifier: LoadingCell.identifier)
     }
 }
 
@@ -45,7 +52,7 @@ extension NewsViewController: NewsView {
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +61,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             return 1
         case .news?:
             return 2
+        case .loading?:
+            return 1
         case .none:
             return 0
         }
@@ -70,6 +79,12 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
                 newsCell.delegate = self
                 return newsCell
             }
+        case .loading?:
+            if let loadingCell = beritaTableView.dequeueReusableCell(withIdentifier: LoadingCell.identifier) as? LoadingCell {
+                loadingCell.newsLoading.startAnimating()
+                return loadingCell
+            }
+            
         case .none:
             return UITableViewCell()
         }

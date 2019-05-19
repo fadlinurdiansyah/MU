@@ -11,4 +11,5 @@ import Foundation
 enum NewsSection: Int {
     case match = 0
     case news = 1
+    case loading = 2
 }

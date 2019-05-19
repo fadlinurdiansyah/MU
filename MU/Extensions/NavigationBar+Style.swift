@@ -24,7 +24,10 @@ extension UINavigationBar {
         backgroundColor = .clear
         barTintColor = .clear
         setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        tintColor = UIColor.white
+        tintColor = .clear
+        if let font = UIFont(name: "Mukta Regular", size: 20) {
+            setTitleFont(font: font, color: .clear)
+        }
         titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.clear]
         shadowImage = UIImage()
         
@@ -37,9 +40,11 @@ extension UINavigationBar {
         shadowImage = nil
         backgroundColor = backColor
         barTintColor = backColor
-        tintColor = backColor
+        tintColor = textColor
+        if let font = UIFont(name: "Mukta Regular", size: 20) {
+            setTitleFont(font: font, color: textColor)
+        }
         titleTextAttributes = [NSAttributedString.Key.foregroundColor: textColor]
-        
     }
     
 }

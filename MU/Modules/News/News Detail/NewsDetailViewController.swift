@@ -43,13 +43,6 @@ class NewsDetailViewController: BaseViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        UIApplication.shared.statusBarView?.backgroundColor = ColorConstants.primaryRed
-        navigationController?.navigationBar.setColors(backgroundWithColor: ColorConstants.primaryRed, textWithColor: UIColor.white)
-
-    }
-    
     func setupNavbar() {
         
         let backButton = UIBarButtonItem(image: UIImage(named: "ic-back-shadow")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(handleBackView))
