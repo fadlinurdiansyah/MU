@@ -21,7 +21,6 @@ class BeritaCell: UITableViewCell {
     
     weak var delegate: BeritaCellDelegate?
     
-    
     static var identifier: String {
         return String(describing: self)
     }

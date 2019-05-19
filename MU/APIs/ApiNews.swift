@@ -15,14 +15,14 @@ enum ApiNews: URLRequestConvertible {
     
     var path: String {
         switch self {
-        case .getListNews(_):
+        case .getListNews:
             return "/YOUR_PATH"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getListNews(_):
+        case .getListNews:
             return .get
         }
     }

@@ -40,7 +40,6 @@ class NewsPresenter: NewsViewPresenter {
         return shareText
     }
     
-    
     static func config(withNewsViewController viewController: NewsViewController) {
         let presenter = NewsPresenter(view: viewController)
         viewController.presenter = presenter
