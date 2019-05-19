@@ -73,7 +73,6 @@ class NewsDetailViewController: BaseViewController {
         let activityVC = UIActivityViewController(activityItems: ["\(shareText)","\(link)"], applicationActivities: nil)
         
         activityVC.popoverPresentationController?.sourceView = self.view
-        
         self.present(activityVC, animated: true, completion: nil)
         
     }

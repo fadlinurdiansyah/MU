@@ -11,7 +11,8 @@ import SwiftyJSON
 
 protocol NewsViewPresenter: class {
     init(view: NewsView)
-    // TODO: Declare view presenter methods
+    func getLinkShareOnNews() -> String?
+    func getTextShareOnNews() -> String?
 }
 
 protocol NewsView: class {
@@ -19,6 +20,19 @@ protocol NewsView: class {
 }
 
 class NewsPresenter: NewsViewPresenter {
+    
+    func getLinkShareOnNews() -> String? {
+        let link = "https://www.muid.site"
+        
+        return link
+    }
+    
+    func getTextShareOnNews() -> String? {
+        let shareText = "Dapatkan informasi terupdate tentang Manchester United"
+        
+        return shareText
+    }
+    
     
     static func config(withNewsViewController viewController: NewsViewController) {
         let presenter = NewsPresenter(view: viewController)

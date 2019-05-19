@@ -67,6 +67,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .news?:
             if let newsCell = beritaTableView.dequeueReusableCell(withIdentifier: BeritaCell.identifier, for: indexPath) as? BeritaCell {
+                newsCell.delegate = self
                 return newsCell
             }
         case .none:
@@ -86,4 +87,19 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+}
+
+extension NewsViewController: BeritaCellDelegate {
+    func didTapButtonShare() {
+        
+        let shareLink = presenter.getTextShareOnNews()
+        let shareText = presenter.getTextShareOnNews()
+        
+        let activityVC = UIActivityViewController(activityItems: ["\(String(describing: shareText))", "\(String(describing: shareLink))"], applicationActivities: nil)
+        
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+        
+    }
+
 }

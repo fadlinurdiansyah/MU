@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol BeritaCellDelegate: class {
+    func didTapButtonShare()
+}
+
 class BeritaCell: UITableViewCell {
     
-    // Mark: Properties
+    // MARK: Properties
     
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    
+    weak var delegate: BeritaCellDelegate?
     
     
     static var identifier: String {
@@ -29,7 +35,7 @@ class BeritaCell: UITableViewCell {
         // Initialization code
     }
     
-    // Mark: Lifecycle
+    // MARK: Lifecycle
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -38,10 +44,11 @@ class BeritaCell: UITableViewCell {
     }
     
     @IBAction func likeButton(_ sender: Any) {
+        
     }
     
     @IBAction func shareButton(_ sender: Any) {
-        
+        delegate?.didTapButtonShare()
     }
    
 }
