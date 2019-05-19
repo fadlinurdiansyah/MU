@@ -11,7 +11,6 @@ import UIKit
 
 extension SegueConstants {
     enum News {
-        // TODO: Add segue ids
         static let showDetailBerita = "showDetailBerita"
     }
 }
@@ -36,11 +35,31 @@ class NewsViewController: BaseViewController {
 //        beritaTableView.rowHeight = UITableView.automaticDimension
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
+        
+        loadPage()
+    }
+    
+    func loadPage() {
+        self.presenter.loadFirstPage()
     }
 }
 
 extension NewsViewController: NewsView {
-    // TODO: implement view methods
+    func showLoading() {
+        // TODO: Show Block Loading Here
+    }
+    
+    func hideLoading() {
+        // TODO: Hide Block Loading Here
+    }
+    
+    func getListNewsSuccess(withListNews listNews: ListNews) {
+        // TODO : Action for success
+    }
+    
+    func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
+        // TODO : Action for failure
+    }
 }
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
