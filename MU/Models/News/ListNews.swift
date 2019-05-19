@@ -1,15 +1,15 @@
 //
-//  NewsModel.swift
+//  ListNews.swift
 //  MU
 //
-//  Created by NDS on 19/05/19.
+//  Created by fadielse on 19/05/19.
 //  Copyright © 2019 NDS. All rights reserved.
 //
 
 import Foundation
 import SwiftyJSON
 
-class NewsModel {
+class ListNews {
     
     let data: [Data]?
     let message: String?
@@ -21,10 +21,10 @@ class NewsModel {
             return nil
         }
         
-        data = json["data"].arrayValue.map { Data(json: $0)! }
+        data = json["data"].arrayValue.map { Data($0) }
         message = json["message"].stringValue
         success = json["success"].boolValue
-        paging = Paging(json: json["paging"])
+        paging = Paging(json["paging"])
     }
 }
 
@@ -51,6 +51,18 @@ class Data {
     }
 }
 
-class Paging: BasePagination {
+class Paging {
+    
+    let previous: Any?
+    let next: String?
+    
+    init?(json: JSON?) {
+        guard let json = json else {
+            return nil
+        }
+        
+        previous = json["previous"]
+        next = json["next"].stringValue
+    }
     
 }
