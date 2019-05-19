@@ -16,7 +16,7 @@ enum ApiNews: URLRequestConvertible {
     var path: String {
         switch self {
         case .getListNews:
-            return "/YOUR_PATH"
+            return "/feeds"
         }
     }
     

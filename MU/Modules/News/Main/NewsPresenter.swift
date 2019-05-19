@@ -28,6 +28,24 @@ protocol NewsView: class {
 
 class NewsPresenter: NewsViewPresenter {
     
+    
+    
+    static func config(withNewsViewController viewController: NewsViewController) {
+        let presenter = NewsPresenter(view: viewController)
+        viewController.presenter = presenter
+    }
+    
+    let view: NewsView
+    var pageStart: Int = 0 // default page start for first request
+    var pageSize: Int = 5
+    var hasNext: Bool = true // flag check has nxt page
+    var isShowLoading = false // flag misalkan di view ada loading yg blok halaman pas request
+    var listNewsItems: [String/*string ganti model news per itemnya*/] = []
+    
+    required init(view: NewsView) {
+        self.view = view
+    }
+    
     func getLinkShareOnNews() -> String? {
         let link = "https://www.muid.site"
         
@@ -38,22 +56,6 @@ class NewsPresenter: NewsViewPresenter {
         let shareText = "Dapatkan informasi terupdate tentang Manchester United"
         
         return shareText
-    }
-    
-    static func config(withNewsViewController viewController: NewsViewController) {
-        let presenter = NewsPresenter(view: viewController)
-        viewController.presenter = presenter
-    }
-    
-    let view: NewsView
-    var pageStart: Int = 1 // default page start for first request
-    var pageSize: Int = 10
-    var hasNext: Bool = true // flag check has nxt page
-    var isShowLoading = false // flag misalkan di view ada loading yg blok halaman pas request
-    var listNewsItems: [String/*string ganti model news per itemnya*/] = []
-    
-    required init(view: NewsView) {
-        self.view = view
     }
     
     func resetListNews() {
@@ -70,7 +72,7 @@ class NewsPresenter: NewsViewPresenter {
         isShowLoading = false
         
         if hasNext {
-            pageStart += 1
+            pageStart += 5
             getListNews()
         }
     }
@@ -83,8 +85,8 @@ class NewsPresenter: NewsViewPresenter {
     
     func getListNews() {
         let newsRequest = NewsRequest()
-        newsRequest.pageNo = pageStart
-        newsRequest.pageSize = pageSize
+        newsRequest.offset = pageStart
+        newsRequest.limit = pageSize
         
         MUAPI.instance.request(ApiNews.getListNews(request: newsRequest), success: { (json) in
             let listNewsDAO = ListNewsDAO(json: json)

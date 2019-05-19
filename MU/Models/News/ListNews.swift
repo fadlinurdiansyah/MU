@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class ListNews {
     
-    let data: [Data]?
+    let data: [NewsData]?
     let message: String?
     let success: Bool?
     let paging: Paging?
@@ -21,14 +21,14 @@ class ListNews {
             return nil
         }
         
-        data = json["data"].arrayValue.map { Data($0) }
+        data = json["data"].arrayValue.map { NewsData(json: $0)! }
         message = json["message"].stringValue
         success = json["success"].boolValue
-        paging = Paging(json["paging"])
+        paging = Paging(json: json["paging"])
     }
 }
 
-class Data {
+class NewsData {
     
     let idNews: String?
     let createdTime: String?
@@ -64,5 +64,4 @@ class Paging {
         previous = json["previous"]
         next = json["next"].stringValue
     }
-    
 }

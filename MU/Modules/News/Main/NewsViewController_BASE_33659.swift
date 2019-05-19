@@ -21,7 +21,6 @@ class NewsViewController: BaseViewController {
     @IBOutlet weak var beritaTableView: UITableView!
     
     var presenter: NewsPresenter!
-    var newsData: [NewsData]?
     
     // MARK: Lifecycle
     
@@ -30,53 +29,23 @@ class NewsViewController: BaseViewController {
         NewsPresenter.config(withNewsViewController: self)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        UIApplication.shared.statusBarView?.backgroundColor = ColorConstants.primaryRed
-        navigationController?.navigationBar.setColors(backgroundWithColor: ColorConstants.primaryRed, textWithColor: UIColor.white)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        beritaTableView.estimatedRowHeight = 350
+//        beritaTableView.rowHeight = UITableView.automaticDimension
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
-        beritaTableView.register(LoadingCell.nib, forCellReuseIdentifier: LoadingCell.identifier)
-        
-        loadPage()
-    }
-    
-    func loadPage() {
-        self.presenter.loadFirstPage()
     }
 }
 
 extension NewsViewController: NewsView {
-    func showLoading() {
-        // TODO: Show Block Loading Here
-    }
-    
-    func hideLoading() {
-        // TODO: Hide Block Loading Here
-    }
-    
-    func getListNewsSuccess(withListNews listNews: ListNews) {
-        print("\(listNews)")
-        if let data = listNews.data {
-            newsData = data
-        }
-        beritaTableView.reloadData()
-    }
-    
-    func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
-        // TODO : Action for failure
-    }
+    // TODO: implement view methods
 }
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,13 +53,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         case .match?:
             return 1
         case .news?:
-            if let count = newsData?.count {
-                return count
-            } else {
-                return 0
-            }
-        case .loading?:
-            return 1
+            return 2
         case .none:
             return 0
         }
@@ -104,20 +67,9 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .news?:
             if let newsCell = beritaTableView.dequeueReusableCell(withIdentifier: BeritaCell.identifier, for: indexPath) as? BeritaCell {
-                // self.fbData?.posts?.indices.contains(indexPath.row)
-                if (self.newsData?.indices.contains(indexPath.row))! {
-                    let data = newsData?[indexPath.row]
-                    newsCell.newsData = data
-                }
                 newsCell.delegate = self
                 return newsCell
             }
-        case .loading?:
-            if let loadingCell = beritaTableView.dequeueReusableCell(withIdentifier: LoadingCell.identifier) as? LoadingCell {
-                loadingCell.newsLoading.startAnimating()
-                return loadingCell
-            }
-            
         case .none:
             return UITableViewCell()
         }
@@ -143,7 +95,7 @@ extension NewsViewController: BeritaCellDelegate {
         let shareLink = presenter.getTextShareOnNews()
         let shareText = presenter.getTextShareOnNews()
         
-        let activityVC = UIActivityViewController(activityItems: ["\(shareText)", "\(shareLink)"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["\(String(describing: shareText))", "\(String(describing: shareLink))"], applicationActivities: nil)
         
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)

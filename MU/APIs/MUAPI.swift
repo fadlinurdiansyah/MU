@@ -22,7 +22,7 @@ class MUAPI {
         #if PRODUCTION
         static let baseUrl = "LINK API PRODUCTION HERE"
         #else
-        static let baseUrl = "LINK API DEVELOPMENT HERE"
+        static let baseUrl = "https://api.muid.site"
         #endif
     }
     

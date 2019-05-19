@@ -11,13 +11,13 @@ import Foundation
 class NewsRequest {
     
     //contoh
-    var pageNo: Int?
-    var pageSize: Int?
-    
+    var offset: Int?
+    var limit: Int?
+       
     func buildForParameters() -> [String: AnyObject] {
         var parameters: [String: AnyObject] = [:]
-        parameters["pageNo"] = pageNo as AnyObject
-        parameters["pageSize"] = pageSize as AnyObject
+        parameters["offset"] = offset as AnyObject
+        parameters["limit"] = limit as AnyObject
         return parameters
     }
 }

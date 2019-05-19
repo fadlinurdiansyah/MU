@@ -18,7 +18,16 @@ class BeritaCell: UITableViewCell {
     
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var newsDescLabel: UILabel!
+    @IBOutlet weak var newsImageView: UIImageView!
     
+    var newsData: NewsData? {
+        didSet {
+            newsDescLabel.text = newsData?.message
+        }
+    }
+    
+   
     weak var delegate: BeritaCellDelegate?
     
     static var identifier: String {

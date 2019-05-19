@@ -114,6 +114,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="likeButton" destination="Rgz-OL-vg2" id="fBS-1e-Nir"/>
+                <outlet property="newsDescLabel" destination="Xu4-LP-Mmm" id="QfY-yq-RxO"/>
+                <outlet property="newsImageView" destination="OpF-VM-6du" id="uI6-gK-EX5"/>
                 <outlet property="shareButton" destination="AsY-pG-RC9" id="R9a-Sz-2N3"/>
             </connections>
             <point key="canvasLocation" x="692" y="340.02998500749629"/>

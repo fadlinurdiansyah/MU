@@ -21,7 +21,6 @@ class NewsViewController: BaseViewController {
     @IBOutlet weak var beritaTableView: UITableView!
     
     var presenter: NewsPresenter!
-    var newsData: [NewsData]?
     
     // MARK: Lifecycle
     
@@ -38,39 +37,16 @@ class NewsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        beritaTableView.estimatedRowHeight = 350
+//        beritaTableView.rowHeight = UITableView.automaticDimension
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
         beritaTableView.register(LoadingCell.nib, forCellReuseIdentifier: LoadingCell.identifier)
-        
-        loadPage()
-    }
-    
-    func loadPage() {
-        self.presenter.loadFirstPage()
     }
 }
 
 extension NewsViewController: NewsView {
-    func showLoading() {
-        // TODO: Show Block Loading Here
-    }
-    
-    func hideLoading() {
-        // TODO: Hide Block Loading Here
-    }
-    
-    func getListNewsSuccess(withListNews listNews: ListNews) {
-        print("\(listNews)")
-        if let data = listNews.data {
-            newsData = data
-        }
-        beritaTableView.reloadData()
-    }
-    
-    func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
-        // TODO : Action for failure
-    }
+    // TODO: implement view methods
 }
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -84,11 +60,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         case .match?:
             return 1
         case .news?:
-            if let count = newsData?.count {
-                return count
-            } else {
-                return 0
-            }
+            return 2
         case .loading?:
             return 1
         case .none:
@@ -104,11 +76,6 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .news?:
             if let newsCell = beritaTableView.dequeueReusableCell(withIdentifier: BeritaCell.identifier, for: indexPath) as? BeritaCell {
-                // self.fbData?.posts?.indices.contains(indexPath.row)
-                if (self.newsData?.indices.contains(indexPath.row))! {
-                    let data = newsData?[indexPath.row]
-                    newsCell.newsData = data
-                }
                 newsCell.delegate = self
                 return newsCell
             }
@@ -143,7 +110,7 @@ extension NewsViewController: BeritaCellDelegate {
         let shareLink = presenter.getTextShareOnNews()
         let shareText = presenter.getTextShareOnNews()
         
-        let activityVC = UIActivityViewController(activityItems: ["\(shareText)", "\(shareLink)"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["\(String(describing: shareText))", "\(String(describing: shareLink))"], applicationActivities: nil)
         
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)

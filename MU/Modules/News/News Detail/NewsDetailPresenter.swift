@@ -23,18 +23,6 @@ protocol NewsDetailView: class {
 
 class NewsDetailPresenter: NewsDetailViewPresenter {
     
-    func getLinkShare() -> String? {
-        let link = "https://www.muid.site"
-        
-        return link
-    }
-    
-    func getTextShare() -> String? {
-        let shareText = "Dapatkan informasi terupdate tentang Manchester United"
-        
-        return shareText
-    }
-    
     static func config(withNewsDetailViewController viewController: NewsDetailViewController) {
         let presenter = NewsDetailPresenter(view: viewController)
         viewController.presenter = presenter
@@ -46,5 +34,15 @@ class NewsDetailPresenter: NewsDetailViewPresenter {
         self.view = view
     }
     
-    // TODO: Implement view presenter methods
+    func getLinkShare() -> String? {
+        let link = "https://www.muid.site"
+        
+        return link
+    }
+    
+    func getTextShare() -> String? {
+        let shareText = "Dapatkan informasi terupdate tentang Manchester United"
+        
+        return shareText
+    }
 }
