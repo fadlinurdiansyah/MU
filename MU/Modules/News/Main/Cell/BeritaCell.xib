@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mukta-Regular.ttf">
+            <string>Mukta-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="550" id="KGk-i7-Jjw" customClass="BeritaCell" customModule="MU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="503" height="550"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="503" height="549.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tAZ-lJ-j7e">
+                        <rect key="frame" x="0.0" y="0.0" width="503" height="549.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="OpF-VM-6du">
+                                <rect key="frame" x="0.0" y="0.0" width="503" height="290"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-LP-Mmm">
+                                <rect key="frame" x="9" y="304.5" width="1750.5" height="190.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="deM-Ay-c1c"/>
+                                </constraints>
+                                <string key="text">Agenda utama Ed Woodward saat menyambangi Carrington Training Complex pagi ini waktu Manchester adalah untuk melanjutkan pembicaraan mengenai perencanaan klub untuk musim depan dengan Ole. Khususnya mengenai negosiasi perpanjangan kontrak...</string>
+                                <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Ra-eu-feG" userLabel="Button Stack View">
+                                <rect key="frame" x="0.0" y="515" width="503" height="20"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-K2-7YV" userLabel="Posting Time View">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posting Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-Eb-CGz">
+                                                <rect key="frame" x="56.5" y="1.5" width="54.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Tfl-Eb-CGz" firstAttribute="centerY" secondItem="ajh-K2-7YV" secondAttribute="centerY" id="Dcv-Gl-wCH"/>
+                                            <constraint firstItem="Tfl-Eb-CGz" firstAttribute="centerX" secondItem="ajh-K2-7YV" secondAttribute="centerX" id="Jfg-ht-5L7"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-OL-vg2" userLabel="Like Button">
+                                        <rect key="frame" x="167.5" y="0.0" width="168" height="20"/>
+                                        <state key="normal" image="ic-dislike"/>
+                                        <connections>
+                                            <action selector="likeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0ET-0O-N5w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-pG-RC9" userLabel="Share Button">
+                                        <rect key="frame" x="335.5" y="0.0" width="167.5" height="20"/>
+                                        <state key="normal" image="ic-share"/>
+                                        <connections>
+                                            <action selector="shareButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pah-Dc-T2L"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78039215689999997" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="mNK-w4-pcI"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-ds-335" userLabel="Line Separator View">
+                                <rect key="frame" x="0.0" y="542.5" width="503" height="7"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="Rbj-8Q-ASe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Xu4-LP-Mmm" firstAttribute="leading" secondItem="tAZ-lJ-j7e" secondAttribute="leading" constant="9" id="1d1-G7-iWF"/>
+                            <constraint firstItem="Qfr-ds-335" firstAttribute="top" secondItem="9Ra-eu-feG" secondAttribute="bottom" constant="7.2999999999999998" id="Dek-Jw-Ii7"/>
+                            <constraint firstItem="OpF-VM-6du" firstAttribute="leading" secondItem="tAZ-lJ-j7e" secondAttribute="leading" id="Hya-xk-Mvv"/>
+                            <constraint firstItem="9Ra-eu-feG" firstAttribute="top" secondItem="Xu4-LP-Mmm" secondAttribute="bottom" constant="20.300000000000001" id="Iku-t4-G6O"/>
+                            <constraint firstItem="Qfr-ds-335" firstAttribute="leading" secondItem="tAZ-lJ-j7e" secondAttribute="leading" id="OdW-uX-lx7"/>
+                            <constraint firstItem="9Ra-eu-feG" firstAttribute="leading" secondItem="tAZ-lJ-j7e" secondAttribute="leading" id="TrV-F0-68L"/>
+                            <constraint firstAttribute="trailing" secondItem="Xu4-LP-Mmm" secondAttribute="trailing" constant="24.300000000000001" id="Vqm-vL-QgO"/>
+                            <constraint firstAttribute="bottom" secondItem="Qfr-ds-335" secondAttribute="bottom" id="Y3J-a6-Wpf"/>
+                            <constraint firstItem="Xu4-LP-Mmm" firstAttribute="top" secondItem="OpF-VM-6du" secondAttribute="bottom" constant="14.699999999999999" id="Y5a-SO-Eke"/>
+                            <constraint firstItem="OpF-VM-6du" firstAttribute="top" secondItem="tAZ-lJ-j7e" secondAttribute="top" id="cXL-T8-M9t"/>
+                            <constraint firstAttribute="trailing" secondItem="9Ra-eu-feG" secondAttribute="trailing" id="lWM-be-hWL"/>
+                            <constraint firstAttribute="trailing" secondItem="Qfr-ds-335" secondAttribute="trailing" id="lwE-hN-uuf"/>
+                            <constraint firstAttribute="trailing" secondItem="OpF-VM-6du" secondAttribute="trailing" id="qGG-U9-FpW"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tAZ-lJ-j7e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2qq-cU-d9g"/>
+                    <constraint firstAttribute="trailing" secondItem="tAZ-lJ-j7e" secondAttribute="trailing" id="Ffq-tz-X7X"/>
+                    <constraint firstItem="tAZ-lJ-j7e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KMq-Jr-TZr"/>
+                    <constraint firstAttribute="bottom" secondItem="tAZ-lJ-j7e" secondAttribute="bottom" id="WvT-Kq-m3d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="likeButton" destination="Rgz-OL-vg2" id="fBS-1e-Nir"/>
+                <outlet property="shareButton" destination="AsY-pG-RC9" id="R9a-Sz-2N3"/>
+            </connections>
+            <point key="canvasLocation" x="692" y="340.02998500749629"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-dislike" width="20" height="17"/>
+        <image name="ic-share" width="21" height="20"/>
+        <image name="img-placeholder" width="414" height="290"/>
+    </resources>
+</document>
