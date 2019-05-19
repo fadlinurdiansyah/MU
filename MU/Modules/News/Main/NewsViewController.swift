@@ -42,11 +42,31 @@ class NewsViewController: BaseViewController {
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
         beritaTableView.register(LoadingCell.nib, forCellReuseIdentifier: LoadingCell.identifier)
+        
+        loadPage()
+    }
+    
+    func loadPage() {
+        self.presenter.loadFirstPage()
     }
 }
 
 extension NewsViewController: NewsView {
-    // TODO: implement view methods
+    func showLoading() {
+        // TODO: Show Block Loading Here
+    }
+    
+    func hideLoading() {
+        // TODO: Hide Block Loading Here
+    }
+    
+    func getListNewsSuccess(withListNews listNews: ListNews) {
+        // TODO : Action for success
+    }
+    
+    func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
+        // TODO : Action for failure
+    }
 }
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
