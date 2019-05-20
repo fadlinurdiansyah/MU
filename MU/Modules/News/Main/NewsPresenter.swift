@@ -86,6 +86,10 @@ class NewsPresenter: NewsViewPresenter {
         newsRequest.offset = pageStart
         newsRequest.limit = pageSize
         
+        if isShowLoading {
+            view.showLoading()
+        }
+        
         MUAPI.instance.request(ApiNews.getListNews(request: newsRequest), success: { (json) in
             self.view.hideLoading()
             let listNewsDAO = ListNewsDAO(json: json)

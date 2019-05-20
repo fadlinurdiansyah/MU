@@ -76,10 +76,11 @@ class NewsViewController: BaseViewController {
 
 extension NewsViewController: NewsView {
     func showLoading() {
-        // TODO: Show Block Loading Here
+        self.showBlockLoading(withView: self.view)
     }
     
     func hideLoading() {
+        self.stopBlockLoading()
         beritaTableView.endRefreshing(at: .top)
         beritaTableView.finishInfiniteScroll()
     }
