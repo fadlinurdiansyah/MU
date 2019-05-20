@@ -58,6 +58,7 @@ class NewsPresenter: NewsViewPresenter {
     }
     
     func resetListNews() {
+        pageStart = 0
         listNewsItems.removeAll()
     }
     
