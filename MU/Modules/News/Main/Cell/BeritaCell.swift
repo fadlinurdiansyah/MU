@@ -26,6 +26,8 @@ class BeritaCell: UITableViewCell {
     var newsData: NewsData? {
         didSet {
             updateUI()
+            newsImageView.sd_setImage(with:  newsData?.fullPicture?.toUrl(), placeholderImage: UIImage(named: "img-placeholder"))
+            newsDescLabel.text = newsData?.message
         }
     }
     

@@ -23,30 +23,39 @@
                 <rect key="frame" x="0.0" y="0.0" width="341" height="345.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-wx-AP8">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-wx-AP8">
                         <rect key="frame" x="0.0" y="0.0" width="341" height="345.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="m8r-qc-6Ss">
-                                <rect key="frame" x="0.0" y="0.0" width="341" height="290"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="are-BN-xP6">
-                                <rect key="frame" x="9" y="304.5" width="6245.5" height="41"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="m8r-qc-6Ss">
+                                <rect key="frame" x="0.0" y="0.0" width="341" height="280"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="8n3-Tv-Kcx"/>
+                                    <constraint firstAttribute="width" secondItem="m8r-qc-6Ss" secondAttribute="height" multiplier="341:280" id="L7u-vV-orQ"/>
                                 </constraints>
-                                <string key="text">"Jose Mourinho: "Jika para pemain saya bisa menggambarkan saya dalam satu kata? Itu tergantung, bagi beberapa pemain mungkin saya dikira bajingan. Mengapa Anda harus memilih saya? Sebelum menanyakan itu, Anda harus memahami bahwa Anda bisa berbicara dengan saya, jika Anda hanya ingin menang. Jika Anda ingin menang, dan Anda punya kondisi untuk menang, maka kita bisa berbicara." "Kebajikan saya: pengalaman, ambisi liar dan pengetahuan. Keburukan saya: ketidakmampuan untuk menerima kekalahan, ketidakmampuan untuk bertahan dengan seseorang yang tidak punya motivasi seperti saya. Perbedaan antara Jose sebagai manajer dan sosok biasa: sebagai sosok biasa saya pendiam, sensitif dan tidak egois. Jose sebagai manajer itu praktis, pintar dan dominan. Saya sangat menyukai Jose sebagai sosok biasa, sayang sekali orang-orang hanya mengetahui sisi saya sebagai manajer ketimbang sosok biasa." (DAZN)"</string>
-                                <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lck-Xx-Cva">
+                                <rect key="frame" x="0.0" y="295" width="341" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="are-BN-xP6">
+                                        <rect key="frame" x="16" y="0.0" width="309" height="50.5"/>
+                                        <string key="text">"Jose Mourinho: "Jika para pemain saya bisa menggambarkan saya dalam satu kata? Itu tergantung, bagi beberapa pemain mungkin saya dikira bajingan. Mengapa Anda harus memilih saya? Sebelum menanyakan itu, Anda harus memahami bahwa Anda bisa berbicara dengan saya, jika Anda hanya ingin menang. Jika Anda ingin menang, dan Anda punya kondisi untuk menang, maka kita bisa berbicara." "Kebajikan saya: pengalaman, ambisi liar dan pengetahuan. Keburukan saya: ketidakmampuan untuk menerima kekalahan, ketidakmampuan untuk bertahan dengan seseorang yang tidak punya motivasi seperti saya. Perbedaan antara Jose sebagai manajer dan sosok biasa: sebagai sosok biasa saya pendiam, sensitif dan tidak egois. Jose sebagai manajer itu praktis, pintar dan dominan. Saya sangat menyukai Jose sebagai sosok biasa, sayang sekali orang-orang hanya mengetahui sisi saya sebagai manajer ketimbang sosok biasa." (DAZN)"</string>
+                                        <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="are-BN-xP6" firstAttribute="leading" secondItem="lck-Xx-Cva" secondAttribute="leading" constant="16" id="DOC-kr-5XS"/>
+                                    <constraint firstItem="are-BN-xP6" firstAttribute="top" secondItem="lck-Xx-Cva" secondAttribute="top" id="OWY-k2-aJq"/>
+                                    <constraint firstAttribute="trailing" secondItem="are-BN-xP6" secondAttribute="trailing" constant="16" id="XsU-8q-MXu"/>
+                                    <constraint firstAttribute="bottom" secondItem="are-BN-xP6" secondAttribute="bottom" id="ksT-Ss-2B2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="are-BN-xP6" firstAttribute="top" secondItem="m8r-qc-6Ss" secondAttribute="bottom" constant="14.699999999999999" id="0Xq-HH-gSi"/>
-                            <constraint firstAttribute="trailing" secondItem="are-BN-xP6" secondAttribute="trailing" constant="14.699999999999999" id="2gs-1e-DGg"/>
                             <constraint firstItem="m8r-qc-6Ss" firstAttribute="top" secondItem="Xfd-wx-AP8" secondAttribute="top" id="3h2-l6-yhK"/>
                             <constraint firstAttribute="trailing" secondItem="m8r-qc-6Ss" secondAttribute="trailing" id="6FO-8U-spI"/>
                             <constraint firstItem="m8r-qc-6Ss" firstAttribute="leading" secondItem="Xfd-wx-AP8" secondAttribute="leading" id="f99-cm-YcE"/>
-                            <constraint firstItem="are-BN-xP6" firstAttribute="leading" secondItem="Xfd-wx-AP8" secondAttribute="leading" constant="9" id="vQv-C4-fga"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -57,7 +66,7 @@
                     <constraint firstAttribute="trailing" secondItem="Xfd-wx-AP8" secondAttribute="trailing" id="cnP-3O-MOE"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="36" y="190.70464767616193"/>
+            <point key="canvasLocation" x="222" y="5"/>
         </tableViewCell>
     </objects>
     <resources>

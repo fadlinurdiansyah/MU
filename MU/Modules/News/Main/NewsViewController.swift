@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import PullToRefresh
+import UIScrollView_InfiniteScroll
 
 extension SegueConstants {
     enum News {
@@ -21,7 +23,7 @@ class NewsViewController: BaseViewController {
     @IBOutlet weak var beritaTableView: UITableView!
     
     var presenter: NewsPresenter!
-    var newsData: [NewsData]?
+    var newsData: [NewsData] = []
     
     // MARK: Lifecycle
     
@@ -39,11 +41,32 @@ class NewsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+        loadPage()
+    }
+    
+    func setupTableView() {
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
         beritaTableView.register(LoadingCell.nib, forCellReuseIdentifier: LoadingCell.identifier)
         
-        loadPage()
+        let refresher = PullToRefresh()
+        self.beritaTableView.addPullToRefresh(refresher) {
+            self.presenter?.reloadFirstPage()
+        }
+        
+        setTableViewInfiniteScroll()
+    }
+
+    func setTableViewInfiniteScroll() {
+        beritaTableView.bottomLoading(withView: self.view)
+        beritaTableView.setShouldShowInfiniteScrollHandler({[unowned self] _ in
+            return self.presenter?.hasNext ?? false
+        })
+        
+        beritaTableView.addInfiniteScroll {[unowned self](_) -> Void in
+            self.presenter?.loadNextPage()
+        }
     }
     
     func loadPage() {
@@ -53,23 +76,28 @@ class NewsViewController: BaseViewController {
 
 extension NewsViewController: NewsView {
     func showLoading() {
-        // TODO: Show Block Loading Here
+        self.showBlockLoading(withView: self.view)
     }
     
     func hideLoading() {
-        // TODO: Hide Block Loading Here
+        self.stopBlockLoading()
+        beritaTableView.endRefreshing(at: .top)
+        beritaTableView.finishInfiniteScroll()
     }
     
-    func getListNewsSuccess(withListNews listNews: ListNews) {
-        print("\(listNews)")
-        if let data = listNews.data {
-            newsData = data
-        }
-        self.beritaTableView.reloadData()
+    func getListNewsSuccess() {
+        newsData = presenter.getNewsItem()
+        beritaTableView.reloadData()
     }
     
     func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
-        // TODO : Action for failure
+        if error.isTypeErrorConvertingJson() {
+            self.showShowServerError(withView: self.view)
+        } else if error.isTypeInternalServerError() {
+            self.showShowServerError(withView: self.view)
+        } else if error.isTypeNoInternetConnection() {
+            self.showErrorConnection(withView: self.view)
+        }
     }
 }
 
@@ -84,11 +112,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         case .match?:
             return 1
         case .news?:
-            if let count = newsData?.count {
-                return count
-            } else {
-                return 0
-            }
+            return newsData.count
         case .loading?:
             return 1
         case .none:
@@ -104,9 +128,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .news?:
             if let newsCell = beritaTableView.dequeueReusableCell(withIdentifier: BeritaCell.identifier, for: indexPath) as? BeritaCell {
-                // self.fbData?.posts?.indices.contains(indexPath.row)
-                if (self.newsData?.indices.contains(indexPath.row))! {
-                    let data = newsData?[indexPath.row]
+                if self.newsData.indices.contains(indexPath.row) {
+                    let data = newsData[indexPath.row]
                     newsCell.newsData = data
                 }
                 newsCell.delegate = self

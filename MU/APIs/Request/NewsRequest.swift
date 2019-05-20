@@ -10,7 +10,6 @@ import Foundation
 
 class NewsRequest {
     
-    //contoh
     var offset: Int?
     var limit: Int?
        

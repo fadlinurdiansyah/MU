@@ -9,7 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-
 class BasePagination {
     
     let previous: Any?
