@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol BeritaCellDelegate: class {
     func didTapButtonShare()
@@ -23,6 +24,7 @@ class BeritaCell: UITableViewCell {
     
     var newsData: NewsData? {
         didSet {
+            newsImageView.sd_setImage(with:  newsData?.fullPicture?.toUrl(), placeholderImage: UIImage(named: "img-placeholder"))
             newsDescLabel.text = newsData?.message
         }
     }

@@ -12,8 +12,8 @@ import SwiftyJSON
 protocol NewsDetailViewPresenter: class {
     init(view: NewsDetailView)
     
-    func getLinkShare() -> String?
-    func getTextShare() -> String?
+    func getLinkShare() -> String
+    func getTextShare() -> String
     
 }
 
@@ -34,13 +34,13 @@ class NewsDetailPresenter: NewsDetailViewPresenter {
         self.view = view
     }
     
-    func getLinkShare() -> String? {
+    func getLinkShare() -> String {
         let link = "https://www.muid.site"
         
         return link
     }
     
-    func getTextShare() -> String? {
+    func getTextShare() -> String {
         let shareText = "Dapatkan informasi terupdate tentang Manchester United"
         
         return shareText
