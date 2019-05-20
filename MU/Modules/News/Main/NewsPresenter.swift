@@ -28,8 +28,6 @@ protocol NewsView: class {
 
 class NewsPresenter: NewsViewPresenter {
     
-    
-    
     static func config(withNewsViewController viewController: NewsViewController) {
         let presenter = NewsPresenter(view: viewController)
         viewController.presenter = presenter

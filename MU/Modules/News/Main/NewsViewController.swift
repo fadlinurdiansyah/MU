@@ -65,7 +65,7 @@ extension NewsViewController: NewsView {
         if let data = listNews.data {
             newsData = data
         }
-        beritaTableView.reloadData()
+        self.beritaTableView.reloadData()
     }
     
     func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
@@ -134,7 +134,6 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             break
         }
     }
-    
 }
 
 extension NewsViewController: BeritaCellDelegate {
