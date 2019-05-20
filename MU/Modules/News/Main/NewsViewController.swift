@@ -91,7 +91,13 @@ extension NewsViewController: NewsView {
     }
     
     func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
-        // TODO : Action for failure
+        if error.isTypeErrorConvertingJson() {
+            self.showShowServerError(withView: self.view)
+        } else if error.isTypeInternalServerError() {
+            self.showShowServerError(withView: self.view)
+        } else if error.isTypeNoInternetConnection() {
+            self.showErrorConnection(withView: self.view)
+        }
     }
 }
 

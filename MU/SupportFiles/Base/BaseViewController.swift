@@ -55,6 +55,18 @@ class BaseViewController: UIViewController {
         loadingView?.showBlockLoading()
     }
     
+    func showErrorConnection(withView view: UIView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        addLoadingAsSubViewIfNeed(withView: view)
+        loadingView?.showNoConnection()
+    }
+    
+    func showShowServerError(withView view: UIView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        addLoadingAsSubViewIfNeed(withView: view)
+        loadingView?.showServerError()
+    }
+    
     func stopBlockLoading() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         loadingView?.stop()
