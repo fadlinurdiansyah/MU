@@ -27,23 +27,33 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tAZ-lJ-j7e">
                         <rect key="frame" x="0.0" y="0.0" width="503" height="502.5"/>
                         <subviews>
+<<<<<<< HEAD
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="OpF-VM-6du">
+=======
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="OpF-VM-6du">
+>>>>>>> 2c263b0d956e1780fa3a8f0c9c84d0dda2989d13
                                 <rect key="frame" x="0.0" y="0.0" width="503" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OpF-VM-6du" secondAttribute="height" multiplier="503:290" id="OWA-ya-l2Q"/>
                                 </constraints>
                             </imageView>
+<<<<<<< HEAD
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-LP-Mmm">
+                                <rect key="frame" x="9" y="304.5" width="1750.5" height="190.5"/>
+=======
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egO-CC-RR2">
                                 <rect key="frame" x="0.0" y="297.5" width="503" height="163.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-LP-Mmm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-LP-Mmm">
                                         <rect key="frame" x="16" y="0.0" width="471" height="163.5"/>
                                         <string key="text">Agenda utama Ed Woodward saat menyambangi Carrington Training Complex pagi ini waktu Manchester adalah untuk melanjutkan pembicaraan mengenai perencanaan klub untuk musim depan dengan Ole. Khususnya mengenai negosiasi perpanjangan kontrak...</string>
                                         <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+>>>>>>> 2c263b0d956e1780fa3a8f0c9c84d0dda2989d13
                                 <constraints>
                                     <constraint firstItem="Xu4-LP-Mmm" firstAttribute="top" secondItem="egO-CC-RR2" secondAttribute="top" id="2dV-BS-YIN"/>
                                     <constraint firstAttribute="bottom" secondItem="Xu4-LP-Mmm" secondAttribute="bottom" id="FAB-YK-t7A"/>
@@ -124,14 +134,14 @@
                 <outlet property="newsDescLabel" destination="Xu4-LP-Mmm" id="QfY-yq-RxO"/>
                 <outlet property="newsImageView" destination="OpF-VM-6du" id="uI6-gK-EX5"/>
                 <outlet property="shareButton" destination="AsY-pG-RC9" id="R9a-Sz-2N3"/>
-                <outlet property="timePostingLabel" destination="Tfl-Eb-CGz" id="7wV-lB-gb1"/>
+                <outlet property="timePostingLabel" destination="Tfl-Eb-CGz" id="Gj6-fe-P40"/>
             </connections>
             <point key="canvasLocation" x="692" y="318.89055472263868"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic-dislike" width="20" height="17"/>
-        <image name="ic-share" width="21" height="20"/>
+        <image name="ic-dislike" width="20" height="17.5"/>
+        <image name="ic-share" width="21.5" height="20"/>
         <image name="img-placeholder" width="414" height="290"/>
     </resources>
 </document>

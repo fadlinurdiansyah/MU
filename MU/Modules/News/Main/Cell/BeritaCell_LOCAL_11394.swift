@@ -47,9 +47,9 @@ class BeritaCell: UITableViewCell {
     // MARK: Lifecycle
     
     override func prepareForReuse() {
-//        newsImageView.image = nil
-//        newsDescLabel.text = nil
-//        timePostingLabel.text = nil
+        newsImageView.image = nil
+        newsDescLabel.text = nil
+        timePostingLabel.text = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -81,8 +81,21 @@ class BeritaCell: UITableViewCell {
         }
         
         if let pictureURL = newsData?.fullPicture {
-            newsImageView.sd_setImage(with:  pictureURL.toUrl(), placeholderImage: UIImage(named: "img-placeholder"))
-
+            newsImageView.sd_setImage(with: URL(string: pictureURL), placeholderImage: UIImage(named: "img-placeholder"), options: SDWebImageOptions.refreshCached) { (image, error, cacheType, url) in
+                self.newsImageView.image = image
+            }
         }
     }
+    
+    // MARK: Method hitung mundur waktu Kick Off
+    func getSecond(withTimeStamp time: String) -> String {
+        
+        let timePosting = time
+        let postDateFormat = DateFormatter()
+        postDateFormat.dateFormat = "yyyy-mm-dd HH:mm:ss"
+        let datePost = postDateFormat.date(from: timePosting)! as Date
+        
+        return datePost.timeAgoDisplay()
+    }
+   
 }

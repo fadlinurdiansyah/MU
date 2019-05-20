@@ -48,6 +48,7 @@ class NewsViewController: BaseViewController {
     func setupTableView() {
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
+        beritaTableView.register(LoadingCell.nib, forCellReuseIdentifier: LoadingCell.identifier)
         
         let refresher = PullToRefresh()
         self.beritaTableView.addPullToRefresh(refresher) {
@@ -84,9 +85,18 @@ extension NewsViewController: NewsView {
         beritaTableView.finishInfiniteScroll()
     }
     
+<<<<<<< HEAD
+    func getListNewsSuccess(withListNews listNews: ListNews) {
+        print("\(listNews)")
+        if let data = listNews.data {
+            newsData = data
+        }
+        self.beritaTableView.reloadData()
+=======
     func getListNewsSuccess() {
         newsData = presenter.getNewsItem()
         beritaTableView.reloadData()
+>>>>>>> c19da2aaf1ca7b476dc53628edfba560d7f7727b
     }
     
     func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
@@ -112,6 +122,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             return 1
         case .news?:
             return newsData.count
+        case .loading?:
+            return 1
         case .none:
             return 0
         }
@@ -132,6 +144,12 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
                 newsCell.delegate = self
                 return newsCell
             }
+        case .loading?:
+            if let loadingCell = beritaTableView.dequeueReusableCell(withIdentifier: LoadingCell.identifier) as? LoadingCell {
+                loadingCell.newsLoading.startAnimating()
+                return loadingCell
+            }
+            
         case .none:
             return UITableViewCell()
         }

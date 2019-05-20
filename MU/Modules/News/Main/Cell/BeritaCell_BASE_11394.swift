@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 protocol BeritaCellDelegate: class {
     func didTapButtonShare()
@@ -21,14 +20,14 @@ class BeritaCell: UITableViewCell {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var newsDescLabel: UILabel!
     @IBOutlet weak var newsImageView: UIImageView!
-    @IBOutlet weak var timePostingLabel: UILabel!
     
     var newsData: NewsData? {
         didSet {
-            updateUI()
+            newsDescLabel.text = newsData?.message
         }
     }
     
+   
     weak var delegate: BeritaCellDelegate?
     
     static var identifier: String {
@@ -45,15 +44,10 @@ class BeritaCell: UITableViewCell {
     }
     
     // MARK: Lifecycle
-    
-    override func prepareForReuse() {
-//        newsImageView.image = nil
-//        newsDescLabel.text = nil
-//        timePostingLabel.text = nil
-    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
     
@@ -64,25 +58,5 @@ class BeritaCell: UITableViewCell {
     @IBAction func shareButton(_ sender: Any) {
         delegate?.didTapButtonShare()
     }
-    
-    func updateUI() {
-        
-        guard let message = newsData?.message else {
-            return
-        }
-        newsDescLabel.text = message
-        
-        if let timePost = newsData?.createdTime {
-            let postDateFormat = DateFormatter()
-            postDateFormat.dateFormat = "yyyy-mm-dd HH:mm:ss"
-            let datePost = postDateFormat.date(from: timePost)! as Date
-            
-            timePostingLabel.text = datePost.timeAgoDisplay()
-        }
-        
-        if let pictureURL = newsData?.fullPicture {
-            newsImageView.sd_setImage(with:  pictureURL.toUrl(), placeholderImage: UIImage(named: "img-placeholder"))
-
-        }
-    }
+   
 }

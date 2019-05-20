@@ -48,6 +48,7 @@ class NewsViewController: BaseViewController {
     func setupTableView() {
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
+        beritaTableView.register(LoadingCell.nib, forCellReuseIdentifier: LoadingCell.identifier)
         
         let refresher = PullToRefresh()
         self.beritaTableView.addPullToRefresh(refresher) {
@@ -75,28 +76,30 @@ class NewsViewController: BaseViewController {
 
 extension NewsViewController: NewsView {
     func showLoading() {
-        self.showBlockLoading(withView: self.view)
+        // TODO: Show Block Loading Here
     }
     
     func hideLoading() {
-        self.stopBlockLoading()
         beritaTableView.endRefreshing(at: .top)
         beritaTableView.finishInfiniteScroll()
     }
     
+<<<<<<< HEAD
+    func getListNewsSuccess(withListNews listNews: ListNews) {
+        print("\(listNews)")
+        if let data = listNews.data {
+            newsData = data
+        }
+        self.beritaTableView.reloadData()
+=======
     func getListNewsSuccess() {
         newsData = presenter.getNewsItem()
         beritaTableView.reloadData()
+>>>>>>> 2c263b0d956e1780fa3a8f0c9c84d0dda2989d13
     }
     
     func getListNewsFailed(withErrorException error: ErrorExceptionAPI) {
-        if error.isTypeErrorConvertingJson() {
-            self.showShowServerError(withView: self.view)
-        } else if error.isTypeInternalServerError() {
-            self.showShowServerError(withView: self.view)
-        } else if error.isTypeNoInternetConnection() {
-            self.showErrorConnection(withView: self.view)
-        }
+        // TODO : Action for failure
     }
 }
 
@@ -112,6 +115,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             return 1
         case .news?:
             return newsData.count
+        case .loading?:
+            return 1
         case .none:
             return 0
         }
@@ -132,6 +137,12 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
                 newsCell.delegate = self
                 return newsCell
             }
+        case .loading?:
+            if let loadingCell = beritaTableView.dequeueReusableCell(withIdentifier: LoadingCell.identifier) as? LoadingCell {
+                loadingCell.newsLoading.startAnimating()
+                return loadingCell
+            }
+            
         case .none:
             return UITableViewCell()
         }

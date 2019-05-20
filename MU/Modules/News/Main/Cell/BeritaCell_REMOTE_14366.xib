@@ -36,10 +36,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egO-CC-RR2">
                                 <rect key="frame" x="0.0" y="297.5" width="503" height="163.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-LP-Mmm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-LP-Mmm">
                                         <rect key="frame" x="16" y="0.0" width="471" height="163.5"/>
                                         <string key="text">Agenda utama Ed Woodward saat menyambangi Carrington Training Complex pagi ini waktu Manchester adalah untuk melanjutkan pembicaraan mengenai perencanaan klub untuk musim depan dengan Ole. Khususnya mengenai negosiasi perpanjangan kontrak...</string>
                                         <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -124,14 +125,13 @@
                 <outlet property="newsDescLabel" destination="Xu4-LP-Mmm" id="QfY-yq-RxO"/>
                 <outlet property="newsImageView" destination="OpF-VM-6du" id="uI6-gK-EX5"/>
                 <outlet property="shareButton" destination="AsY-pG-RC9" id="R9a-Sz-2N3"/>
-                <outlet property="timePostingLabel" destination="Tfl-Eb-CGz" id="7wV-lB-gb1"/>
             </connections>
             <point key="canvasLocation" x="692" y="318.89055472263868"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic-dislike" width="20" height="17"/>
-        <image name="ic-share" width="21" height="20"/>
+        <image name="ic-dislike" width="20" height="17.5"/>
+        <image name="ic-share" width="21.5" height="20"/>
         <image name="img-placeholder" width="414" height="290"/>
     </resources>
 </document>
