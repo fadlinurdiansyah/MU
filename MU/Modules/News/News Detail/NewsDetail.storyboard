@@ -6,18 +6,24 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mukta-Regular.ttf">
+            <string>Mukta-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--NewsDetail-->
         <scene sceneID="5We-7B-J9h">
             <objects>
                 <viewController storyboardIdentifier="NewsDetailViewController" title="NewsDetail" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="NewsDetailViewController" customModule="MU" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1aI-fb-72i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-OW-Pdy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-OW-Pdy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
@@ -26,14 +32,73 @@
                                     <outlet property="delegate" destination="1dX-N7-XUl" id="kSW-3o-ZHi"/>
                                 </connections>
                             </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="xUn-4b-AsL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWk-fp-ZK6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="39w-5Y-zXG">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rOR-j9-vnB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9Q-tq-CPq">
+                                                        <rect key="frame" x="0.0" y="290" width="375" height="710"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58f-bi-0BW">
+                                                                <rect key="frame" x="9" y="14.5" width="351.5" height="532"/>
+                                                                <mutableString key="text">"Jose Mourinho: "Jika para pemain saya bisa menggambarkan saya dalam satu kata? Itu tergantung, bagi beberapa pemain mungkin saya dikira bajingan. Mengapa Anda harus memilih saya? Sebelum menanyakan itu, Anda harus memahami bahwa Anda bisa berbicara dengan saya, jika Anda hanya ingin menang. Jika Anda ingin menang, dan Anda punya kondisi untuk menang, maka kita bisa berbicara." "Kebajikan saya: pengalaman, ambisi liar dan pengetahuan. Keburukan saya: ketidakmampuan untuk menerima kekalahan, ketidakmampuan untuk bertahan dengan seseorang yang tidak punya motivasi seperti saya. Perbedaan antara Jose sebagai manajer dan sosok biasa: sebagai sosok biasa saya pendiam, sensitif dan tidak egois. Jose sebagai manajer itu praktis, pintar dan dominan. Saya sangat menyukai Jose sebagai sosok biasa, sayang sekali orang-orang hanya mengetahui sisi saya sebagai manajer ketimbang sosok biasa." (DAZN)"</mutableString>
+                                                                <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="58f-bi-0BW" firstAttribute="leading" secondItem="U9Q-tq-CPq" secondAttribute="leading" constant="9" id="9VS-WW-NXE"/>
+                                                            <constraint firstItem="58f-bi-0BW" firstAttribute="top" secondItem="U9Q-tq-CPq" secondAttribute="top" constant="14.699999999999999" id="OKE-rk-BkQ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="58f-bi-0BW" secondAttribute="trailing" constant="14.699999999999999" id="Xvs-Mp-jv4"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="39w-5Y-zXG" secondAttribute="bottom" id="5hQ-76-b4E"/>
+                                            <constraint firstItem="39w-5Y-zXG" firstAttribute="leading" secondItem="AWk-fp-ZK6" secondAttribute="leading" id="86y-5b-L8O"/>
+                                            <constraint firstItem="39w-5Y-zXG" firstAttribute="top" secondItem="AWk-fp-ZK6" secondAttribute="top" id="fNz-PF-N6N"/>
+                                            <constraint firstAttribute="trailing" secondItem="39w-5Y-zXG" secondAttribute="trailing" id="hk5-C0-8XB"/>
+                                            <constraint firstAttribute="height" constant="1000" id="scz-wV-2vl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AWk-fp-ZK6" firstAttribute="top" secondItem="xUn-4b-AsL" secondAttribute="top" id="IZ7-nY-uhq"/>
+                                    <constraint firstItem="AWk-fp-ZK6" firstAttribute="leading" secondItem="xUn-4b-AsL" secondAttribute="leading" id="QVZ-Mb-6Kt"/>
+                                    <constraint firstAttribute="bottom" secondItem="AWk-fp-ZK6" secondAttribute="bottom" id="c8H-0A-K4T"/>
+                                    <constraint firstAttribute="trailing" secondItem="AWk-fp-ZK6" secondAttribute="trailing" id="d9e-zB-ey2"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KtQ-Jj-OWe" firstAttribute="trailing" secondItem="xUn-4b-AsL" secondAttribute="trailing" id="2h6-Al-o7J"/>
+                            <constraint firstItem="KtQ-Jj-OWe" firstAttribute="bottom" secondItem="xUn-4b-AsL" secondAttribute="bottom" id="E6y-LX-wmp"/>
                             <constraint firstAttribute="trailing" secondItem="xoh-OW-Pdy" secondAttribute="trailing" id="EDn-gT-DRL"/>
                             <constraint firstItem="xoh-OW-Pdy" firstAttribute="leading" secondItem="1aI-fb-72i" secondAttribute="leading" id="H26-RN-t1g"/>
+                            <constraint firstItem="AWk-fp-ZK6" firstAttribute="width" secondItem="1aI-fb-72i" secondAttribute="width" id="Oao-36-MqL"/>
                             <constraint firstAttribute="bottom" secondItem="xoh-OW-Pdy" secondAttribute="bottom" id="j7w-Ju-Iwg"/>
+                            <constraint firstItem="xUn-4b-AsL" firstAttribute="top" secondItem="1aI-fb-72i" secondAttribute="top" id="pQt-Tb-qfx"/>
+                            <constraint firstItem="xUn-4b-AsL" firstAttribute="leading" secondItem="KtQ-Jj-OWe" secondAttribute="leading" id="uV6-CW-D8D"/>
                             <constraint firstItem="xoh-OW-Pdy" firstAttribute="top" secondItem="1aI-fb-72i" secondAttribute="top" id="xSu-Ly-H9A"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="KtQ-Jj-OWe"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xoh-OW-Pdy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="newsDetailTableView" destination="xoh-OW-Pdy" id="MjF-uJ-SoW"/>
@@ -41,7 +106,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977511244377816"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img-placeholder" width="414" height="290"/>
+    </resources>
 </document>

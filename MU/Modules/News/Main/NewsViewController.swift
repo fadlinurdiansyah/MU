@@ -49,25 +49,33 @@ class NewsViewController: BaseViewController {
         beritaTableView.register(MatchCell.nib, forCellReuseIdentifier: MatchCell.identifier)
         beritaTableView.register(BeritaCell.nib, forCellReuseIdentifier: BeritaCell.identifier)
         
+        // Add pull refresh on tableview
         let refresher = PullToRefresh()
         self.beritaTableView.addPullToRefresh(refresher) {
             self.presenter?.reloadFirstPage()
         }
         
+        //Setup table view with infinity scroll
         setTableViewInfiniteScroll()
     }
 
     func setTableViewInfiniteScroll() {
+        
+        //Add view on bottom tableview
         beritaTableView.bottomLoading(withView: self.view)
+        
+        //Stop infinity view animation and reset scroll state
         beritaTableView.setShouldShowInfiniteScrollHandler({[unowned self] _ in
-            return self.presenter?.hasNext ?? false
+            return self.presenter?.hasNext ?? false //set has next value with false
         })
         
+        //Add infinity view on tableview and load table view with new data
         beritaTableView.addInfiniteScroll {[unowned self](_) -> Void in
             self.presenter?.loadNextPage()
         }
     }
     
+    //Load data into tableview
     func loadPage() {
         self.presenter.loadFirstPage()
     }
@@ -103,7 +111,7 @@ extension NewsViewController: NewsView {
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
