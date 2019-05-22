@@ -19,6 +19,8 @@ class NewsDetailViewController: BaseViewController {
     
     // MARK: Properties
     @IBOutlet weak var newsDetailTableView: UITableView!
+    @IBOutlet weak var detailNewsImage: UIImageView!
+    @IBOutlet weak var descNewsLabel: UILabel!
     
     var presenter: NewsDetailPresenter!
     
@@ -40,7 +42,7 @@ class NewsDetailViewController: BaseViewController {
         newsDetailTableView.register(NewsDetailCell.nib, forCellReuseIdentifier: NewsDetailCell.identifier)
         
         setupNavbar()
-        
+        setupUI()
     }
     
     func setupNavbar() {
@@ -52,6 +54,11 @@ class NewsDetailViewController: BaseViewController {
         navigationItem.leftBarButtonItem = backButton
         navigationItem.rightBarButtonItem = shareButton
         
+    }
+    
+    func setupUI() {
+        let data = presenter.getNewsData()
+        print("\(data)")
     }
     
     @objc func handleBackView() {

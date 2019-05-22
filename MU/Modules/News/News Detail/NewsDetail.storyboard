@@ -49,7 +49,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58f-bi-0BW">
                                                                 <rect key="frame" x="9" y="14.5" width="351.5" height="532"/>
-                                                                <mutableString key="text">"Jose Mourinho: "Jika para pemain saya bisa menggambarkan saya dalam satu kata? Itu tergantung, bagi beberapa pemain mungkin saya dikira bajingan. Mengapa Anda harus memilih saya? Sebelum menanyakan itu, Anda harus memahami bahwa Anda bisa berbicara dengan saya, jika Anda hanya ingin menang. Jika Anda ingin menang, dan Anda punya kondisi untuk menang, maka kita bisa berbicara." "Kebajikan saya: pengalaman, ambisi liar dan pengetahuan. Keburukan saya: ketidakmampuan untuk menerima kekalahan, ketidakmampuan untuk bertahan dengan seseorang yang tidak punya motivasi seperti saya. Perbedaan antara Jose sebagai manajer dan sosok biasa: sebagai sosok biasa saya pendiam, sensitif dan tidak egois. Jose sebagai manajer itu praktis, pintar dan dominan. Saya sangat menyukai Jose sebagai sosok biasa, sayang sekali orang-orang hanya mengetahui sisi saya sebagai manajer ketimbang sosok biasa." (DAZN)"</mutableString>
+                                                                <string key="text">"Jose Mourinho: "Jika para pemain saya bisa menggambarkan saya dalam satu kata? Itu tergantung, bagi beberapa pemain mungkin saya dikira bajingan. Mengapa Anda harus memilih saya? Sebelum menanyakan itu, Anda harus memahami bahwa Anda bisa berbicara dengan saya, jika Anda hanya ingin menang. Jika Anda ingin menang, dan Anda punya kondisi untuk menang, maka kita bisa berbicara." "Kebajikan saya: pengalaman, ambisi liar dan pengetahuan. Keburukan saya: ketidakmampuan untuk menerima kekalahan, ketidakmampuan untuk bertahan dengan seseorang yang tidak punya motivasi seperti saya. Perbedaan antara Jose sebagai manajer dan sosok biasa: sebagai sosok biasa saya pendiam, sensitif dan tidak egois. Jose sebagai manajer itu praktis, pintar dan dominan. Saya sangat menyukai Jose sebagai sosok biasa, sayang sekali orang-orang hanya mengetahui sisi saya sebagai manajer ketimbang sosok biasa." (DAZN)"</string>
                                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -101,6 +101,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="descNewsLabel" destination="58f-bi-0BW" id="aGo-aX-g3d"/>
+                        <outlet property="detailNewsImage" destination="rOR-j9-vnB" id="jQY-IL-CtQ"/>
                         <outlet property="newsDetailTableView" destination="xoh-OW-Pdy" id="MjF-uJ-SoW"/>
                     </connections>
                 </viewController>

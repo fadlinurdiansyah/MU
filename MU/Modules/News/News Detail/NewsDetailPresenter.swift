@@ -14,6 +14,7 @@ protocol NewsDetailViewPresenter: class {
     
     func getLinkShare() -> String
     func getTextShare() -> String
+    func getNewsData() -> [NewsData]?
     
 }
 
@@ -22,13 +23,14 @@ protocol NewsDetailView: class {
 }
 
 class NewsDetailPresenter: NewsDetailViewPresenter {
-    
+   
     static func config(withNewsDetailViewController viewController: NewsDetailViewController) {
         let presenter = NewsDetailPresenter(view: viewController)
         viewController.presenter = presenter
     }
     
     let view: NewsDetailView
+    var listNewsItemDetail: [NewsData]?
     
     required init(view: NewsDetailView) {
         self.view = view
@@ -44,5 +46,9 @@ class NewsDetailPresenter: NewsDetailViewPresenter {
         let shareText = "Dapatkan informasi terupdate tentang Manchester United"
         
         return shareText
+    }
+    
+    func getNewsData() -> [NewsData]? {
+        return listNewsItemDetail
     }
 }

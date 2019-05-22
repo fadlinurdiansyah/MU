@@ -24,6 +24,7 @@ class NewsViewController: BaseViewController {
     
     var presenter: NewsPresenter!
     var newsData: [NewsData] = []
+    var newsDetailPresenter: NewsDetailPresenter?
     
     // MARK: Lifecycle
     
