@@ -63,6 +63,7 @@ PODS:
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.1)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.2.1)"
   - GTMSessionFetcher/Core (1.2.2)
+  - Hero (1.4.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - Firebase/Core (~> 4.9.0)
   - Firebase/Database
   - Firebase/Storage
+  - Hero
   - NVActivityIndicatorView
   - PullToRefresher
   - ReachabilitySwift
@@ -111,6 +113,7 @@ SPEC REPOS:
     - FirebaseStorage
     - GoogleToolboxForMac
     - GTMSessionFetcher
+    - Hero
     - leveldb-library
     - nanopb
     - NVActivityIndicatorView
@@ -134,6 +137,7 @@ SPEC CHECKSUMS:
   FirebaseStorage: 181bb543d39ee3c53e0558de7ba86b1286a0427f
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
@@ -144,6 +148,6 @@ SPEC CHECKSUMS:
   SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: d7fea1a71e455c1fac881b69d07745e79e486677
+PODFILE CHECKSUM: 0d4e65c2b38298ac0c611b1d376a521e12bd7b77
 
-COCOAPODS: 1.7.0.rc.2
+COCOAPODS: 1.7.0.rc.1

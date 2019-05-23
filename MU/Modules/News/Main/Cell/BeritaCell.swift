@@ -23,11 +23,11 @@ class BeritaCell: UITableViewCell {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var timePostingLabel: UILabel!
     
-    var newsData: NewsData? {
+    var newsData: NewsData? /*{
         didSet {
             updateUI()
         }
-    }
+    }*/
     
     weak var delegate: BeritaCellDelegate?
     
@@ -81,7 +81,7 @@ class BeritaCell: UITableViewCell {
         }
         
         if let pictureURL = newsData?.fullPicture {
-            newsImageView.sd_setImage(with:  pictureURL.toUrl(), placeholderImage: UIImage(named: "img-placeholder"))
+            newsImageView.sd_setImage(with: pictureURL.toUrl(), placeholderImage: UIImage(named: "img-placeholder"))
 
         }
     }

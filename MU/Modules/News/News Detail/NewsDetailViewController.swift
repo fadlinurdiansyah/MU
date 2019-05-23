@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 extension SegueConstants {
     enum NewsDetail {
@@ -38,7 +39,8 @@ class NewsDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hero.isEnabled = true
+        self.view.hero.modifiers = [.source(heroID: "cell-\(presenter.getHeroId())")]
         newsDetailTableView.register(NewsDetailCell.nib, forCellReuseIdentifier: NewsDetailCell.identifier)
         
         setupNavbar()
@@ -57,8 +59,22 @@ class NewsDetailViewController: BaseViewController {
     }
     
     func setupUI() {
-        let data = presenter.getNewsData()
-        print("\(data)")
+        guard
+            let data = presenter.getNewsData(),
+            let pictureStringURL = data.fullPicture,
+            let message = data.message
+        else {
+            self.handleBackView()
+            return
+        }
+        
+        detailNewsImage.hero.id = "cell-image-\(presenter.getHeroId())"
+        detailNewsImage.hero.modifiers = [.fade]
+        detailNewsImage.sd_setImage(with: pictureStringURL.toUrl(), placeholderImage: UIImage(named: "img-placeholder"))
+        
+        descNewsLabel.hero.id = "cell-label-\(presenter.getHeroId())"
+        descNewsLabel.hero.modifiers = [.fade]
+        descNewsLabel.text = message
     }
     
     @objc func handleBackView() {

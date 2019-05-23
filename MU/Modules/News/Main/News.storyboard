@@ -31,6 +31,9 @@
                             <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="20"/>
                         </textAttributes>
                     </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="1dX-N7-XUl" kind="relationship" relationship="rootViewController" id="Sgj-IV-mL8"/>
                     </connections>
@@ -88,12 +91,12 @@
                 <viewControllerPlaceholder storyboardName="NewsDetail" id="WPl-m1-AAg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7Z-PT-n2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144" y="-118"/>
+            <point key="canvasLocation" x="146" y="-110"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ic-news" width="23" height="27"/>
-        <image name="ic-player" width="23" height="26"/>
-        <image name="ic-schedule" width="28" height="29"/>
+        <image name="ic-news" width="23" height="27.5"/>
+        <image name="ic-player" width="23" height="26.5"/>
+        <image name="ic-schedule" width="28.5" height="29"/>
     </resources>
 </document>
