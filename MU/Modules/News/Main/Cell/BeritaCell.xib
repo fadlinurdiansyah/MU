@@ -58,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posting Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-Eb-CGz">
-                                                <rect key="frame" x="56.5" y="1.5" width="54.5" height="17"/>
+                                                <rect key="frame" x="54.5" y="4" width="59" height="12"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -117,8 +117,15 @@
                     <constraint firstItem="tAZ-lJ-j7e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KMq-Jr-TZr"/>
                     <constraint firstAttribute="bottom" secondItem="tAZ-lJ-j7e" secondAttribute="bottom" id="WvT-Kq-m3d"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="likeButton" destination="Rgz-OL-vg2" id="fBS-1e-Nir"/>
                 <outlet property="newsDescLabel" destination="Xu4-LP-Mmm" id="QfY-yq-RxO"/>

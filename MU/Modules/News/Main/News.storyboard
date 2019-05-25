@@ -73,6 +73,9 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="beritaTableView" destination="4c8-Vr-gmG" id="VzJ-dB-Kb9"/>
                         <segue destination="WPl-m1-AAg" kind="show" identifier="showNewsDetail" id="NP6-ji-ITX"/>

@@ -100,6 +100,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="descNewsLabel" destination="58f-bi-0BW" id="aGo-aX-g3d"/>
                         <outlet property="detailNewsImage" destination="rOR-j9-vnB" id="jQY-IL-CtQ"/>

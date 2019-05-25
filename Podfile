@@ -19,6 +19,7 @@ pod 'CHIPageControl'
 pod 'ReachabilitySwift'
 pod 'UIScrollView-InfiniteScroll'
 pod 'PullToRefresher'
+pod 'Hero'
 
 end
 

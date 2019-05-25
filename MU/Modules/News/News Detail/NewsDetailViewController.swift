@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 extension SegueConstants {
     enum NewsDetail {
