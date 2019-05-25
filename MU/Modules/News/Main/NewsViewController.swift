@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import PullToRefresh
 import UIScrollView_InfiniteScroll
+import Hero
 
 extension SegueConstants {
     enum News {
@@ -31,6 +32,7 @@ class NewsViewController: BaseViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         NewsPresenter.config(withNewsViewController: self)
+        self.hero.isEnabled = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +46,17 @@ class NewsViewController: BaseViewController {
         
         setupTableView()
         loadPage()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueConstants.News.showNewsDetail {
+            if let viewController = segue.destination as? NewsDetailViewController {
+                if let data = sender as? NewsData {
+                    viewController.presenter.data = data
+                    viewController.presenter.heroId = presenter.getSelectedRow()
+                }
+            }
+        }
     }
     
     func setupTableView() {
@@ -134,9 +147,13 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .news?:
             if let newsCell = beritaTableView.dequeueReusableCell(withIdentifier: BeritaCell.identifier, for: indexPath) as? BeritaCell {
+                newsCell.hero.id = "cell-\(indexPath.row)"
+                newsCell.newsImageView.hero.id = "cell-image-\(indexPath.row)"
+                newsCell.newsDescLabel.hero.id = "cell-label-\(indexPath.row)"
                 if self.newsData.indices.contains(indexPath.row) {
                     let data = newsData[indexPath.row]
                     newsCell.newsData = data
+                    newsCell.updateUI()
                 }
                 newsCell.delegate = self
                 return newsCell
@@ -149,10 +166,13 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter.selectedRow = indexPath.row
         switch NewsSection(rawValue: indexPath.section) {
         case .news?:
-            performSegue(withIdentifier: SegueConstants.News.showNewsDetail, sender: self)
+            if self.newsData.indices.contains(indexPath.row) {
+                let data = newsData[indexPath.row]
+                performSegue(withIdentifier: SegueConstants.News.showNewsDetail, sender: data)
+            }
         default:
             break
         }

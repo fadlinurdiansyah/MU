@@ -18,6 +18,7 @@ protocol NewsViewPresenter: class {
     func getLinkShareOnNews() -> String
     func getTextShareOnNews() -> String
     func getNewsItem() -> [NewsData]
+    func getSelectedRow() -> Int
 }
 
 protocol NewsView: class {
@@ -40,6 +41,7 @@ class NewsPresenter: NewsViewPresenter {
     var hasNext: Bool = true // flag check has nxt page
     var isShowLoading = false // flag misalkan di view ada loading yg blok halaman pas request
     var listNewsItems: [NewsData] = []
+    var selectedRow: Int = 0
     
     required init(view: NewsView) {
         self.view = view
@@ -110,5 +112,9 @@ class NewsPresenter: NewsViewPresenter {
     
     func getNewsItem() -> [NewsData] {
         return listNewsItems
+    }
+    
+    func getSelectedRow() -> Int {
+        return selectedRow
     }
 }

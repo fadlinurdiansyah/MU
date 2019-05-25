@@ -71,4 +71,8 @@ class BaseViewController: UIViewController {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         loadingView?.stop()
     }
+    
+    func viewController(forStoryboardName: String) -> UIViewController? {
+        return UIStoryboard(name: forStoryboardName, bundle: nil).instantiateInitialViewController()
+    }
 }
