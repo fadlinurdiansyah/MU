@@ -23,6 +23,7 @@ class MUAPI {
         static let baseUrl = "LINK API PRODUCTION HERE"
         #else
         static let baseUrl = "https://api.muid.site"
+        static let sportsDBUrl = "https://www.thesportsdb.com/api/v1/json/1/"
         #endif
     }
     

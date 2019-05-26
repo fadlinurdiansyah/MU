@@ -23,11 +23,7 @@ class BeritaCell: UITableViewCell {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var timePostingLabel: UILabel!
     
-    var newsData: NewsData? /*{
-        didSet {
-            updateUI()
-        }
-    }*/
+    var newsData: NewsData?
     
     weak var delegate: BeritaCellDelegate?
     
@@ -46,12 +42,6 @@ class BeritaCell: UITableViewCell {
     
     // MARK: Lifecycle
     
-    override func prepareForReuse() {
-//        newsImageView.image = nil
-//        newsDescLabel.text = nil
-//        timePostingLabel.text = nil
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state

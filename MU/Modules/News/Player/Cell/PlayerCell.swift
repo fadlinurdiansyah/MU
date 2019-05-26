@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PlayerCell: UICollectionViewCell {
+    
+    // MARK: Properties
+    
+    @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var playerNameLabel: UILabel!
+    var playerData: Player?
+    
     
     static var identifier: String {
         return String(describing: self)
@@ -20,7 +28,18 @@ class PlayerCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        playerImage.image = UIImage(named: "img-player-placeholder")?.imageWithGradient()
+    }
+    
+    func updateUI() {
+        guard let playerName = playerData?.strPlayer else { return }
+        playerNameLabel.text = playerName
+        
+        if let playerPicURL = playerData?.strCutout {
+            playerImage.sd_setImage(with: playerPicURL.toUrl(), placeholderImage: UIImage(named: "img-player-placeholder"))
+        }
+        
     }
 
 }

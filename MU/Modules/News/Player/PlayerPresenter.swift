@@ -11,11 +11,12 @@ import SwiftyJSON
 
 protocol PlayerViewPresenter: class {
     init(view: PlayerView)
-    // TODO: Declare view presenter methods
+    func loadPage()
+    func getPlayerItem() -> [Player]
 }
 
 protocol PlayerView: class {
-    // TODO: Declare view methods
+    func getListPlayerSuccess()
 }
 
 class PlayerPresenter: PlayerViewPresenter {
@@ -26,10 +27,39 @@ class PlayerPresenter: PlayerViewPresenter {
     }
     
     let view: PlayerView
+    let team = "Man United"
+    var listPlayerItems: [Player] = []
     
     required init(view: PlayerView) {
         self.view = view
     }
     
-    // TODO: Implement view presenter methods
+    func loadPage() {
+        getListPlayer()
+    }
+    
+    func getListPlayer() {
+        let playerRequest = PlayerRequest()
+        playerRequest.team = team
+        
+        MUAPI.instance.request(ApiPlayer.getListPlayer(request: playerRequest), success: { (json) in
+            let listPlayerDAO = ListPlayerDAO(json: json)
+            
+            if let listPlayer = listPlayerDAO.listPlayers {
+                
+                self.listPlayerItems.append(contentsOf: listPlayer.player)
+                self.view.getListPlayerSuccess()
+            } else {
+                
+                print("Error append list player")
+            }
+            
+        }) { (error) in
+            print("\(error)")
+        }
+    }
+    
+    func getPlayerItem() -> [Player] {
+        return listPlayerItems
+    }
 }

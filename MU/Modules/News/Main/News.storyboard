@@ -71,6 +71,9 @@
                     <navigationItem key="navigationItem" title="Berita" id="Vls-nz-kGK">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="ic-player" id="Y2I-FQ-ZGW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="d6L-2s-PUG" kind="presentation" identifier="showPlayer" id="Zkg-iM-4z0"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="ic-schedule" id="kC7-cs-fuQ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,6 +91,14 @@
             </objects>
             <point key="canvasLocation" x="-465" y="-110"/>
         </scene>
+        <!--Player-->
+        <scene sceneID="V49-Nv-c8P">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Player" id="d6L-2s-PUG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyq-N0-zN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="-149"/>
+        </scene>
         <!--NewsDetail-->
         <scene sceneID="2Kf-HB-cP1">
             <objects>
@@ -98,8 +109,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic-news" width="23" height="27.5"/>
-        <image name="ic-player" width="23" height="26.5"/>
-        <image name="ic-schedule" width="28.5" height="29"/>
+        <image name="ic-news" width="23" height="27"/>
+        <image name="ic-player" width="23" height="26"/>
+        <image name="ic-schedule" width="28" height="29"/>
     </resources>
 </document>
