@@ -18,19 +18,19 @@ extension UIImage {
         self.draw(at: CGPoint(x: 0, y: 0))
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let locations: [CGFloat] = [1.0, 0.0]
+        let locations: [CGFloat] = [1.0, 0.5]
         
         //Location untuk horizontal gradient [x , y]
         //        let locations: [CGFloat] = [0.0, 1.0]
         
         let bottomColor = UIColor.clear.cgColor
-        let topColor = UIColor.gray.cgColor
+        let topColor = UIColor.black.cgColor
         let colors = [topColor, bottomColor] as CFArray
         
         let gradient = CGGradient(colorsSpace: colorSpace, colors: colors, locations: locations )
         
-        let startPoint = CGPoint(x: self.size.width / 2, y: 10)
-        let endPoint = CGPoint(x: self.size.width / 2, y: self.size.height + 30)
+        let startPoint = CGPoint(x: self.size.width / 2, y: 0)
+        let endPoint = CGPoint(x: self.size.width / 2, y: self.size.height)
         
         //Horizontal Gradient
         //        let startPoint = CGPoint(x: 0, y: img.size.height / 2)
@@ -45,7 +45,6 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         return image!
-        
     }
     
 }

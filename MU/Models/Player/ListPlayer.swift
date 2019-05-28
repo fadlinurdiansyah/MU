@@ -61,7 +61,7 @@ class Player {
     let strDescriptionPL: Any?
     let strGender: String?
     let strSide: String?
-    let strPosition: String?
+    let strPosition: String
     let strCollege: Any?
     let strFacebook: String?
     let strWebsite: String?

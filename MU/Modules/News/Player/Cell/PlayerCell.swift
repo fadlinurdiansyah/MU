@@ -17,7 +17,6 @@ class PlayerCell: UICollectionViewCell {
     @IBOutlet weak var playerNameLabel: UILabel!
     var playerData: Player?
     
-    
     static var identifier: String {
         return String(describing: self)
     }
@@ -37,7 +36,11 @@ class PlayerCell: UICollectionViewCell {
         playerNameLabel.text = playerName
         
         if let playerPicURL = playerData?.strCutout {
-            playerImage.sd_setImage(with: playerPicURL.toUrl(), placeholderImage: UIImage(named: "img-player-placeholder"))
+//            playerImage.sd_setImage(with: playerPicURL.toUrl(), placeholderImage: UIImage(named: "img-player-placeholder"))
+            
+            playerImage.sd_setImage(with: playerPicURL.toUrl(), placeholderImage: UIImage(named: "img-player-placeholder"), options: SDWebImageOptions.init(rawValue: 0)) { (image, error, cahceType, url) in
+                self.playerImage.image = image?.imageWithGradient()
+            }
         }
         
     }

@@ -56,12 +56,30 @@ class PlayerViewController: BaseViewController {
 extension PlayerViewController: PlayerView {
     
     func getListPlayerSuccess() {
-        playerData = presenter.getPlayerItem()
+        playerData = presenter.getPlayerItem().sorted { $0.strPosition < $1.strPosition }
         playerCollectionView.reloadData()
+    }
+    
+    func showLoading() {
+        self.showBlockLoading(withView: self.view)
+    }
+    
+    func hideLoading() {
+        self.stopBlockLoading()
+    }
+    
+    func getListPlayerFailed(withErrorException error: ErrorExceptionAPI) {
+        if error.isTypeErrorConvertingJson() {
+            self.showShowServerError(withView: self.view)
+        } else if error.isTypeInternalServerError() {
+            self.showShowServerError(withView: self.view)
+        } else if error.isTypeNoInternetConnection() {
+            self.showErrorConnection(withView: self.view)
+        }
     }
 }
 
-extension PlayerViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension PlayerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerData.count
@@ -83,6 +101,17 @@ extension PlayerViewController: UICollectionViewDelegate, UICollectionViewDataSo
             
             return UICollectionViewCell()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let leftSpace = 16
+        let rightSpace = 16
+        let centerSpace = 0
+        let frameWidth = self.view.frame.width
+        let cellWidth = ((frameWidth / 2) - CGFloat(leftSpace + centerSpace + rightSpace))
+        
+        return CGSize(width: cellWidth, height: cellWidth)
     }
     
 }

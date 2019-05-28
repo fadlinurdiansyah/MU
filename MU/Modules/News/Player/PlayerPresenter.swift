@@ -17,6 +17,9 @@ protocol PlayerViewPresenter: class {
 
 protocol PlayerView: class {
     func getListPlayerSuccess()
+    func getListPlayerFailed(withErrorException error: ErrorExceptionAPI)
+    func showLoading()
+    func hideLoading()
 }
 
 class PlayerPresenter: PlayerViewPresenter {
@@ -29,12 +32,14 @@ class PlayerPresenter: PlayerViewPresenter {
     let view: PlayerView
     let team = "Man United"
     var listPlayerItems: [Player] = []
+    var isShowLoading = false
     
     required init(view: PlayerView) {
         self.view = view
     }
     
     func loadPage() {
+        isShowLoading = true
         getListPlayer()
     }
     
@@ -42,20 +47,26 @@ class PlayerPresenter: PlayerViewPresenter {
         let playerRequest = PlayerRequest()
         playerRequest.team = team
         
+        if isShowLoading {
+            view.showLoading()
+        }
+        
         MUAPI.instance.request(ApiPlayer.getListPlayer(request: playerRequest), success: { (json) in
             let listPlayerDAO = ListPlayerDAO(json: json)
             
             if let listPlayer = listPlayerDAO.listPlayers {
                 
                 self.listPlayerItems.append(contentsOf: listPlayer.player)
+                self.view.hideLoading()
                 self.view.getListPlayerSuccess()
             } else {
                 
-                print("Error append list player")
+                self.view.getListPlayerFailed(withErrorException: InternalServerErrorException())
             }
             
         }) { (error) in
-            print("\(error)")
+            self.view.hideLoading()
+            self.view.getListPlayerFailed(withErrorException: error)
         }
     }
     

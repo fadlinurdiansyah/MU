@@ -10,7 +10,7 @@ import UIKit
 
 class LoadingCell: UITableViewCell {
     
-    //MARK: Properties
+    // MARK: Properties
     
     @IBOutlet weak var newsLoading: UIActivityIndicatorView!
     @IBOutlet weak var textNewsLoading: UILabel!
