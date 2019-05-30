@@ -31,10 +31,6 @@ class PlayerViewController: BaseViewController {
         PlayerPresenter.config(withPlayerViewController: self)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.setColors(backgroundWithColor: ColorConstants.primaryRed, textWithColor: UIColor.white)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,11 +41,6 @@ class PlayerViewController: BaseViewController {
     
     func setupCollectionView() {
         playerCollectionView.register(PlayerCell.nib, forCellWithReuseIdentifier: PlayerCell.identifier)
-    }
-    
-    @IBAction func backBarButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        print("Tess Back")
     }
 }
 
@@ -110,8 +101,9 @@ extension PlayerViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let centerSpace = 0
         let frameWidth = self.view.frame.width
         let cellWidth = ((frameWidth / 2) - CGFloat(leftSpace + centerSpace + rightSpace))
+        let cellHeight = cellWidth
         
-        return CGSize(width: cellWidth, height: cellWidth)
+        return CGSize(width: cellWidth, height: cellHeight)
     }
     
 }

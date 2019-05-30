@@ -72,11 +72,14 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="ic-player" id="Y2I-FQ-ZGW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="d6L-2s-PUG" kind="presentation" identifier="showPlayer" id="Zkg-iM-4z0"/>
+                                <segue destination="d6L-2s-PUG" kind="show" id="TTx-ve-BTG"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="ic-schedule" id="kC7-cs-fuQ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="z6x-HK-Gyn" kind="show" id="hvh-EP-OIW"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <userDefinedRuntimeAttributes>
@@ -90,6 +93,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-465" y="-110"/>
+        </scene>
+        <!--MainSchAndStand-->
+        <scene sceneID="uSs-v9-xLb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainSchAndStand" id="z6x-HK-Gyn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Urg-AG-8is" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="-194"/>
         </scene>
         <!--Player-->
         <scene sceneID="V49-Nv-c8P">
@@ -105,7 +116,7 @@
                 <viewControllerPlaceholder storyboardName="NewsDetail" id="WPl-m1-AAg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7Z-PT-n2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="-110"/>
+            <point key="canvasLocation" x="196" y="-110"/>
         </scene>
     </scenes>
     <resources>

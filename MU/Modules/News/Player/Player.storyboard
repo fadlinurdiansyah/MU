@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="79j-RV-v3E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dX-N7-XUl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Player-->
+        <!--Pemain-->
         <scene sceneID="5We-7B-J9h">
             <objects>
-                <viewController storyboardIdentifier="PlayerViewController" title="Player" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="PlayerViewController" customModule="MU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerViewController" title="Pemain" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="PlayerViewController" customModule="MU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TI4-sc-Zv5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="13.300000000000001" minimumInteritemSpacing="0.0" id="8Im-Ke-Ebd">
                                     <size key="itemSize" width="186.69999999999999" height="186.69999999999999"/>
@@ -43,14 +43,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pemain" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="J19-KI-z0b">
-                        <barButtonItem key="leftBarButtonItem" image="ic-back-default" style="plain" id="TuU-3L-aIt">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="backBarButton:" destination="1dX-N7-XUl" id="t0m-0U-7jh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="playerCollectionView" destination="TI4-sc-Zv5" id="GUo-fY-VtT"/>
                     </connections>
@@ -59,31 +51,5 @@
             </objects>
             <point key="canvasLocation" x="938.39999999999998" y="-0.44977511244377816"/>
         </scene>
-        <!--Pemain-->
-        <scene sceneID="SgA-1Z-fe5">
-            <objects>
-                <navigationController title="Pemain" automaticallyAdjustsScrollViewInsets="NO" id="79j-RV-v3E" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="ic-back-default" id="HYQ-sx-Rn6">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.7803921568627451" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="20"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="1dX-N7-XUl" kind="relationship" relationship="rootViewController" id="nch-3K-07K"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lst-cR-vRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977511244377816"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="ic-back-default" width="11" height="21"/>
-    </resources>
 </document>
