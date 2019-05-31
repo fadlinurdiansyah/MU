@@ -67,10 +67,12 @@ class StandingPresenter: StandingViewPresenter {
                 self.view.getListStandingFailed(withErrorException: InternalServerErrorException())
             }
             
-        }) { (error) in
+        }, exception: { (error) in
             
             self.view.getListStandingFailed(withErrorException: error)
         }
+        
+        )
     }
 
     func getListStandingItem() -> [Table] {

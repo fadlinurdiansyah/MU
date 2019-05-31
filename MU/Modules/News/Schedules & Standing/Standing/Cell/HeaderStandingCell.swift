@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeaderStandingCell: UITableViewHeaderFooterView {
+class HeaderStandingCell: UITableViewCell {
     
     static var identifier: String {
         return String(describing: self)

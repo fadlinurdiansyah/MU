@@ -130,9 +130,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="143.5" id="Nha-WL-Lhc"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.36862745098039218" green="0.3529411764705882" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,14 +137,15 @@
                             <constraint firstAttribute="bottom" secondItem="wAI-dO-apd" secondAttribute="bottom" id="Pp4-E4-uvE"/>
                             <constraint firstAttribute="trailing" secondItem="wAI-dO-apd" secondAttribute="trailing" id="QgY-Oc-6wC"/>
                             <constraint firstItem="wAI-dO-apd" firstAttribute="top" secondItem="rFG-0L-6sm" secondAttribute="top" id="Zks-l1-fw2"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="143" id="hNv-Ru-UJf"/>
                             <constraint firstItem="wAI-dO-apd" firstAttribute="leading" secondItem="rFG-0L-6sm" secondAttribute="leading" id="kwa-jh-VOX"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="rFG-0L-6sm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="62e-6c-YkV"/>
+                    <constraint firstAttribute="bottom" secondItem="rFG-0L-6sm" secondAttribute="bottom" id="HRf-Vv-nCc"/>
                     <constraint firstItem="rFG-0L-6sm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aTB-sW-532"/>
-                    <constraint firstItem="rFG-0L-6sm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pRN-07-cfo"/>
-                    <constraint firstAttribute="bottom" secondItem="rFG-0L-6sm" secondAttribute="bottom" id="vRq-a2-ab5"/>
                     <constraint firstAttribute="trailing" secondItem="rFG-0L-6sm" secondAttribute="trailing" id="yoM-WQ-qSm"/>
                 </constraints>
             </tableViewCellContentView>
@@ -156,7 +154,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="img-awayTeam" width="66.5" height="66.5"/>
-        <image name="img-homeTeam" width="65.5" height="66.5"/>
+        <image name="img-awayTeam" width="66" height="66"/>
+        <image name="img-homeTeam" width="65" height="66"/>
     </resources>
 </document>

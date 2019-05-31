@@ -104,10 +104,12 @@ class NewsPresenter: NewsViewPresenter {
             } else {
                 self.view.getListNewsFailed(withErrorException: InternalServerErrorException())
             }
-        }) { (error) in
+        }, exception: { (error) in
             self.view.hideLoading()
             self.view.getListNewsFailed(withErrorException: error)
         }
+            
+        )
     }
     
     func getNewsItem() -> [NewsData] {

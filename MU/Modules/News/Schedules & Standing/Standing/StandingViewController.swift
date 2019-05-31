@@ -39,7 +39,7 @@ class StandingViewController: BaseViewController {
     }
     
     func setupTableView() {
-//        standingTableView.register(HeaderStandingCell.nib, forHeaderFooterViewReuseIdentifier: HeaderStandingCell.identifier)
+        standingTableView.register(HeaderStandingCell.nib, forCellReuseIdentifier: HeaderStandingCell.identifier)
         standingTableView.register(StandingCell.nib, forCellReuseIdentifier: StandingCell.identifier)
     }
     
@@ -72,8 +72,14 @@ extension StandingViewController: StandingView {
 }
 
 extension StandingViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return standingData.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cellHeader = standingTableView.dequeueReusableCell(withIdentifier: HeaderStandingCell.identifier) as? HeaderStandingCell else { fatalError() }
+            return cellHeader
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,6 +87,7 @@ extension StandingViewController: UITableViewDelegate, UITableViewDataSource {
             if self.standingData.indices.contains(indexPath.row) {
                 let data = standingData[indexPath.row]
                 cellStanding.standingData = data
+                cellStanding.position = indexPath.row
                 cellStanding.updateUI()
             }
             return cellStanding

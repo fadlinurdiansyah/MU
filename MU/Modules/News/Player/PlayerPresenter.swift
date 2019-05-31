@@ -64,13 +64,15 @@ class PlayerPresenter: PlayerViewPresenter {
                 self.view.getListPlayerFailed(withErrorException: InternalServerErrorException())
             }
             
-        }) { (error) in
+        }, exception: { (error) in
             self.view.hideLoading()
             self.view.getListPlayerFailed(withErrorException: error)
-        }
+            }
+        )
     }
     
     func getPlayerItem() -> [Player] {
         return listPlayerItems
     }
+
 }

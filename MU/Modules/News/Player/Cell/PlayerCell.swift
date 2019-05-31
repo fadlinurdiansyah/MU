@@ -38,7 +38,7 @@ class PlayerCell: UICollectionViewCell {
         if let playerPicURL = playerData?.strCutout {
 //            playerImage.sd_setImage(with: playerPicURL.toUrl(), placeholderImage: UIImage(named: "img-player-placeholder"))
             
-            playerImage.sd_setImage(with: playerPicURL.toUrl(), placeholderImage: UIImage(named: "img-player-placeholder"), options: SDWebImageOptions.init(rawValue: 0)) { (image, error, cahceType, url) in
+            playerImage.sd_setImage(with: playerPicURL.toUrl(), placeholderImage: UIImage(named: "img-player-placeholder"), options: SDWebImageOptions.init(rawValue: 0)) { (image, _, _, _) in
                 self.playerImage.image = image?.imageWithGradient()
             }
         }
