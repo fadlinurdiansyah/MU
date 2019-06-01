@@ -12,6 +12,7 @@ import SwiftyJSON
 protocol StandingViewPresenter: class {
     init(view: StandingView)
     func getListStandingItem() -> [Table]
+    func countListStandingItem() -> Int
 }
 
 protocol StandingView: class {
@@ -79,4 +80,7 @@ class StandingPresenter: StandingViewPresenter {
         return listStandingItems
     }
     
+    func countListStandingItem() -> Int {
+        return listStandingItems.count
+    }
 }
