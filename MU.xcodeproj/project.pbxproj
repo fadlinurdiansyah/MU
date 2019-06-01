@@ -50,6 +50,12 @@
 		25BF0125229F959100A1775D /* ListStandingDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0124229F959100A1775D /* ListStandingDAO.swift */; };
 		25BF0128229F95C000A1775D /* ListStanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0127229F95C000A1775D /* ListStanding.swift */; };
 		25BF012A22A17B2900A1775D /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF012922A17B2900A1775D /* UIColor+RGB.swift */; };
+		25BF012E22A2300300A1775D /* SchedulesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF012C22A2300300A1775D /* SchedulesCell.swift */; };
+		25BF012F22A2300300A1775D /* SchedulesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BF012D22A2300300A1775D /* SchedulesCell.xib */; };
+		25BF013222A243EB00A1775D /* ApiSchedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF013122A243EB00A1775D /* ApiSchedules.swift */; };
+		25BF013422A2441500A1775D /* SchedulesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF013322A2441500A1775D /* SchedulesRequest.swift */; };
+		25BF013722A2461B00A1775D /* ListSchedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF013622A2461B00A1775D /* ListSchedules.swift */; };
+		25BF013922A2480E00A1775D /* ListSchedulesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF013822A2480E00A1775D /* ListSchedulesDAO.swift */; };
 		25C51549229A674F004AD584 /* UIImage+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C51548229A674F004AD584 /* UIImage+Gradient.swift */; };
 		25C51550229AD2F5004AD584 /* ListPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5154F229AD2F5004AD584 /* ListPlayer.swift */; };
 		25C51552229AD33B004AD584 /* ApiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C51551229AD33B004AD584 /* ApiPlayer.swift */; };
@@ -147,6 +153,12 @@
 		25BF0124229F959100A1775D /* ListStandingDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStandingDAO.swift; sourceTree = "<group>"; };
 		25BF0127229F95C000A1775D /* ListStanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStanding.swift; sourceTree = "<group>"; };
 		25BF012922A17B2900A1775D /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		25BF012C22A2300300A1775D /* SchedulesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesCell.swift; sourceTree = "<group>"; };
+		25BF012D22A2300300A1775D /* SchedulesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchedulesCell.xib; sourceTree = "<group>"; };
+		25BF013122A243EB00A1775D /* ApiSchedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSchedules.swift; sourceTree = "<group>"; };
+		25BF013322A2441500A1775D /* SchedulesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesRequest.swift; sourceTree = "<group>"; };
+		25BF013622A2461B00A1775D /* ListSchedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchedules.swift; sourceTree = "<group>"; };
+		25BF013822A2480E00A1775D /* ListSchedulesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchedulesDAO.swift; sourceTree = "<group>"; };
 		25C51548229A674F004AD584 /* UIImage+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gradient.swift"; sourceTree = "<group>"; };
 		25C5154F229AD2F5004AD584 /* ListPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayer.swift; sourceTree = "<group>"; };
 		25C51551229AD33B004AD584 /* ApiPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPlayer.swift; sourceTree = "<group>"; };
@@ -276,6 +288,7 @@
 				2596CE26229124520072A407 /* News */,
 				25C5154E229AD2CB004AD584 /* Player */,
 				25BF0126229F95A100A1775D /* Standing */,
+				25BF013522A245FB00A1775D /* Schedules */,
 				FFB508772287444200A1E03E /* ErrorExceptionAPI.swift */,
 			);
 			path = Models;
@@ -392,6 +405,32 @@
 			path = Standing;
 			sourceTree = "<group>";
 		};
+		25BF012B22A22FBC00A1775D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				25BF012C22A2300300A1775D /* SchedulesCell.swift */,
+				25BF012D22A2300300A1775D /* SchedulesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		25BF013022A243AB00A1775D /* Schedules */ = {
+			isa = PBXGroup;
+			children = (
+				25BF013122A243EB00A1775D /* ApiSchedules.swift */,
+				25BF013322A2441500A1775D /* SchedulesRequest.swift */,
+			);
+			path = Schedules;
+			sourceTree = "<group>";
+		};
+		25BF013522A245FB00A1775D /* Schedules */ = {
+			isa = PBXGroup;
+			children = (
+				25BF013622A2461B00A1775D /* ListSchedules.swift */,
+			);
+			path = Schedules;
+			sourceTree = "<group>";
+		};
 		25C5154E229AD2CB004AD584 /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,8 +463,9 @@
 			isa = PBXGroup;
 			children = (
 				25BF010D229F745600A1775D /* Schedules.storyboard */,
-				25BF010E229F745600A1775D /* SchedulesPresenter.swift */,
 				25BF010F229F745600A1775D /* SchedulesViewController.swift */,
+				25BF010E229F745600A1775D /* SchedulesPresenter.swift */,
+				25BF012B22A22FBC00A1775D /* Cell */,
 			);
 			path = Schedules;
 			sourceTree = "<group>";
@@ -559,6 +599,7 @@
 				255CF5B2229991B40060D01D /* News */,
 				FF0FB95C22912C1E00A614F7 /* Player */,
 				25BF011F229F954700A1775D /* Standing */,
+				25BF013022A243AB00A1775D /* Schedules */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -602,6 +643,7 @@
 				FF0FB96522912EA100A614F7 /* ListNewsDAO.swift */,
 				25C51555229AD371004AD584 /* ListPlayerDAO.swift */,
 				25BF0124229F959100A1775D /* ListStandingDAO.swift */,
+				25BF013822A2480E00A1775D /* ListSchedulesDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -710,6 +752,7 @@
 				254D998C228E184200AA44AA /* MatchCell.xib in Resources */,
 				254D997F228E128300AA44AA /* Mukta-Bold.ttf in Resources */,
 				252C4569229868ED00F9084D /* PlayerCell.xib in Resources */,
+				25BF012F22A2300300A1775D /* SchedulesCell.xib in Resources */,
 				25C5156C229F73F3004AD584 /* Standing.storyboard in Resources */,
 				254D9983228E128300AA44AA /* Mukta-Medium.ttf in Resources */,
 				254D997E228E128300AA44AA /* Mukta-SemiBold.ttf in Resources */,
@@ -801,6 +844,7 @@
 				25C5156D229F73F3004AD584 /* StandingPresenter.swift in Sources */,
 				25C5156E229F73F3004AD584 /* StandingViewController.swift in Sources */,
 				FF0FB96222912E4200A614F7 /* BasePagination.swift in Sources */,
+				25BF012E22A2300300A1775D /* SchedulesCell.swift in Sources */,
 				25BF0121229F956B00A1775D /* ApiStanding.swift in Sources */,
 				25C51564229F739E004AD584 /* MainSchAndStandPresenter.swift in Sources */,
 				FF1DD0542287CE80001362B6 /* NewsPresenter.swift in Sources */,
@@ -822,10 +866,12 @@
 				25BF0128229F95C000A1775D /* ListStanding.swift in Sources */,
 				FF2972BF228FAA2200B76A76 /* NewsSection.swift in Sources */,
 				25BF0112229F745600A1775D /* SchedulesViewController.swift in Sources */,
+				25BF013422A2441500A1775D /* SchedulesRequest.swift in Sources */,
 				FFB5087B2287452E00A1E03E /* BaseDAO.swift in Sources */,
 				25C51565229F739E004AD584 /* MainSchAndStandViewController.swift in Sources */,
 				FFB5086722872E3B00A1E03E /* CustomOverlay.swift in Sources */,
 				FFB50872228742B900A1E03E /* String+Utilities.swift in Sources */,
+				25BF013922A2480E00A1775D /* ListSchedulesDAO.swift in Sources */,
 				FF0FB96A2291353600A614F7 /* NewsRequest.swift in Sources */,
 				25ED69F52292E184000E6D0D /* Date+ConvTimePost.swift in Sources */,
 				FF1DD0472287B8BD001362B6 /* UITextFieldHelper.swift in Sources */,
@@ -847,6 +893,8 @@
 				FF1DD04D2287C781001362B6 /* MainTabPresenter.swift in Sources */,
 				FF1DD0422287B8BD001362B6 /* UIButtonHelper.swift in Sources */,
 				2596CE1E228FDD020072A407 /* NewsDetailCell.swift in Sources */,
+				25BF013722A2461B00A1775D /* ListSchedules.swift in Sources */,
+				25BF013222A243EB00A1775D /* ApiSchedules.swift in Sources */,
 				FF1DD0452287B8BD001362B6 /* UITextViewHelper.swift in Sources */,
 				2509BD2D228F052C00E6EF14 /* BeritaCell.swift in Sources */,
 				25BF0119229F8D4800A1775D /* StandingCell.swift in Sources */,

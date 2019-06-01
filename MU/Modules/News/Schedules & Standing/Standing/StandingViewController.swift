@@ -47,6 +47,11 @@ class StandingViewController: BaseViewController {
 
 extension StandingViewController: StandingView {
     
+    func getListStandingSuccess() {
+        standingData = presenter.getListStandingItem()
+        standingTableView.reloadData()
+    }
+    
     func getListStandingFailed(withErrorException error: ErrorExceptionAPI) {
         if error.isTypeErrorConvertingJson() {
             self.showShowServerError(withView: self.view)
@@ -65,10 +70,6 @@ extension StandingViewController: StandingView {
         self.stopBlockLoading()
     }
     
-    func getListStandingSuccess() {
-        standingData = presenter.getListStandingItem()
-        standingTableView.reloadData()
-    }
 }
 
 extension StandingViewController: UITableViewDelegate, UITableViewDataSource {

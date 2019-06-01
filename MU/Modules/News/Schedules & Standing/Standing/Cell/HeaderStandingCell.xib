@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="432" height="32.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DJ-nK-DpV">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="32.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="32.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjI-3g-tcp" userLabel="Position View">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="32.5"/>
@@ -47,17 +47,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSv-Vs-VRc" userLabel="Team View">
-                                        <rect key="frame" x="50" y="0.0" width="150" height="32.5"/>
+                                        <rect key="frame" x="50" y="0.0" width="120" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Q2-cR-8po">
-                                                <rect key="frame" x="15.5" y="5.5" width="29.5" height="22"/>
+                                                <rect key="frame" x="0.5" y="5.5" width="29.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="LTi-1o-5El"/>
+                                            <constraint firstAttribute="width" constant="120" id="LTi-1o-5El"/>
                                             <constraint firstItem="7Q2-cR-8po" firstAttribute="centerX" secondItem="XSv-Vs-VRc" secondAttribute="centerX" constant="-45" id="NzV-ZK-2OY"/>
                                             <constraint firstItem="7Q2-cR-8po" firstAttribute="centerY" secondItem="XSv-Vs-VRc" secondAttribute="centerY" id="fjf-SU-0yy"/>
                                         </constraints>
@@ -70,13 +70,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="qWN-l6-ecl">
-                                <rect key="frame" x="200" y="0.0" width="232" height="32.5"/>
+                                <rect key="frame" x="170" y="0.0" width="262" height="32.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNM-n2-LtK" userLabel="GP View">
-                                        <rect key="frame" x="0.0" y="0.0" width="38.5" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1L-2O-QHB">
-                                                <rect key="frame" x="12" y="5.5" width="15" height="22"/>
+                                                <rect key="frame" x="14.5" y="5.5" width="15" height="22"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -88,10 +88,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-bz-KtX" userLabel="Win View">
-                                        <rect key="frame" x="38.5" y="0.0" width="39" height="32.5"/>
+                                        <rect key="frame" x="43.5" y="0.0" width="44" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o61-Nu-SF9">
-                                                <rect key="frame" x="14" y="5.5" width="11.5" height="22"/>
+                                                <rect key="frame" x="16.5" y="5.5" width="11.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -103,10 +103,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT6-wH-J6a" userLabel="Draw View">
-                                        <rect key="frame" x="77.5" y="0.0" width="38.5" height="32.5"/>
+                                        <rect key="frame" x="87.5" y="0.0" width="43.5" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dc-SN-O5H">
-                                                <rect key="frame" x="15" y="5.5" width="8.5" height="22"/>
+                                                <rect key="frame" x="17.5" y="5.5" width="8.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -118,10 +118,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0Y-Z5-kgP" userLabel="Lose View">
-                                        <rect key="frame" x="116" y="0.0" width="38.5" height="32.5"/>
+                                        <rect key="frame" x="131" y="0.0" width="43.5" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-E6-mIw">
-                                                <rect key="frame" x="16.5" y="5.5" width="6" height="22"/>
+                                                <rect key="frame" x="19" y="5.5" width="6" height="22"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -133,10 +133,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtO-H4-Vca" userLabel="GD View">
-                                        <rect key="frame" x="154.5" y="0.0" width="39" height="32.5"/>
+                                        <rect key="frame" x="174.5" y="0.0" width="44" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAz-CC-eyN">
-                                                <rect key="frame" x="11.5" y="5.5" width="16.5" height="22"/>
+                                                <rect key="frame" x="14" y="5.5" width="16.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -148,10 +148,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-xR-yVT" userLabel="Points View">
-                                        <rect key="frame" x="193.5" y="0.0" width="38.5" height="32.5"/>
+                                        <rect key="frame" x="218.5" y="0.0" width="43.5" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-c4-lnO">
-                                                <rect key="frame" x="10.5" y="5.5" width="17" height="22"/>
+                                                <rect key="frame" x="13" y="5.5" width="17" height="22"/>
                                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

@@ -17,9 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-4m-LKv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1dX-N7-XUl" id="aOh-FU-p3r"/>
+                                    <outlet property="delegate" destination="1dX-N7-XUl" id="9fu-hP-UqR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XaS-4m-LKv" firstAttribute="top" secondItem="DEK-3G-Vg1" secondAttribute="top" id="1hJ-h6-3rN"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="bottom" secondItem="XaS-4m-LKv" secondAttribute="bottom" id="2JL-0M-W5Z"/>
+                            <constraint firstItem="XaS-4m-LKv" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" id="4jx-cl-W07"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="XaS-4m-LKv" secondAttribute="trailing" id="a7T-8Y-POv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
+                    <connections>
+                        <outlet property="schedulesTableView" destination="XaS-4m-LKv" id="1Bt-f0-uEh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

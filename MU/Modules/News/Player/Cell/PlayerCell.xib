@@ -30,18 +30,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-player-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="plo-HY-6Lw">
                                 <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGK-j2-ydj">
-                                <rect key="frame" x="158" y="358" width="84.5" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGK-j2-ydj">
+                                <rect key="frame" x="20" y="358" width="360" height="27"/>
                                 <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
-                                <color key="textColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="plo-HY-6Lw" firstAttribute="top" secondItem="cyf-Vi-ZbC" secondAttribute="top" id="4hV-rW-Fqi"/>
+                            <constraint firstItem="PGK-j2-ydj" firstAttribute="leading" secondItem="cyf-Vi-ZbC" secondAttribute="leading" constant="20" id="6NA-nf-QZI"/>
                             <constraint firstAttribute="bottom" secondItem="PGK-j2-ydj" secondAttribute="bottom" constant="15" id="WBh-b4-9Lq"/>
                             <constraint firstAttribute="bottom" secondItem="plo-HY-6Lw" secondAttribute="bottom" id="XoF-FS-A0Q"/>
                             <constraint firstItem="plo-HY-6Lw" firstAttribute="leading" secondItem="cyf-Vi-ZbC" secondAttribute="leading" id="bEB-AB-LrR"/>
+                            <constraint firstAttribute="trailing" secondItem="PGK-j2-ydj" secondAttribute="trailing" constant="20" id="gDp-eO-gF1"/>
                             <constraint firstAttribute="trailing" secondItem="plo-HY-6Lw" secondAttribute="trailing" id="p8l-jT-J13"/>
                             <constraint firstItem="PGK-j2-ydj" firstAttribute="centerX" secondItem="cyf-Vi-ZbC" secondAttribute="centerX" id="xPv-G1-tzv"/>
                         </constraints>

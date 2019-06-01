@@ -37,6 +37,12 @@ class StandingCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        teamLabel.textColor = UIColor.rgb(red: 66, green: 62, blue: 62)
+        lineSeparatorView.backgroundColor = UIColor.rgb(red: 211, green: 203, blue: 203)
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
