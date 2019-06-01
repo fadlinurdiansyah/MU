@@ -20,8 +20,6 @@ class StandingViewController: BaseViewController {
     // MARK: Properties
     @IBOutlet weak var standingTableView: UITableView!
     
-    var standingData: [Table] = []
-    
     var presenter: StandingPresenter!
     
     // MARK: Lifecycle
@@ -66,7 +64,6 @@ extension StandingViewController: StandingView {
     }
     
     func getListStandingSuccess() {
-        standingData = presenter.getListStandingItem()
         standingTableView.reloadData()
     }
 }
@@ -74,7 +71,7 @@ extension StandingViewController: StandingView {
 extension StandingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return standingData.count
+        return presenter.countListStandingItem()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -84,7 +81,8 @@ extension StandingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cellStanding = standingTableView.dequeueReusableCell(withIdentifier: StandingCell.identifier, for: indexPath) as? StandingCell {
-            if self.standingData.indices.contains(indexPath.row) {
+            let standingData = presenter.getListStandingItem()
+            if standingData.indices.contains(indexPath.row) {
                 let data = standingData[indexPath.row]
                 cellStanding.standingData = data
                 cellStanding.position = indexPath.row
