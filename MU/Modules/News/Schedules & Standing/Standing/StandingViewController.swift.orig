@@ -46,6 +46,7 @@ class StandingViewController: BaseViewController {
 extension StandingViewController: StandingView {
     
     func getListStandingSuccess() {
+        standingData = presenter.getListStandingItem()
         standingTableView.reloadData()
     }
     
@@ -66,6 +67,13 @@ extension StandingViewController: StandingView {
     func hideLoading() {
         self.stopBlockLoading()
     }
+    
+<<<<<<< HEAD
+=======
+    func getListStandingSuccess() {
+        standingTableView.reloadData()
+    }
+>>>>>>> 56e8d5e254a1d62d0fbb826aecd482b35fc15c04
 }
 
 extension StandingViewController: UITableViewDelegate, UITableViewDataSource {

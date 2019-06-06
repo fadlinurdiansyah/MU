@@ -39,6 +39,12 @@ class SchedulesCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        scoreOrTimeLabel.text = nil
+    }
+    
     func updateUI() {
         guard
             let eventDate = dataSchedules?.dateEvent,
@@ -50,10 +56,16 @@ class SchedulesCell: UITableViewCell {
             let league = dataSchedules?.strLeague
         else { fatalError() }
         
-        dateMatchLabel.text = "\(eventDate) \(league)"
+        dateMatchLabel.text = "\(eventDate.indoDateFormat()) - \(league)"
         homeTeamLabel.text = "\(homeTeam)"
         awayTeamLabel.text = "\(awayTeam)"
-        scoreOrTimeLabel.text = "\(homeTeamScore) - \(awayTeamScore)"
+        
+        if homeTeamScore != "" && awayTeamScore != "" {
+            scoreOrTimeLabel.text = "\(homeTeamScore) - \(awayTeamScore)"
+        } else {
+            scoreOrTimeLabel.text = timeMatch[0..<5]
+        }
+        
     }
     
 }

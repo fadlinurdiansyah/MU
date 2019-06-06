@@ -20,8 +20,6 @@ class PlayerViewController: BaseViewController {
     // MARK: Properties
     @IBOutlet weak var playerCollectionView: UICollectionView!
     
-    var playerData: [Player] = []
-    
     var presenter: PlayerPresenter!
     
     // MARK: Lifecycle
@@ -47,7 +45,6 @@ class PlayerViewController: BaseViewController {
 extension PlayerViewController: PlayerView {
     
     func getListPlayerSuccess() {
-        playerData = presenter.getPlayerItem().sorted { $0.strPosition < $1.strPosition }
         playerCollectionView.reloadData()
     }
     
@@ -73,14 +70,15 @@ extension PlayerViewController: PlayerView {
 extension PlayerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return playerData.count
+        return presenter.getCountPlayerItem()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let playerCell = playerCollectionView.dequeueReusableCell(withReuseIdentifier: PlayerCell.identifier, for: indexPath) as? PlayerCell {
             
-            if self.playerData.indices.contains(indexPath.row) {
+            let playerData = presenter.getPlayerItem().sorted { $0.strPosition < $1.strPosition }
+            if playerData.indices.contains(indexPath.row) {
                 let data = playerData[indexPath.row]
                 playerCell.playerData = data
                 playerCell.updateUI()

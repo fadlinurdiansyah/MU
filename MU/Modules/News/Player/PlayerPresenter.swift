@@ -12,7 +12,9 @@ import SwiftyJSON
 protocol PlayerViewPresenter: class {
     init(view: PlayerView)
     func loadPage()
+    func getListPlayer()
     func getPlayerItem() -> [Player]
+    func getCountPlayerItem() -> Int
 }
 
 protocol PlayerView: class {
@@ -73,6 +75,10 @@ class PlayerPresenter: PlayerViewPresenter {
     
     func getPlayerItem() -> [Player] {
         return listPlayerItems
+    }
+    
+    func getCountPlayerItem() -> Int {
+        return listPlayerItems.count
     }
 
 }

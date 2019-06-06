@@ -12,11 +12,17 @@ import Alamofire
 enum ApiSchedules: URLRequestConvertible {
     
     case getListSchedules(request: SchedulesRequest)
+    case getLastSchedules(request: LastSchedulesRequest)
+    case getNextSchedules(request: NextSchedulesRequest)
     
     var path: String {
         switch self {
         case .getListSchedules:
             return "eventsseason.php"
+        case .getLastSchedules:
+            return "eventslast.php"
+        case .getNextSchedules:
+            return "eventsnext.php"
         }
     }
     
@@ -24,12 +30,20 @@ enum ApiSchedules: URLRequestConvertible {
         switch self {
         case .getListSchedules:
             return .get
+        case .getLastSchedules:
+            return .get
+        case .getNextSchedules:
+            return .get
         }
     }
     
     var parameter: [String: AnyObject] {
         switch self {
         case .getListSchedules(let request):
+            return request.buildForParameters()
+        case .getLastSchedules(let request):
+            return request.buildForParameters()
+        case .getNextSchedules(let request):
             return request.buildForParameters()
         }
     }

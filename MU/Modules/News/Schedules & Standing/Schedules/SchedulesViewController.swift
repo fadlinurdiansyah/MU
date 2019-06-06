@@ -21,7 +21,6 @@ class SchedulesViewController: BaseViewController {
     @IBOutlet weak var schedulesTableView: UITableView!
     
     var presenter: SchedulesPresenter!
-    var schedulesData: [Events] = []
     
     // MARK: Lifecycle
     
@@ -46,8 +45,9 @@ class SchedulesViewController: BaseViewController {
 extension SchedulesViewController: SchedulesView {
     
     func getListSchedulesSuccess() {
-        schedulesData = presenter.getListSchedulesItem()
         schedulesTableView.reloadData()
+        let numRow = presenter.getCountSchedulesItem()
+        schedulesTableView.scrollToRow(at: IndexPath(row: numRow - 1, section: 0), at: .bottom, animated: true)
     }
     
     func getListSchedulesFailed(withErrorException error: ErrorExceptionAPI) {
@@ -73,12 +73,13 @@ extension SchedulesViewController: SchedulesView {
 extension SchedulesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return schedulesData.count
+        return presenter.getCountSchedulesItem()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cellSchedules = schedulesTableView.dequeueReusableCell(withIdentifier: SchedulesCell.identifier, for: indexPath) as? SchedulesCell {
             
+            let schedulesData = presenter.getListSchedulesItem()
             if schedulesData.indices.contains(indexPath.row) {
                 let data = schedulesData[indexPath.row]
                 cellSchedules.dataSchedules = data
@@ -91,5 +92,4 @@ extension SchedulesViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    
 }

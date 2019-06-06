@@ -25,7 +25,6 @@ class NewsViewController: BaseViewController {
     @IBOutlet weak var beritaTableView: UITableView!
     
     var presenter: NewsPresenter!
-    var newsData: [NewsData] = []
     
     // MARK: Lifecycle
     
@@ -107,7 +106,6 @@ extension NewsViewController: NewsView {
     }
     
     func getListNewsSuccess() {
-        newsData = presenter.getNewsItem()
         beritaTableView.reloadData()
     }
     
@@ -133,7 +131,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         case .match?:
             return 1
         case .news?:
-            return newsData.count
+            return presenter.getCountNewsItem()
         case .none:
             return 0
         }
@@ -150,7 +148,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
                 newsCell.hero.id = "cell-\(indexPath.row)"
                 newsCell.newsImageView.hero.id = "cell-image-\(indexPath.row)"
                 newsCell.newsDescLabel.hero.id = "cell-label-\(indexPath.row)"
-                if self.newsData.indices.contains(indexPath.row) {
+                let newsData = presenter.getNewsItem()
+                if newsData.indices.contains(indexPath.row) {
                     let data = newsData[indexPath.row]
                     newsCell.newsData = data
                     newsCell.updateUI()
@@ -169,7 +168,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         presenter.selectedRow = indexPath.row
         switch NewsSection(rawValue: indexPath.section) {
         case .news?:
-            if self.newsData.indices.contains(indexPath.row) {
+            let newsData = presenter.getNewsItem()
+            if newsData.indices.contains(indexPath.row) {
                 let data = newsData[indexPath.row]
                 performSegue(withIdentifier: SegueConstants.News.showNewsDetail, sender: data)
             }

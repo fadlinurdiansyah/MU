@@ -20,11 +20,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="KGk-i7-Jjw" customClass="SchedulesCell" customModule="MU" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="SchedulesCell" customModule="MU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="96.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="h4K-FU-sbr">
@@ -54,16 +54,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSw-k2-3dq" userLabel="Team &amp; Time View">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="W8S-Ct-nDe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4s-Bj-NeC" userLabel="Home Team View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="38"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="47"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTE-Y2-kPS">
-                                                                        <rect key="frame" x="37" y="6.5" width="75" height="25"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Team" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTE-Y2-kPS">
+                                                                        <rect key="frame" x="10" y="11" width="102" height="25"/>
                                                                         <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="15"/>
                                                                         <color key="textColor" red="0.38823529411764707" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -71,15 +71,16 @@
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="MTE-Y2-kPS" firstAttribute="leading" secondItem="R4s-Bj-NeC" secondAttribute="leading" constant="10" id="C0i-hX-Skr"/>
                                                                     <constraint firstAttribute="trailing" secondItem="MTE-Y2-kPS" secondAttribute="trailing" id="CLS-Kw-R7u"/>
                                                                     <constraint firstItem="MTE-Y2-kPS" firstAttribute="centerY" secondItem="R4s-Bj-NeC" secondAttribute="centerY" id="jCe-2L-IB1"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-28-L5Y" userLabel="Score or Time View">
-                                                                <rect key="frame" x="127" y="0.0" width="66" height="38"/>
+                                                                <rect key="frame" x="127" y="0.0" width="66" height="47"/>
                                                                 <subviews>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 - 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-vD-Sqa">
-                                                                        <rect key="frame" x="0.0" y="7.5" width="66" height="23"/>
+                                                                        <rect key="frame" x="0.0" y="12" width="66" height="23"/>
                                                                         <color key="backgroundColor" red="0.90980392156862744" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="23" id="dpt-ju-Q6n"/>
@@ -103,10 +104,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2P-o3-znO" userLabel="Away Team View">
-                                                                <rect key="frame" x="208" y="0.0" width="112" height="38"/>
+                                                                <rect key="frame" x="208" y="0.0" width="112" height="47"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Away Team" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ7-cv-Gjq">
-                                                                        <rect key="frame" x="0.0" y="6.5" width="71" height="25"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Away Team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ7-cv-Gjq">
+                                                                        <rect key="frame" x="0.0" y="11" width="102" height="25"/>
                                                                         <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="15"/>
                                                                         <color key="textColor" red="0.38823529410000002" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -115,6 +116,7 @@
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="DZ7-cv-Gjq" firstAttribute="leading" secondItem="L2P-o3-znO" secondAttribute="leading" id="BHY-Hc-VUQ"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="DZ7-cv-Gjq" secondAttribute="trailing" constant="10" id="ftX-1T-ndJ"/>
                                                                     <constraint firstItem="DZ7-cv-Gjq" firstAttribute="centerY" secondItem="L2P-o3-znO" secondAttribute="centerY" id="kvI-iV-LrU"/>
                                                                 </constraints>
                                                             </view>
@@ -133,15 +135,15 @@
                                                     <constraint firstAttribute="bottom" secondItem="W8S-Ct-nDe" secondAttribute="bottom" id="ANN-Kl-baW"/>
                                                     <constraint firstAttribute="trailing" secondItem="W8S-Ct-nDe" secondAttribute="trailing" id="Drl-Pq-uRI"/>
                                                     <constraint firstItem="W8S-Ct-nDe" firstAttribute="top" secondItem="CSw-k2-3dq" secondAttribute="top" id="W6H-fW-nHk"/>
-                                                    <constraint firstAttribute="height" constant="38" id="x8H-wp-0rE"/>
+                                                    <constraint firstAttribute="height" constant="47" id="x8H-wp-0rE"/>
                                                     <constraint firstItem="W8S-Ct-nDe" firstAttribute="leading" secondItem="CSw-k2-3dq" secondAttribute="leading" id="zOt-pG-bor"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-Cm-vMN" userLabel="Stadium View">
-                                                <rect key="frame" x="0.0" y="38" width="320" height="28"/>
+                                                <rect key="frame" x="0.0" y="47" width="320" height="19"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Team Stadium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8D-le-LnL">
-                                                        <rect key="frame" x="109" y="4" width="102" height="19.5"/>
+                                                        <rect key="frame" x="109" y="0.0" width="102" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="11.699999809265137"/>
                                                         <color key="textColor" red="0.38823529411764707" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -149,8 +151,8 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="28" id="KoF-Hl-wlc"/>
-                                                    <constraint firstItem="m8D-le-LnL" firstAttribute="centerY" secondItem="dNN-Cm-vMN" secondAttribute="centerY" id="THp-sq-2OG"/>
+                                                    <constraint firstAttribute="height" constant="19" id="KoF-Hl-wlc"/>
+                                                    <constraint firstItem="m8D-le-LnL" firstAttribute="top" secondItem="dNN-Cm-vMN" secondAttribute="top" id="jXP-op-yfD"/>
                                                     <constraint firstItem="m8D-le-LnL" firstAttribute="centerX" secondItem="dNN-Cm-vMN" secondAttribute="centerX" id="m03-gv-n4M"/>
                                                 </constraints>
                                             </view>
@@ -184,7 +186,7 @@
                 <outlet property="scoreOrTimeLabel" destination="CHA-vD-Sqa" id="V4v-sI-P3l"/>
                 <outlet property="stadiumLabel" destination="m8D-le-LnL" id="ini-WC-jsa"/>
             </connections>
-            <point key="canvasLocation" x="137.59999999999999" y="148.87556221889056"/>
+            <point key="canvasLocation" x="137.59999999999999" y="194.75262368815595"/>
         </tableViewCell>
     </objects>
 </document>

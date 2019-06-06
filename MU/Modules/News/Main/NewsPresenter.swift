@@ -18,6 +18,7 @@ protocol NewsViewPresenter: class {
     func getLinkShareOnNews() -> String
     func getTextShareOnNews() -> String
     func getNewsItem() -> [NewsData]
+    func getCountNewsItem() -> Int
     func getSelectedRow() -> Int
 }
 
@@ -114,6 +115,10 @@ class NewsPresenter: NewsViewPresenter {
     
     func getNewsItem() -> [NewsData] {
         return listNewsItems
+    }
+    
+    func getCountNewsItem() -> Int {
+        return listNewsItems.count
     }
     
     func getSelectedRow() -> Int {
