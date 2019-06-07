@@ -42,6 +42,9 @@
 		2596CE2F22912CA80072A407 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2596CE2D22912CA80072A407 /* LoadingCell.swift */; };
 		2596CE3022912CA80072A407 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2596CE2E22912CA80072A407 /* LoadingCell.xib */; };
 		25A7ECF42258E14600E7F51C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A7ECF32258E14600E7F51C /* GoogleService-Info.plist */; };
+		25ADB7F522A9B31C00C2DF6F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25ADB7F222A9B31C00C2DF6F /* Login.storyboard */; };
+		25ADB7F622A9B31C00C2DF6F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB7F322A9B31C00C2DF6F /* LoginPresenter.swift */; };
+		25ADB7F722A9B31C00C2DF6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB7F422A9B31C00C2DF6F /* LoginViewController.swift */; };
 		25BF0110229F745600A1775D /* Schedules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BF010D229F745600A1775D /* Schedules.storyboard */; };
 		25BF0111229F745600A1775D /* SchedulesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF010E229F745600A1775D /* SchedulesPresenter.swift */; };
 		25BF0112229F745600A1775D /* SchedulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF010F229F745600A1775D /* SchedulesViewController.swift */; };
@@ -150,6 +153,9 @@
 		2596CE2E22912CA80072A407 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		2596CE31229131400072A407 /* BasePagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePagination.swift; sourceTree = "<group>"; };
 		25A7ECF32258E14600E7F51C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25ADB7F222A9B31C00C2DF6F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		25ADB7F322A9B31C00C2DF6F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		25ADB7F422A9B31C00C2DF6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25BF010D229F745600A1775D /* Schedules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Schedules.storyboard; sourceTree = "<group>"; };
 		25BF010E229F745600A1775D /* SchedulesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesPresenter.swift; sourceTree = "<group>"; };
 		25BF010F229F745600A1775D /* SchedulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesViewController.swift; sourceTree = "<group>"; };
@@ -387,6 +393,16 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		25ADB7F122A9B30400C2DF6F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				25ADB7F222A9B31C00C2DF6F /* Login.storyboard */,
+				25ADB7F322A9B31C00C2DF6F /* LoginPresenter.swift */,
+				25ADB7F422A9B31C00C2DF6F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		25BF0116229F8C4200A1775D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,13 +601,13 @@
 				2596CE20228FE3800072A407 /* NavigationBar+Style.swift */,
 				FF92115D2292D69400624330 /* String+URL.swift */,
 				FFB50871228742B900A1E03E /* String+Utilities.swift */,
+				255B4C7922A3A0AF00E95C52 /* String+IndoDateFormat.swift */,
 				2596CE22228FF2DE0072A407 /* UIApplication+statusBar.swift */,
 				25ED69F42292E184000E6D0D /* Date+ConvTimePost.swift */,
 				FF92115F2292D96500624330 /* UITableView+InfiniteScroll.swift */,
 				25C51548229A674F004AD584 /* UIImage+Gradient.swift */,
 				25BF0114229F88D500A1775D /* UIView+constraints.swift */,
 				25BF012922A17B2900A1775D /* UIColor+RGB.swift */,
-				255B4C7922A3A0AF00E95C52 /* String+IndoDateFormat.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -599,6 +615,7 @@
 		FFB508212286A6E400A1E03E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				25ADB7F122A9B30400C2DF6F /* Login */,
 				FF1DD04F2287CE6E001362B6 /* News */,
 				FF1DD0482287C766001362B6 /* MainTab */,
 				FFB5082A2286BA6E00A1E03E /* OnBoarding */,
@@ -754,6 +771,7 @@
 				FF1DD0532287CE80001362B6 /* News.storyboard in Resources */,
 				25A7ECF42258E14600E7F51C /* GoogleService-Info.plist in Resources */,
 				25BF0110229F745600A1775D /* Schedules.storyboard in Resources */,
+				25ADB7F522A9B31C00C2DF6F /* Login.storyboard in Resources */,
 				25BF011E229F90B000A1775D /* HeaderStandingCell.xib in Resources */,
 				FF1DD04C2287C781001362B6 /* MainTab.storyboard in Resources */,
 				252C45622298681900F9084D /* Player.storyboard in Resources */,
@@ -879,6 +897,7 @@
 				252C4568229868ED00F9084D /* PlayerCell.swift in Sources */,
 				255B4C7A22A3A0AF00E95C52 /* String+IndoDateFormat.swift in Sources */,
 				FF1DD04E2287C781001362B6 /* MainTabViewController.swift in Sources */,
+				25ADB7F622A9B31C00C2DF6F /* LoginPresenter.swift in Sources */,
 				FF0FB96422912E8D00A614F7 /* ListNews.swift in Sources */,
 				25C51550229AD2F5004AD584 /* ListPlayer.swift in Sources */,
 				FF0FB95922912AAC00A614F7 /* ApiNews.swift in Sources */,
@@ -907,6 +926,7 @@
 				FFB5085A2286C8AA00A1E03E /* OnBoardingViewController.swift in Sources */,
 				FF9211602292D96500624330 /* UITableView+InfiniteScroll.swift in Sources */,
 				255B4C7E22A3B7E000E95C52 /* NextSchedulesRequest.swift in Sources */,
+				25ADB7F722A9B31C00C2DF6F /* LoginViewController.swift in Sources */,
 				FF0FB96622912EA100A614F7 /* ListNewsDAO.swift in Sources */,
 				FF1DD0442287B8BD001362B6 /* DeviceHelper.swift in Sources */,
 				FF1DD0462287B8BD001362B6 /* UILabelHelper.swift in Sources */,
