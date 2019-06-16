@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="width" secondItem="ucc-0S-KNg" secondAttribute="height" multiplier="414:433" id="xw9-LW-MWB"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUd-oC-DKi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUd-oC-DKi" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="477" width="414" height="385"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FBS-AE-T8C">
@@ -143,6 +143,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
+                    <connections>
+                        <outlet property="btnLoginGoogle" destination="H8w-ta-aEP" id="xxX-kV-lDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

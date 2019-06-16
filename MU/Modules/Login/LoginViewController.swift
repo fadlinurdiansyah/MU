@@ -18,6 +18,7 @@ extension SegueConstants {
 class LoginViewController: BaseViewController {
     
     // MARK: Properties
+    @IBOutlet weak var btnLoginGoogle: UIButton!
     
     var presenter: LoginPresenter!
     
