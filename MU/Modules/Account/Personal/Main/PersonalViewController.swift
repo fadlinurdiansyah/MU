@@ -39,6 +39,7 @@ class PersonalViewController: BaseViewController {
         setupTableView()
     }
     
+    // Configure table view
     func setupTableView() {
         tableViewPersonal.register(PersonalCellHeader.nib, forCellReuseIdentifier: PersonalCellHeader.identifier)
         tableViewPersonal.register(PersonalCellDetail.nib, forCellReuseIdentifier: PersonalCellDetail.identifier)
