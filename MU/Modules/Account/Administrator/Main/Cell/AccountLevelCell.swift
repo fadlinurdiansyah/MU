@@ -1,5 +1,5 @@
 //
-//  NobarCell.swift
+//  LevelAccountCell.swift
 //  MU
 //
 //  Created by NDS on 13/06/19.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class NobarSetupCell: UITableViewCell {
+class AccountLevelCell: UITableViewCell {
+    
+    // MARK: Properties
     
     static var identifier: String {
         return String(describing: self)
@@ -28,5 +30,7 @@ class NobarSetupCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    // MARK: Lifecycle
     
 }

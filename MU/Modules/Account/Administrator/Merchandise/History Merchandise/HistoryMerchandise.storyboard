@@ -10,7 +10,7 @@
         <!--Test-->
         <scene sceneID="5We-7B-J9h">
             <objects>
-                <viewController storyboardIdentifier="PersonalViewController" title="Personal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="PersonalViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryMerchandiseViewController" title="HistoryMerchandise" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="HistoryMerchandiseViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

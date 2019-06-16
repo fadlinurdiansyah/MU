@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dX-N7-XUl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Admin-->
+        <scene sceneID="5We-7B-J9h">
+            <objects>
+                <viewController storyboardIdentifier="AdminViewController" title="Admin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="AdminViewController" customModule="MU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="13" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcd-ae-jGv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1dX-N7-XUl" id="kWq-3p-GSI"/>
+                                    <outlet property="delegate" destination="1dX-N7-XUl" id="Bw9-S2-jBV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bcd-ae-jGv" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" id="1Z8-sI-26i"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="bottom" secondItem="bcd-ae-jGv" secondAttribute="bottom" id="DkJ-5c-ezc"/>
+                            <constraint firstItem="bcd-ae-jGv" firstAttribute="top" secondItem="DEK-3G-Vg1" secondAttribute="top" id="bRQ-xc-ltI"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="bcd-ae-jGv" secondAttribute="trailing" id="wiO-cS-i5F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewAdmin" destination="bcd-ae-jGv" id="Icn-JA-bgM"/>
+                        <segue destination="bJn-x1-Kwy" kind="show" identifier="showAddNobar" id="EUB-Yp-2uj"/>
+                        <segue destination="cX2-6S-VMy" kind="show" identifier="showAddLocationNobar" id="Op0-5W-jCt"/>
+                        <segue destination="3gC-so-esr" kind="show" identifier="showNobarHistory" id="Ddf-8u-cSt"/>
+                        <segue destination="kft-Pi-HNU" kind="show" identifier="showAddEvent" id="lyu-Kx-3Q4"/>
+                        <segue destination="tzg-CD-WSH" kind="show" identifier="showEventHistory" id="1BH-yU-DLE"/>
+                        <segue destination="eIm-ie-B6Y" kind="show" identifier="showSellMerchandise" id="PHp-E7-EyV"/>
+                        <segue destination="B7A-23-3iB" kind="show" identifier="showMerchandiseTranDetail" id="YwN-Kh-jfx"/>
+                        <segue destination="FHX-xr-fbu" kind="show" identifier="showMerchandiseHistory" id="GNw-Ev-9gL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--AddNobar-->
+        <scene sceneID="a3d-bA-6vZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddNobar" id="bJn-x1-Kwy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93B-0R-NLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="-266"/>
+        </scene>
+        <!--AddLocationNobar-->
+        <scene sceneID="kUA-9c-Q2n">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddLocationNobar" id="cX2-6S-VMy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWE-0g-Ma2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="-218"/>
+        </scene>
+        <!--NobarHistory-->
+        <scene sceneID="LW7-1a-3r2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NobarHistory" id="3gC-so-esr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhW-fs-VLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="-160"/>
+        </scene>
+        <!--AddEvent-->
+        <scene sceneID="g5j-oG-Pz8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddEvent" id="kft-Pi-HNU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFw-2D-7xK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="4"/>
+        </scene>
+        <!--EventHistory-->
+        <scene sceneID="10t-Lm-p8p">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EventHistory" id="tzg-CD-WSH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2B-xa-lKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="67"/>
+        </scene>
+        <!--SellMerchandise-->
+        <scene sceneID="Tx8-W0-NPX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SellMerchandise" id="eIm-ie-B6Y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAD-iz-cZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="157"/>
+        </scene>
+        <!--HistoryMerchandise-->
+        <scene sceneID="a0X-pV-beq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HistoryMerchandise" id="FHX-xr-fbu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2W-6M-FeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="301"/>
+        </scene>
+        <!--MerchandiseTranDetail-->
+        <scene sceneID="ubf-Ru-p9e">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MerchandiseTranDetail" id="B7A-23-3iB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DbK-Pf-kpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="228"/>
+        </scene>
+    </scenes>
+</document>

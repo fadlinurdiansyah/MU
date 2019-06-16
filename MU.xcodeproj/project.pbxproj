@@ -84,11 +84,59 @@
 		25E8F72122B13B98008F8216 /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F71E22B13B98008F8216 /* Personal.storyboard */; };
 		25E8F72222B13B98008F8216 /* PersonalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F71F22B13B98008F8216 /* PersonalPresenter.swift */; };
 		25E8F72322B13B98008F8216 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F72022B13B98008F8216 /* PersonalViewController.swift */; };
-		25E8F72722B19A7D008F8216 /* LevelAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F72522B19A7D008F8216 /* LevelAccountCell.swift */; };
-		25E8F72822B19A7D008F8216 /* LevelAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F72622B19A7D008F8216 /* LevelAccountCell.xib */; };
+		25E8F72722B19A7D008F8216 /* AccountLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F72522B19A7D008F8216 /* AccountLevelCell.swift */; };
+		25E8F72822B19A7D008F8216 /* AccountLevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F72622B19A7D008F8216 /* AccountLevelCell.xib */; };
 		25E8F72A22B19F00008F8216 /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F72922B19F00008F8216 /* AccountSection.swift */; };
-		25E8F72D22B1A341008F8216 /* NobarSetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F72B22B1A341008F8216 /* NobarSetupCell.swift */; };
-		25E8F72E22B1A341008F8216 /* NobarSetupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F72C22B1A341008F8216 /* NobarSetupCell.xib */; };
+		25E8F72D22B1A341008F8216 /* AdminCellDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F72B22B1A341008F8216 /* AdminCellDetail.swift */; };
+		25E8F72E22B1A341008F8216 /* AdminCellDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F72C22B1A341008F8216 /* AdminCellDetail.xib */; };
+		25E8F73322B28401008F8216 /* AdminCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F73122B28401008F8216 /* AdminCellHeader.swift */; };
+		25E8F73422B28401008F8216 /* AdminCellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F73222B28401008F8216 /* AdminCellHeader.xib */; };
+		25E8F73A22B2FA51008F8216 /* AddNobar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F73722B2FA51008F8216 /* AddNobar.storyboard */; };
+		25E8F73B22B2FA51008F8216 /* AddNobarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F73822B2FA51008F8216 /* AddNobarPresenter.swift */; };
+		25E8F73C22B2FA51008F8216 /* AddNobarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F73922B2FA51008F8216 /* AddNobarViewController.swift */; };
+		25E8F74122B2FB51008F8216 /* AddLocationNobar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F73E22B2FB51008F8216 /* AddLocationNobar.storyboard */; };
+		25E8F74222B2FB51008F8216 /* AddLocationNobarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F73F22B2FB51008F8216 /* AddLocationNobarPresenter.swift */; };
+		25E8F74322B2FB51008F8216 /* AddLocationNobarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F74022B2FB51008F8216 /* AddLocationNobarViewController.swift */; };
+		25E8F75322B30346008F8216 /* AddEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F75022B30346008F8216 /* AddEvent.storyboard */; };
+		25E8F75422B30346008F8216 /* AddEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F75122B30346008F8216 /* AddEventPresenter.swift */; };
+		25E8F75522B30346008F8216 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F75222B30346008F8216 /* AddEventViewController.swift */; };
+		25E8F75922B303BC008F8216 /* NobarHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F75622B303BC008F8216 /* NobarHistory.storyboard */; };
+		25E8F75A22B303BC008F8216 /* NobarHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F75722B303BC008F8216 /* NobarHistoryPresenter.swift */; };
+		25E8F75B22B303BC008F8216 /* NobarHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F75822B303BC008F8216 /* NobarHistoryViewController.swift */; };
+		25E8F75F22B303E3008F8216 /* EventHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F75C22B303E3008F8216 /* EventHistory.storyboard */; };
+		25E8F76022B303E3008F8216 /* EventHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F75D22B303E3008F8216 /* EventHistoryPresenter.swift */; };
+		25E8F76122B303E3008F8216 /* EventHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F75E22B303E3008F8216 /* EventHistoryViewController.swift */; };
+		25E8F76522B30411008F8216 /* SellMerchandise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F76222B30411008F8216 /* SellMerchandise.storyboard */; };
+		25E8F76622B30411008F8216 /* SellMerchandisePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F76322B30411008F8216 /* SellMerchandisePresenter.swift */; };
+		25E8F76722B30411008F8216 /* SellMerchandiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F76422B30411008F8216 /* SellMerchandiseViewController.swift */; };
+		25E8F76B22B30447008F8216 /* MerchandiseTranDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F76822B30447008F8216 /* MerchandiseTranDetail.storyboard */; };
+		25E8F76C22B30447008F8216 /* MerchandiseTranDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F76922B30447008F8216 /* MerchandiseTranDetailPresenter.swift */; };
+		25E8F76D22B30447008F8216 /* MerchandiseTranDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F76A22B30447008F8216 /* MerchandiseTranDetailViewController.swift */; };
+		25E8F77122B30460008F8216 /* HistoryMerchandise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F76E22B30460008F8216 /* HistoryMerchandise.storyboard */; };
+		25E8F77222B30460008F8216 /* HistoryMerchandisePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F76F22B30460008F8216 /* HistoryMerchandisePresenter.swift */; };
+		25E8F77322B30460008F8216 /* HistoryMerchandiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F77022B30460008F8216 /* HistoryMerchandiseViewController.swift */; };
+		25E8F77822B46E86008F8216 /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F77722B46E86008F8216 /* AccountRow.swift */; };
+		25E8F78122B4844C008F8216 /* PersonalCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F77F22B4844C008F8216 /* PersonalCellHeader.swift */; };
+		25E8F78222B4844C008F8216 /* PersonalCellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F78022B4844C008F8216 /* PersonalCellHeader.xib */; };
+		25E8F78522B48740008F8216 /* PersonalCellDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F78322B48740008F8216 /* PersonalCellDetail.swift */; };
+		25E8F78622B48740008F8216 /* PersonalCellDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F78422B48740008F8216 /* PersonalCellDetail.xib */; };
+		25E8F78822B4876C008F8216 /* PersonalSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F78722B4876C008F8216 /* PersonalSection.swift */; };
+		25E8F78A22B487AE008F8216 /* PersonalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F78922B487AE008F8216 /* PersonalRow.swift */; };
+		25E8F79E22B4FC01008F8216 /* YourMenuHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F79B22B4FC01008F8216 /* YourMenuHistory.storyboard */; };
+		25E8F79F22B4FC01008F8216 /* YourMenuHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F79C22B4FC01008F8216 /* YourMenuHistoryPresenter.swift */; };
+		25E8F7A022B4FC01008F8216 /* YourMenuHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F79D22B4FC01008F8216 /* YourMenuHistoryViewController.swift */; };
+		25E8F7A422B4FC4B008F8216 /* YourMenuFavorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F7A122B4FC4B008F8216 /* YourMenuFavorite.storyboard */; };
+		25E8F7A522B4FC4B008F8216 /* YourMenuFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7A222B4FC4B008F8216 /* YourMenuFavoritePresenter.swift */; };
+		25E8F7A622B4FC4B008F8216 /* YourMenuFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7A322B4FC4B008F8216 /* YourMenuFavoriteViewController.swift */; };
+		25E8F7AA22B4FC6C008F8216 /* YourMenuTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F7A722B4FC6C008F8216 /* YourMenuTransaction.storyboard */; };
+		25E8F7AB22B4FC6C008F8216 /* YourMenuTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7A822B4FC6C008F8216 /* YourMenuTransactionPresenter.swift */; };
+		25E8F7AC22B4FC6C008F8216 /* YourMenuTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7A922B4FC6C008F8216 /* YourMenuTransactionViewController.swift */; };
+		25E8F7B022B4FCC0008F8216 /* AboutUS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F7AD22B4FCC0008F8216 /* AboutUS.storyboard */; };
+		25E8F7B122B4FCC0008F8216 /* AboutUSPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7AE22B4FCC0008F8216 /* AboutUSPresenter.swift */; };
+		25E8F7B222B4FCC0008F8216 /* AboutUSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7AF22B4FCC0008F8216 /* AboutUSViewController.swift */; };
+		25E8F7B722B50466008F8216 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F7B422B50466008F8216 /* EditProfile.storyboard */; };
+		25E8F7B822B50466008F8216 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7B522B50466008F8216 /* EditProfilePresenter.swift */; };
+		25E8F7B922B50466008F8216 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F7B622B50466008F8216 /* EditProfileViewController.swift */; };
 		25ED69F52292E184000E6D0D /* Date+ConvTimePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED69F42292E184000E6D0D /* Date+ConvTimePost.swift */; };
 		FF0FB95922912AAC00A614F7 /* ApiNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0FB95822912AAC00A614F7 /* ApiNews.swift */; };
 		FF0FB96222912E4200A614F7 /* BasePagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0FB96122912E4200A614F7 /* BasePagination.swift */; };
@@ -209,11 +257,59 @@
 		25E8F71E22B13B98008F8216 /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		25E8F71F22B13B98008F8216 /* PersonalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPresenter.swift; sourceTree = "<group>"; };
 		25E8F72022B13B98008F8216 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
-		25E8F72522B19A7D008F8216 /* LevelAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelAccountCell.swift; sourceTree = "<group>"; };
-		25E8F72622B19A7D008F8216 /* LevelAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelAccountCell.xib; sourceTree = "<group>"; };
+		25E8F72522B19A7D008F8216 /* AccountLevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLevelCell.swift; sourceTree = "<group>"; };
+		25E8F72622B19A7D008F8216 /* AccountLevelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountLevelCell.xib; sourceTree = "<group>"; };
 		25E8F72922B19F00008F8216 /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
-		25E8F72B22B1A341008F8216 /* NobarSetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobarSetupCell.swift; sourceTree = "<group>"; };
-		25E8F72C22B1A341008F8216 /* NobarSetupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NobarSetupCell.xib; sourceTree = "<group>"; };
+		25E8F72B22B1A341008F8216 /* AdminCellDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCellDetail.swift; sourceTree = "<group>"; };
+		25E8F72C22B1A341008F8216 /* AdminCellDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminCellDetail.xib; sourceTree = "<group>"; };
+		25E8F73122B28401008F8216 /* AdminCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCellHeader.swift; sourceTree = "<group>"; };
+		25E8F73222B28401008F8216 /* AdminCellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminCellHeader.xib; sourceTree = "<group>"; };
+		25E8F73722B2FA51008F8216 /* AddNobar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNobar.storyboard; sourceTree = "<group>"; };
+		25E8F73822B2FA51008F8216 /* AddNobarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNobarPresenter.swift; sourceTree = "<group>"; };
+		25E8F73922B2FA51008F8216 /* AddNobarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNobarViewController.swift; sourceTree = "<group>"; };
+		25E8F73E22B2FB51008F8216 /* AddLocationNobar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddLocationNobar.storyboard; sourceTree = "<group>"; };
+		25E8F73F22B2FB51008F8216 /* AddLocationNobarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNobarPresenter.swift; sourceTree = "<group>"; };
+		25E8F74022B2FB51008F8216 /* AddLocationNobarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNobarViewController.swift; sourceTree = "<group>"; };
+		25E8F75022B30346008F8216 /* AddEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddEvent.storyboard; sourceTree = "<group>"; };
+		25E8F75122B30346008F8216 /* AddEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPresenter.swift; sourceTree = "<group>"; };
+		25E8F75222B30346008F8216 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		25E8F75622B303BC008F8216 /* NobarHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NobarHistory.storyboard; sourceTree = "<group>"; };
+		25E8F75722B303BC008F8216 /* NobarHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobarHistoryPresenter.swift; sourceTree = "<group>"; };
+		25E8F75822B303BC008F8216 /* NobarHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobarHistoryViewController.swift; sourceTree = "<group>"; };
+		25E8F75C22B303E3008F8216 /* EventHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventHistory.storyboard; sourceTree = "<group>"; };
+		25E8F75D22B303E3008F8216 /* EventHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryPresenter.swift; sourceTree = "<group>"; };
+		25E8F75E22B303E3008F8216 /* EventHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryViewController.swift; sourceTree = "<group>"; };
+		25E8F76222B30411008F8216 /* SellMerchandise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SellMerchandise.storyboard; sourceTree = "<group>"; };
+		25E8F76322B30411008F8216 /* SellMerchandisePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellMerchandisePresenter.swift; sourceTree = "<group>"; };
+		25E8F76422B30411008F8216 /* SellMerchandiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellMerchandiseViewController.swift; sourceTree = "<group>"; };
+		25E8F76822B30447008F8216 /* MerchandiseTranDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MerchandiseTranDetail.storyboard; sourceTree = "<group>"; };
+		25E8F76922B30447008F8216 /* MerchandiseTranDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchandiseTranDetailPresenter.swift; sourceTree = "<group>"; };
+		25E8F76A22B30447008F8216 /* MerchandiseTranDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchandiseTranDetailViewController.swift; sourceTree = "<group>"; };
+		25E8F76E22B30460008F8216 /* HistoryMerchandise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryMerchandise.storyboard; sourceTree = "<group>"; };
+		25E8F76F22B30460008F8216 /* HistoryMerchandisePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMerchandisePresenter.swift; sourceTree = "<group>"; };
+		25E8F77022B30460008F8216 /* HistoryMerchandiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMerchandiseViewController.swift; sourceTree = "<group>"; };
+		25E8F77722B46E86008F8216 /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
+		25E8F77F22B4844C008F8216 /* PersonalCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCellHeader.swift; sourceTree = "<group>"; };
+		25E8F78022B4844C008F8216 /* PersonalCellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCellHeader.xib; sourceTree = "<group>"; };
+		25E8F78322B48740008F8216 /* PersonalCellDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCellDetail.swift; sourceTree = "<group>"; };
+		25E8F78422B48740008F8216 /* PersonalCellDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCellDetail.xib; sourceTree = "<group>"; };
+		25E8F78722B4876C008F8216 /* PersonalSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSection.swift; sourceTree = "<group>"; };
+		25E8F78922B487AE008F8216 /* PersonalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRow.swift; sourceTree = "<group>"; };
+		25E8F79B22B4FC01008F8216 /* YourMenuHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YourMenuHistory.storyboard; sourceTree = "<group>"; };
+		25E8F79C22B4FC01008F8216 /* YourMenuHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMenuHistoryPresenter.swift; sourceTree = "<group>"; };
+		25E8F79D22B4FC01008F8216 /* YourMenuHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMenuHistoryViewController.swift; sourceTree = "<group>"; };
+		25E8F7A122B4FC4B008F8216 /* YourMenuFavorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YourMenuFavorite.storyboard; sourceTree = "<group>"; };
+		25E8F7A222B4FC4B008F8216 /* YourMenuFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMenuFavoritePresenter.swift; sourceTree = "<group>"; };
+		25E8F7A322B4FC4B008F8216 /* YourMenuFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMenuFavoriteViewController.swift; sourceTree = "<group>"; };
+		25E8F7A722B4FC6C008F8216 /* YourMenuTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YourMenuTransaction.storyboard; sourceTree = "<group>"; };
+		25E8F7A822B4FC6C008F8216 /* YourMenuTransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMenuTransactionPresenter.swift; sourceTree = "<group>"; };
+		25E8F7A922B4FC6C008F8216 /* YourMenuTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMenuTransactionViewController.swift; sourceTree = "<group>"; };
+		25E8F7AD22B4FCC0008F8216 /* AboutUS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUS.storyboard; sourceTree = "<group>"; };
+		25E8F7AE22B4FCC0008F8216 /* AboutUSPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUSPresenter.swift; sourceTree = "<group>"; };
+		25E8F7AF22B4FCC0008F8216 /* AboutUSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUSViewController.swift; sourceTree = "<group>"; };
+		25E8F7B422B50466008F8216 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		25E8F7B522B50466008F8216 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		25E8F7B622B50466008F8216 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		25ED69F42292E184000E6D0D /* Date+ConvTimePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ConvTimePost.swift"; sourceTree = "<group>"; };
 		547191C2F4F72A74ACC27FE2 /* Pods_MU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8247756153D366214ED526 /* Pods-MU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MU.debug.xcconfig"; path = "Target Support Files/Pods-MU/Pods-MU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -309,9 +405,10 @@
 		25291AE622AA1E2300EA4FF5 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				25291AED22AA1E6300EA4FF5 /* Main */,
+				25E8F7B322B5043F008F8216 /* Profile */,
 				25E8F71722B13B6B008F8216 /* Administrator */,
 				25E8F71622B13B50008F8216 /* Personal */,
-				25291AED22AA1E6300EA4FF5 /* Main */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -569,9 +666,9 @@
 		25E8F71622B13B50008F8216 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				25E8F71E22B13B98008F8216 /* Personal.storyboard */,
-				25E8F72022B13B98008F8216 /* PersonalViewController.swift */,
-				25E8F71F22B13B98008F8216 /* PersonalPresenter.swift */,
+				25E8F77A22B48253008F8216 /* Main */,
+				25E8F77B22B4825B008F8216 /* Your Menu */,
+				25E8F77C22B48274008F8216 /* Other Menu */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -579,10 +676,10 @@
 		25E8F71722B13B6B008F8216 /* Administrator */ = {
 			isa = PBXGroup;
 			children = (
-				25E8F71822B13B88008F8216 /* Admin.storyboard */,
-				25E8F71A22B13B88008F8216 /* AdminViewController.swift */,
-				25E8F71922B13B88008F8216 /* AdminPresenter.swift */,
-				25E8F72422B199C5008F8216 /* Cell */,
+				25E8F73522B2F9FD008F8216 /* Main */,
+				25E8F77422B30471008F8216 /* Nobar */,
+				25E8F77522B30478008F8216 /* Event */,
+				25E8F77622B3047E008F8216 /* Merchandise */,
 			);
 			path = Administrator;
 			sourceTree = "<group>";
@@ -590,12 +687,240 @@
 		25E8F72422B199C5008F8216 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				25E8F72522B19A7D008F8216 /* LevelAccountCell.swift */,
-				25E8F72622B19A7D008F8216 /* LevelAccountCell.xib */,
-				25E8F72B22B1A341008F8216 /* NobarSetupCell.swift */,
-				25E8F72C22B1A341008F8216 /* NobarSetupCell.xib */,
+				25E8F72522B19A7D008F8216 /* AccountLevelCell.swift */,
+				25E8F72622B19A7D008F8216 /* AccountLevelCell.xib */,
+				25E8F72B22B1A341008F8216 /* AdminCellDetail.swift */,
+				25E8F72C22B1A341008F8216 /* AdminCellDetail.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		25E8F73022B283D1008F8216 /* Cell Header */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F73122B28401008F8216 /* AdminCellHeader.swift */,
+				25E8F73222B28401008F8216 /* AdminCellHeader.xib */,
+			);
+			path = "Cell Header";
+			sourceTree = "<group>";
+		};
+		25E8F73522B2F9FD008F8216 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F71822B13B88008F8216 /* Admin.storyboard */,
+				25E8F71A22B13B88008F8216 /* AdminViewController.swift */,
+				25E8F71922B13B88008F8216 /* AdminPresenter.swift */,
+				25E8F73022B283D1008F8216 /* Cell Header */,
+				25E8F72422B199C5008F8216 /* Cell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		25E8F73622B2FA12008F8216 /* Add Nonton Bareng */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F73722B2FA51008F8216 /* AddNobar.storyboard */,
+				25E8F73822B2FA51008F8216 /* AddNobarPresenter.swift */,
+				25E8F73922B2FA51008F8216 /* AddNobarViewController.swift */,
+			);
+			path = "Add Nonton Bareng";
+			sourceTree = "<group>";
+		};
+		25E8F73D22B2FB18008F8216 /* Add Location Nobar */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F73E22B2FB51008F8216 /* AddLocationNobar.storyboard */,
+				25E8F73F22B2FB51008F8216 /* AddLocationNobarPresenter.swift */,
+				25E8F74022B2FB51008F8216 /* AddLocationNobarViewController.swift */,
+			);
+			path = "Add Location Nobar";
+			sourceTree = "<group>";
+		};
+		25E8F74422B2FBBB008F8216 /* Nobar History */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F75622B303BC008F8216 /* NobarHistory.storyboard */,
+				25E8F75722B303BC008F8216 /* NobarHistoryPresenter.swift */,
+				25E8F75822B303BC008F8216 /* NobarHistoryViewController.swift */,
+			);
+			path = "Nobar History";
+			sourceTree = "<group>";
+		};
+		25E8F74B22B2FC50008F8216 /* Add Event */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F75022B30346008F8216 /* AddEvent.storyboard */,
+				25E8F75122B30346008F8216 /* AddEventPresenter.swift */,
+				25E8F75222B30346008F8216 /* AddEventViewController.swift */,
+			);
+			path = "Add Event";
+			sourceTree = "<group>";
+		};
+		25E8F74C22B2FC57008F8216 /* Event History */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F75C22B303E3008F8216 /* EventHistory.storyboard */,
+				25E8F75D22B303E3008F8216 /* EventHistoryPresenter.swift */,
+				25E8F75E22B303E3008F8216 /* EventHistoryViewController.swift */,
+			);
+			path = "Event History";
+			sourceTree = "<group>";
+		};
+		25E8F74D22B2FC64008F8216 /* Sell Merchandise */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F76222B30411008F8216 /* SellMerchandise.storyboard */,
+				25E8F76322B30411008F8216 /* SellMerchandisePresenter.swift */,
+				25E8F76422B30411008F8216 /* SellMerchandiseViewController.swift */,
+			);
+			path = "Sell Merchandise";
+			sourceTree = "<group>";
+		};
+		25E8F74E22B2FC71008F8216 /* Merchandise Transaction Detail */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F76822B30447008F8216 /* MerchandiseTranDetail.storyboard */,
+				25E8F76922B30447008F8216 /* MerchandiseTranDetailPresenter.swift */,
+				25E8F76A22B30447008F8216 /* MerchandiseTranDetailViewController.swift */,
+			);
+			path = "Merchandise Transaction Detail";
+			sourceTree = "<group>";
+		};
+		25E8F74F22B2FC8F008F8216 /* History Merchandise */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F76E22B30460008F8216 /* HistoryMerchandise.storyboard */,
+				25E8F76F22B30460008F8216 /* HistoryMerchandisePresenter.swift */,
+				25E8F77022B30460008F8216 /* HistoryMerchandiseViewController.swift */,
+			);
+			path = "History Merchandise";
+			sourceTree = "<group>";
+		};
+		25E8F77422B30471008F8216 /* Nobar */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F73622B2FA12008F8216 /* Add Nonton Bareng */,
+				25E8F73D22B2FB18008F8216 /* Add Location Nobar */,
+				25E8F74422B2FBBB008F8216 /* Nobar History */,
+			);
+			path = Nobar;
+			sourceTree = "<group>";
+		};
+		25E8F77522B30478008F8216 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F74C22B2FC57008F8216 /* Event History */,
+				25E8F74B22B2FC50008F8216 /* Add Event */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		25E8F77622B3047E008F8216 /* Merchandise */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F74F22B2FC8F008F8216 /* History Merchandise */,
+				25E8F74E22B2FC71008F8216 /* Merchandise Transaction Detail */,
+				25E8F74D22B2FC64008F8216 /* Sell Merchandise */,
+			);
+			path = Merchandise;
+			sourceTree = "<group>";
+		};
+		25E8F77A22B48253008F8216 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F71E22B13B98008F8216 /* Personal.storyboard */,
+				25E8F72022B13B98008F8216 /* PersonalViewController.swift */,
+				25E8F71F22B13B98008F8216 /* PersonalPresenter.swift */,
+				25E8F77D22B48417008F8216 /* Header Cell */,
+				25E8F77E22B4841F008F8216 /* Cell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		25E8F77B22B4825B008F8216 /* Your Menu */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F79822B4FBBB008F8216 /* History */,
+				25E8F79A22B4FBE2008F8216 /* Favorite */,
+				25E8F79922B4FBD7008F8216 /* Transaction */,
+			);
+			path = "Your Menu";
+			sourceTree = "<group>";
+		};
+		25E8F77C22B48274008F8216 /* Other Menu */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F79722B4FBA4008F8216 /* About US */,
+			);
+			path = "Other Menu";
+			sourceTree = "<group>";
+		};
+		25E8F77D22B48417008F8216 /* Header Cell */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F77F22B4844C008F8216 /* PersonalCellHeader.swift */,
+				25E8F78022B4844C008F8216 /* PersonalCellHeader.xib */,
+			);
+			path = "Header Cell";
+			sourceTree = "<group>";
+		};
+		25E8F77E22B4841F008F8216 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F78322B48740008F8216 /* PersonalCellDetail.swift */,
+				25E8F78422B48740008F8216 /* PersonalCellDetail.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		25E8F79722B4FBA4008F8216 /* About US */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F7AD22B4FCC0008F8216 /* AboutUS.storyboard */,
+				25E8F7AE22B4FCC0008F8216 /* AboutUSPresenter.swift */,
+				25E8F7AF22B4FCC0008F8216 /* AboutUSViewController.swift */,
+			);
+			path = "About US";
+			sourceTree = "<group>";
+		};
+		25E8F79822B4FBBB008F8216 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F79B22B4FC01008F8216 /* YourMenuHistory.storyboard */,
+				25E8F79C22B4FC01008F8216 /* YourMenuHistoryPresenter.swift */,
+				25E8F79D22B4FC01008F8216 /* YourMenuHistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		25E8F79922B4FBD7008F8216 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F7A722B4FC6C008F8216 /* YourMenuTransaction.storyboard */,
+				25E8F7A822B4FC6C008F8216 /* YourMenuTransactionPresenter.swift */,
+				25E8F7A922B4FC6C008F8216 /* YourMenuTransactionViewController.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		25E8F79A22B4FBE2008F8216 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F7A122B4FC4B008F8216 /* YourMenuFavorite.storyboard */,
+				25E8F7A222B4FC4B008F8216 /* YourMenuFavoritePresenter.swift */,
+				25E8F7A322B4FC4B008F8216 /* YourMenuFavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		25E8F7B322B5043F008F8216 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				25E8F7B422B50466008F8216 /* EditProfile.storyboard */,
+				25E8F7B522B50466008F8216 /* EditProfilePresenter.swift */,
+				25E8F7B622B50466008F8216 /* EditProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		3D0E4E4931ADD28CE4CA9D0F /* Frameworks */ = {
@@ -663,6 +988,9 @@
 			children = (
 				FF2972BE228FAA2200B76A76 /* NewsSection.swift */,
 				25E8F72922B19F00008F8216 /* AccountSection.swift */,
+				25E8F77722B46E86008F8216 /* AccountRow.swift */,
+				25E8F78722B4876C008F8216 /* PersonalSection.swift */,
+				25E8F78922B487AE008F8216 /* PersonalRow.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -845,39 +1173,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E8F72E22B1A341008F8216 /* NobarSetupCell.xib in Resources */,
+				25E8F7B722B50466008F8216 /* EditProfile.storyboard in Resources */,
+				25E8F72E22B1A341008F8216 /* AdminCellDetail.xib in Resources */,
 				25E8F72122B13B98008F8216 /* Personal.storyboard in Resources */,
 				2516969C22588CA80024DBC8 /* LaunchScreen.storyboard in Resources */,
+				25E8F75F22B303E3008F8216 /* EventHistory.storyboard in Resources */,
 				25693BE722B131E400A9219C /* Account.storyboard in Resources */,
 				25C51563229F739E004AD584 /* MainSchAndStand.storyboard in Resources */,
+				25E8F75322B30346008F8216 /* AddEvent.storyboard in Resources */,
 				FFB5086922872E3B00A1E03E /* CustomPage.xib in Resources */,
+				25E8F73422B28401008F8216 /* AdminCellHeader.xib in Resources */,
 				254D9980228E128300AA44AA /* Mukta-ExtraBold.ttf in Resources */,
-				25E8F72822B19A7D008F8216 /* LevelAccountCell.xib in Resources */,
+				25E8F79E22B4FC01008F8216 /* YourMenuHistory.storyboard in Resources */,
+				25E8F72822B19A7D008F8216 /* AccountLevelCell.xib in Resources */,
 				FFB5086A22872E3B00A1E03E /* CustomOverlay.xib in Resources */,
 				FF1DD0532287CE80001362B6 /* News.storyboard in Resources */,
 				25A7ECF42258E14600E7F51C /* GoogleService-Info.plist in Resources */,
+				25E8F76522B30411008F8216 /* SellMerchandise.storyboard in Resources */,
 				25BF0110229F745600A1775D /* Schedules.storyboard in Resources */,
 				25ADB7F522A9B31C00C2DF6F /* Login.storyboard in Resources */,
 				25BF011E229F90B000A1775D /* HeaderStandingCell.xib in Resources */,
 				FF1DD04C2287C781001362B6 /* MainTab.storyboard in Resources */,
 				252C45622298681900F9084D /* Player.storyboard in Resources */,
+				25E8F73A22B2FA51008F8216 /* AddNobar.storyboard in Resources */,
+				25E8F7B022B4FCC0008F8216 /* AboutUS.storyboard in Resources */,
 				254D9981228E128300AA44AA /* Mukta-ExtraLight.ttf in Resources */,
+				25E8F78622B48740008F8216 /* PersonalCellDetail.xib in Resources */,
 				2516969922588CA80024DBC8 /* Assets.xcassets in Resources */,
+				25E8F7AA22B4FC6C008F8216 /* YourMenuTransaction.storyboard in Resources */,
 				25BF011A229F8D4800A1775D /* StandingCell.xib in Resources */,
 				25E8F71B22B13B88008F8216 /* Admin.storyboard in Resources */,
 				2596CE1F228FDD020072A407 /* NewsDetailCell.xib in Resources */,
 				254D9982228E128300AA44AA /* Mukta-Regular.ttf in Resources */,
 				2509BD2E228F052D00E6EF14 /* BeritaCell.xib in Resources */,
+				25E8F75922B303BC008F8216 /* NobarHistory.storyboard in Resources */,
 				FFB508582286C8AA00A1E03E /* OnBoarding.storyboard in Resources */,
+				25E8F74122B2FB51008F8216 /* AddLocationNobar.storyboard in Resources */,
 				254D998C228E184200AA44AA /* MatchCell.xib in Resources */,
 				254D997F228E128300AA44AA /* Mukta-Bold.ttf in Resources */,
 				252C4569229868ED00F9084D /* PlayerCell.xib in Resources */,
 				25BF012F22A2300300A1775D /* SchedulesCell.xib in Resources */,
 				25C5156C229F73F3004AD584 /* Standing.storyboard in Resources */,
+				25E8F7A422B4FC4B008F8216 /* YourMenuFavorite.storyboard in Resources */,
 				254D9983228E128300AA44AA /* Mukta-Medium.ttf in Resources */,
+				25E8F76B22B30447008F8216 /* MerchandiseTranDetail.storyboard in Resources */,
 				254D997E228E128300AA44AA /* Mukta-SemiBold.ttf in Resources */,
 				2596CE18228FDBDC0072A407 /* NewsDetail.storyboard in Resources */,
 				FF9211632292E53C00624330 /* LoadingView.xib in Resources */,
+				25E8F78222B4844C008F8216 /* PersonalCellHeader.xib in Resources */,
+				25E8F77122B30460008F8216 /* HistoryMerchandise.storyboard in Resources */,
 				2596CE3022912CA80072A407 /* LoadingCell.xib in Resources */,
 				254D9984228E128300AA44AA /* Mukta-Light.ttf in Resources */,
 			);
@@ -950,17 +1294,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E8F7B922B50466008F8216 /* EditProfileViewController.swift in Sources */,
+				25E8F7AB22B4FC6C008F8216 /* YourMenuTransactionPresenter.swift in Sources */,
 				FFB508342286BC5600A1E03E /* BaseViewController.swift in Sources */,
 				252C45632298681900F9084D /* PlayerPresenter.swift in Sources */,
+				25E8F78822B4876C008F8216 /* PersonalSection.swift in Sources */,
 				FFB508782287444200A1E03E /* ErrorExceptionAPI.swift in Sources */,
 				25C51556229AD371004AD584 /* ListPlayerDAO.swift in Sources */,
 				25C51552229AD33B004AD584 /* ApiPlayer.swift in Sources */,
 				25C51554229AD34A004AD584 /* PlayerRequest.swift in Sources */,
+				25E8F74222B2FB51008F8216 /* AddLocationNobarPresenter.swift in Sources */,
 				FFB5086822872E3B00A1E03E /* CustomPage.swift in Sources */,
 				25BF0115229F88D500A1775D /* UIView+constraints.swift in Sources */,
 				2596CE2F22912CA80072A407 /* LoadingCell.swift in Sources */,
 				2596CE1A228FDBDC0072A407 /* NewsDetailViewController.swift in Sources */,
 				FF1DD0552287CE80001362B6 /* NewsViewController.swift in Sources */,
+				25E8F78122B4844C008F8216 /* PersonalCellHeader.swift in Sources */,
 				25C5156D229F73F3004AD584 /* StandingPresenter.swift in Sources */,
 				25C5156E229F73F3004AD584 /* StandingViewController.swift in Sources */,
 				FF0FB96222912E4200A614F7 /* BasePagination.swift in Sources */,
@@ -974,32 +1323,45 @@
 				FFB5086C2287377500A1E03E /* ColorConstants.swift in Sources */,
 				FFB508322286BC1300A1E03E /* SegueConstants.swift in Sources */,
 				FF92115E2292D69400624330 /* String+URL.swift in Sources */,
+				25E8F7B222B4FCC0008F8216 /* AboutUSViewController.swift in Sources */,
+				25E8F78522B48740008F8216 /* PersonalCellDetail.swift in Sources */,
 				FFB50876228743F000A1E03E /* MUAPI.swift in Sources */,
 				2516969222588CA20024DBC8 /* AppDelegate.swift in Sources */,
 				25BF012A22A17B2900A1775D /* UIColor+RGB.swift in Sources */,
+				25E8F76C22B30447008F8216 /* MerchandiseTranDetailPresenter.swift in Sources */,
 				FF9211652292E54700624330 /* LoadingView.swift in Sources */,
-				25E8F72D22B1A341008F8216 /* NobarSetupCell.swift in Sources */,
+				25E8F7B122B4FCC0008F8216 /* AboutUSPresenter.swift in Sources */,
+				25E8F77822B46E86008F8216 /* AccountRow.swift in Sources */,
+				25E8F72D22B1A341008F8216 /* AdminCellDetail.swift in Sources */,
 				255B4C8022A3C68700E95C52 /* ListLastSchedulesDAO.swift in Sources */,
+				25E8F75522B30346008F8216 /* AddEventViewController.swift in Sources */,
 				25BF011D229F90B000A1775D /* HeaderStandingCell.swift in Sources */,
 				255B4C7C22A3B7C500E95C52 /* LastSchedulesRequest.swift in Sources */,
 				25BF0111229F745600A1775D /* SchedulesPresenter.swift in Sources */,
+				25E8F75B22B303BC008F8216 /* NobarHistoryViewController.swift in Sources */,
+				25E8F76622B30411008F8216 /* SellMerchandisePresenter.swift in Sources */,
 				252C45642298681900F9084D /* PlayerViewController.swift in Sources */,
 				25E8F71C22B13B88008F8216 /* AdminPresenter.swift in Sources */,
-				25E8F72722B19A7D008F8216 /* LevelAccountCell.swift in Sources */,
+				25E8F72722B19A7D008F8216 /* AccountLevelCell.swift in Sources */,
 				252C4568229868ED00F9084D /* PlayerCell.swift in Sources */,
 				255B4C7A22A3A0AF00E95C52 /* String+IndoDateFormat.swift in Sources */,
 				FF1DD04E2287C781001362B6 /* MainTabViewController.swift in Sources */,
 				25ADB7F622A9B31C00C2DF6F /* LoginPresenter.swift in Sources */,
+				25E8F7A522B4FC4B008F8216 /* YourMenuFavoritePresenter.swift in Sources */,
 				FF0FB96422912E8D00A614F7 /* ListNews.swift in Sources */,
 				25C51550229AD2F5004AD584 /* ListPlayer.swift in Sources */,
 				25E8F72322B13B98008F8216 /* PersonalViewController.swift in Sources */,
 				FF0FB95922912AAC00A614F7 /* ApiNews.swift in Sources */,
 				25BF0128229F95C000A1775D /* ListStanding.swift in Sources */,
+				25E8F78A22B487AE008F8216 /* PersonalRow.swift in Sources */,
 				FF2972BF228FAA2200B76A76 /* NewsSection.swift in Sources */,
+				25E8F77222B30460008F8216 /* HistoryMerchandisePresenter.swift in Sources */,
+				25E8F7AC22B4FC6C008F8216 /* YourMenuTransactionViewController.swift in Sources */,
 				25BF0112229F745600A1775D /* SchedulesViewController.swift in Sources */,
 				25BF013422A2441500A1775D /* SchedulesRequest.swift in Sources */,
 				FFB5087B2287452E00A1E03E /* BaseDAO.swift in Sources */,
 				25E8F72222B13B98008F8216 /* PersonalPresenter.swift in Sources */,
+				25E8F79F22B4FC01008F8216 /* YourMenuHistoryPresenter.swift in Sources */,
 				25C51565229F739E004AD584 /* MainSchAndStandViewController.swift in Sources */,
 				FFB5086722872E3B00A1E03E /* CustomOverlay.swift in Sources */,
 				FFB50872228742B900A1E03E /* String+Utilities.swift in Sources */,
@@ -1009,30 +1371,44 @@
 				25ED69F52292E184000E6D0D /* Date+ConvTimePost.swift in Sources */,
 				FF1DD0472287B8BD001362B6 /* UITextFieldHelper.swift in Sources */,
 				2596CE23228FF2DE0072A407 /* UIApplication+statusBar.swift in Sources */,
+				25E8F73B22B2FA51008F8216 /* AddNobarPresenter.swift in Sources */,
 				25C51549229A674F004AD584 /* UIImage+Gradient.swift in Sources */,
 				FF1DD0432287B8BD001362B6 /* NSLayoutHelper.swift in Sources */,
+				25E8F75422B30346008F8216 /* AddEventPresenter.swift in Sources */,
 				254D998B228E184200AA44AA /* MatchCell.swift in Sources */,
 				FFB508592286C8AA00A1E03E /* OnBoardingPresenter.swift in Sources */,
+				25E8F76722B30411008F8216 /* SellMerchandiseViewController.swift in Sources */,
 				25BF0123229F957C00A1775D /* StandingRequest.swift in Sources */,
+				25E8F73C22B2FA51008F8216 /* AddNobarViewController.swift in Sources */,
 				FFB50874228743C700A1E03E /* SummaryDAO.swift in Sources */,
 				2596CE19228FDBDC0072A407 /* NewsDetailPresenter.swift in Sources */,
+				25E8F73322B28401008F8216 /* AdminCellHeader.swift in Sources */,
 				25BF0125229F959100A1775D /* ListStandingDAO.swift in Sources */,
 				2596CE21228FE3800072A407 /* NavigationBar+Style.swift in Sources */,
+				25E8F76D22B30447008F8216 /* MerchandiseTranDetailViewController.swift in Sources */,
+				25E8F77322B30460008F8216 /* HistoryMerchandiseViewController.swift in Sources */,
 				FFB5085A2286C8AA00A1E03E /* OnBoardingViewController.swift in Sources */,
 				FF9211602292D96500624330 /* UITableView+InfiniteScroll.swift in Sources */,
 				255B4C7E22A3B7E000E95C52 /* NextSchedulesRequest.swift in Sources */,
 				25ADB7F722A9B31C00C2DF6F /* LoginViewController.swift in Sources */,
 				25693BE922B131E400A9219C /* AccountViewController.swift in Sources */,
+				25E8F74322B2FB51008F8216 /* AddLocationNobarViewController.swift in Sources */,
+				25E8F76122B303E3008F8216 /* EventHistoryViewController.swift in Sources */,
 				FF0FB96622912EA100A614F7 /* ListNewsDAO.swift in Sources */,
 				FF1DD0442287B8BD001362B6 /* DeviceHelper.swift in Sources */,
 				FF1DD0462287B8BD001362B6 /* UILabelHelper.swift in Sources */,
+				25E8F76022B303E3008F8216 /* EventHistoryPresenter.swift in Sources */,
 				FF1DD04D2287C781001362B6 /* MainTabPresenter.swift in Sources */,
+				25E8F7A022B4FC01008F8216 /* YourMenuHistoryViewController.swift in Sources */,
 				FF1DD0422287B8BD001362B6 /* UIButtonHelper.swift in Sources */,
 				2596CE1E228FDD020072A407 /* NewsDetailCell.swift in Sources */,
 				25BF013722A2461B00A1775D /* ListSchedules.swift in Sources */,
 				25BF013222A243EB00A1775D /* ApiSchedules.swift in Sources */,
 				FF1DD0452287B8BD001362B6 /* UITextViewHelper.swift in Sources */,
 				2509BD2D228F052C00E6EF14 /* BeritaCell.swift in Sources */,
+				25E8F7B822B50466008F8216 /* EditProfilePresenter.swift in Sources */,
+				25E8F75A22B303BC008F8216 /* NobarHistoryPresenter.swift in Sources */,
+				25E8F7A622B4FC4B008F8216 /* YourMenuFavoriteViewController.swift in Sources */,
 				25BF0119229F8D4800A1775D /* StandingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

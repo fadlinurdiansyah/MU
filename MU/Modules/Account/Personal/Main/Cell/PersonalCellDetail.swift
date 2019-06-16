@@ -1,14 +1,19 @@
 //
-//  LevelAccountCell.swift
+//  PersonalCellDetail.swift
 //  MU
 //
-//  Created by NDS on 13/06/19.
+//  Created by NDS on 15/06/19.
 //  Copyright © 2019 NDS. All rights reserved.
 //
 
 import UIKit
 
-class LevelAccountCell: UITableViewCell {
+class PersonalCellDetail: UITableViewCell {
+    
+    // MARK: Properties
+    var title: String?
+    
+    @IBOutlet weak var labelTitle: UILabel!
     
     static var identifier: String {
         return String(describing: self)
@@ -17,7 +22,9 @@ class LevelAccountCell: UITableViewCell {
     static var nib: UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-
+    
+    // MARK: Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +34,12 @@ class LevelAccountCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateUI() {
+        if title != nil {
+            labelTitle.text = title
+        }
     }
     
 }

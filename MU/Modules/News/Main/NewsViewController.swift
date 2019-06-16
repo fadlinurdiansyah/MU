@@ -15,7 +15,6 @@ import Hero
 extension SegueConstants {
     enum News {
         static let showNewsDetail = "showNewsDetail"
-        static let showPlayer = "showPlayer"
     }
 }
 
