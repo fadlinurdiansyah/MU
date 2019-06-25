@@ -78,6 +78,10 @@
 		25C5156C229F73F3004AD584 /* Standing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C51569229F73F3004AD584 /* Standing.storyboard */; };
 		25C5156D229F73F3004AD584 /* StandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5156A229F73F3004AD584 /* StandingPresenter.swift */; };
 		25C5156E229F73F3004AD584 /* StandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5156B229F73F3004AD584 /* StandingViewController.swift */; };
+		25D4A07A22C108ED00DE37FC /* PlayerFavoriteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4A07922C108ED00DE37FC /* PlayerFavoriteRequest.swift */; };
+		25D4A07C22C1090B00DE37FC /* ApiPlayerFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4A07B22C1090B00DE37FC /* ApiPlayerFavorite.swift */; };
+		25D4A07F22C10A3E00DE37FC /* ListPlayerFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4A07E22C10A3E00DE37FC /* ListPlayerFavorite.swift */; };
+		25D4A08122C10CC800DE37FC /* ListPlayerFavoriteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4A08022C10CC800DE37FC /* ListPlayerFavoriteDAO.swift */; };
 		25E8F71B22B13B88008F8216 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8F71822B13B88008F8216 /* Admin.storyboard */; };
 		25E8F71C22B13B88008F8216 /* AdminPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F71922B13B88008F8216 /* AdminPresenter.swift */; };
 		25E8F71D22B13B88008F8216 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8F71A22B13B88008F8216 /* AdminViewController.swift */; };
@@ -251,6 +255,10 @@
 		25C51569229F73F3004AD584 /* Standing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Standing.storyboard; sourceTree = "<group>"; };
 		25C5156A229F73F3004AD584 /* StandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingPresenter.swift; sourceTree = "<group>"; };
 		25C5156B229F73F3004AD584 /* StandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewController.swift; sourceTree = "<group>"; };
+		25D4A07922C108ED00DE37FC /* PlayerFavoriteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFavoriteRequest.swift; sourceTree = "<group>"; };
+		25D4A07B22C1090B00DE37FC /* ApiPlayerFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPlayerFavorite.swift; sourceTree = "<group>"; };
+		25D4A07E22C10A3E00DE37FC /* ListPlayerFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayerFavorite.swift; sourceTree = "<group>"; };
+		25D4A08022C10CC800DE37FC /* ListPlayerFavoriteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayerFavoriteDAO.swift; sourceTree = "<group>"; };
 		25E8F71822B13B88008F8216 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		25E8F71922B13B88008F8216 /* AdminPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPresenter.swift; sourceTree = "<group>"; };
 		25E8F71A22B13B88008F8216 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
@@ -446,6 +454,7 @@
 		2540ECBE22615359003EF6F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				25D4A07D22C10A1E00DE37FC /* Account */,
 				2596CE26229124520072A407 /* News */,
 				25C5154E229AD2CB004AD584 /* Player */,
 				25BF0126229F95A100A1775D /* Standing */,
@@ -653,6 +662,23 @@
 				25BF0116229F8C4200A1775D /* Cell */,
 			);
 			path = Standing;
+			sourceTree = "<group>";
+		};
+		25D4A07422C1079200DE37FC /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				25D4A07922C108ED00DE37FC /* PlayerFavoriteRequest.swift */,
+				25D4A07B22C1090B00DE37FC /* ApiPlayerFavorite.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		25D4A07D22C10A1E00DE37FC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				25D4A07E22C10A3E00DE37FC /* ListPlayerFavorite.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		25E8E5A022916B5A00A6C917 /* Recovered References */ = {
@@ -917,8 +943,8 @@
 			isa = PBXGroup;
 			children = (
 				25E8F7B422B50466008F8216 /* EditProfile.storyboard */,
-				25E8F7B522B50466008F8216 /* EditProfilePresenter.swift */,
 				25E8F7B622B50466008F8216 /* EditProfileViewController.swift */,
+				25E8F7B522B50466008F8216 /* EditProfilePresenter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1037,6 +1063,7 @@
 			isa = PBXGroup;
 			children = (
 				FFB50875228743F000A1E03E /* MUAPI.swift */,
+				25D4A07422C1079200DE37FC /* EditProfile */,
 				255CF5B2229991B40060D01D /* News */,
 				FF0FB95C22912C1E00A614F7 /* Player */,
 				25BF011F229F954700A1775D /* Standing */,
@@ -1086,6 +1113,7 @@
 				25BF0124229F959100A1775D /* ListStandingDAO.swift */,
 				25BF013822A2480E00A1775D /* ListSchedulesDAO.swift */,
 				255B4C7F22A3C68700E95C52 /* ListLastSchedulesDAO.swift */,
+				25D4A08022C10CC800DE37FC /* ListPlayerFavoriteDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -1353,6 +1381,7 @@
 				25E8F72322B13B98008F8216 /* PersonalViewController.swift in Sources */,
 				FF0FB95922912AAC00A614F7 /* ApiNews.swift in Sources */,
 				25BF0128229F95C000A1775D /* ListStanding.swift in Sources */,
+				25D4A08122C10CC800DE37FC /* ListPlayerFavoriteDAO.swift in Sources */,
 				25E8F78A22B487AE008F8216 /* PersonalRow.swift in Sources */,
 				FF2972BF228FAA2200B76A76 /* NewsSection.swift in Sources */,
 				25E8F77222B30460008F8216 /* HistoryMerchandisePresenter.swift in Sources */,
@@ -1384,6 +1413,7 @@
 				2596CE19228FDBDC0072A407 /* NewsDetailPresenter.swift in Sources */,
 				25E8F73322B28401008F8216 /* AdminCellHeader.swift in Sources */,
 				25BF0125229F959100A1775D /* ListStandingDAO.swift in Sources */,
+				25D4A07F22C10A3E00DE37FC /* ListPlayerFavorite.swift in Sources */,
 				2596CE21228FE3800072A407 /* NavigationBar+Style.swift in Sources */,
 				25E8F76D22B30447008F8216 /* MerchandiseTranDetailViewController.swift in Sources */,
 				25E8F77322B30460008F8216 /* HistoryMerchandiseViewController.swift in Sources */,
@@ -1393,6 +1423,7 @@
 				25ADB7F722A9B31C00C2DF6F /* LoginViewController.swift in Sources */,
 				25693BE922B131E400A9219C /* AccountViewController.swift in Sources */,
 				25E8F74322B2FB51008F8216 /* AddLocationNobarViewController.swift in Sources */,
+				25D4A07C22C1090B00DE37FC /* ApiPlayerFavorite.swift in Sources */,
 				25E8F76122B303E3008F8216 /* EventHistoryViewController.swift in Sources */,
 				FF0FB96622912EA100A614F7 /* ListNewsDAO.swift in Sources */,
 				FF1DD0442287B8BD001362B6 /* DeviceHelper.swift in Sources */,
@@ -1403,6 +1434,7 @@
 				FF1DD0422287B8BD001362B6 /* UIButtonHelper.swift in Sources */,
 				2596CE1E228FDD020072A407 /* NewsDetailCell.swift in Sources */,
 				25BF013722A2461B00A1775D /* ListSchedules.swift in Sources */,
+				25D4A07A22C108ED00DE37FC /* PlayerFavoriteRequest.swift in Sources */,
 				25BF013222A243EB00A1775D /* ApiSchedules.swift in Sources */,
 				FF1DD0452287B8BD001362B6 /* UITextViewHelper.swift in Sources */,
 				2509BD2D228F052C00E6EF14 /* BeritaCell.swift in Sources */,

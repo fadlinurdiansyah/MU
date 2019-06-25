@@ -22,12 +22,13 @@ pod 'PullToRefresher'
 pod 'Hero'
 pod 'Parchment'
 pod 'XLPagerTabStrip'
+pod 'IQKeyboardManagerSwift'
 
 end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if ['SwiftyJSON', 'ReachabilitySwift', 'NVActivityIndicatorView', 'Parchment','XLPagerTabStrip'].include? target.name
+    if ['SwiftyJSON', 'ReachabilitySwift', 'NVActivityIndicatorView', 'Parchment','XLPagerTabStrip','IQKeyboardManagerSwift'].include? target.name
       target.build_configurations.each do |config|
         config.build_settings['SWIFT_VERSION'] = '4.2'
       end

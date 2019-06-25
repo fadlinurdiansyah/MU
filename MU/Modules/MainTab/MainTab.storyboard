@@ -26,6 +26,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <outlet property="tabBarMainMenu" destination="CF3-4u-XUK" id="Q9d-K7-Yab"/>
                         <segue destination="euI-Ye-zwm" kind="relationship" relationship="viewControllers" id="Vyp-wC-kqz"/>
                         <segue destination="3an-og-m3e" kind="relationship" relationship="viewControllers" id="JQn-IE-it9"/>
                         <segue destination="Kc6-XF-O42" kind="relationship" relationship="viewControllers" id="GuV-81-sUc"/>

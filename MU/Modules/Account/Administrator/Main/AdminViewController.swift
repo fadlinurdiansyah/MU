@@ -53,6 +53,11 @@ class AdminViewController: BaseViewController {
         tableViewAdmin.scrollIndicatorInsets = UIEdgeInsets(top: 13, left: 0, bottom: 0, right: 0)
         
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        print("offset \(offset)")
+    }
 }
 
 extension AdminViewController: AdminView {

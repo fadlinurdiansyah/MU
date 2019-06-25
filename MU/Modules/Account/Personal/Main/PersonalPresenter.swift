@@ -25,7 +25,6 @@ protocol PersonalView: class {
 
 class PersonalPresenter: PersonalViewPresenter {
     
-    
     static func config(withPersonalViewController viewController: PersonalViewController) {
         let presenter = PersonalPresenter(view: viewController)
         viewController.presenter = presenter

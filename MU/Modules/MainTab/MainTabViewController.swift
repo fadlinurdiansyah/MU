@@ -18,6 +18,7 @@ extension SegueConstants {
 class MainTabViewController: UITabBarController {
     
     // MARK: Properties
+    @IBOutlet weak var tabBarMainMenu: UITabBar!
     
     var presenter: MainTabPresenter!
     
@@ -30,6 +31,7 @@ class MainTabViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }
 

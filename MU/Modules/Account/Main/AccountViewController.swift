@@ -19,6 +19,7 @@ extension SegueConstants {
 class AccountViewController: ButtonBarPagerTabStripViewController {
     
     // MARK: Properties
+    @IBOutlet weak var scrollViewContainer: UIScrollView!
     
     var presenter: AccountPresenter!
     
