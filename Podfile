@@ -23,6 +23,7 @@ pod 'Hero'
 pod 'Parchment'
 pod 'XLPagerTabStrip'
 pod 'IQKeyboardManagerSwift'
+pod 'GoogleSignIn'
 
 end
 

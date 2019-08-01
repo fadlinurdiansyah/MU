@@ -18,6 +18,8 @@
 		252C45642298681900F9084D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C45612298681900F9084D /* PlayerViewController.swift */; };
 		252C4568229868ED00F9084D /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C4566229868ED00F9084D /* PlayerCell.swift */; };
 		252C4569229868ED00F9084D /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 252C4567229868ED00F9084D /* PlayerCell.xib */; };
+		2545BF4022CD441500A99176 /* String+SqlDateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545BF3F22CD441500A99176 /* String+SqlDateFormat.swift */; };
+		2545BF4222D0132900A99176 /* ViewProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545BF4122D0132900A99176 /* ViewProfileRequest.swift */; };
 		254D997E228E128300AA44AA /* Mukta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 254D9977228E127D00AA44AA /* Mukta-SemiBold.ttf */; };
 		254D997F228E128300AA44AA /* Mukta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 254D9978228E127E00AA44AA /* Mukta-Bold.ttf */; };
 		254D9980228E128300AA44AA /* Mukta-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 254D9979228E127F00AA44AA /* Mukta-ExtraBold.ttf */; };
@@ -78,6 +80,8 @@
 		25C5156C229F73F3004AD584 /* Standing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C51569229F73F3004AD584 /* Standing.storyboard */; };
 		25C5156D229F73F3004AD584 /* StandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5156A229F73F3004AD584 /* StandingPresenter.swift */; };
 		25C5156E229F73F3004AD584 /* StandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5156B229F73F3004AD584 /* StandingViewController.swift */; };
+		25CE9A1022C95A0700A1D5AA /* SaveProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE9A0F22C95A0700A1D5AA /* SaveProfileRequest.swift */; };
+		25CE9A1222C95AEB00A1D5AA /* ApiSaveProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE9A1122C95AEB00A1D5AA /* ApiSaveProfile.swift */; };
 		25D4A07A22C108ED00DE37FC /* PlayerFavoriteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4A07922C108ED00DE37FC /* PlayerFavoriteRequest.swift */; };
 		25D4A07C22C1090B00DE37FC /* ApiPlayerFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4A07B22C1090B00DE37FC /* ApiPlayerFavorite.swift */; };
 		25D4A07F22C10A3E00DE37FC /* ListPlayerFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4A07E22C10A3E00DE37FC /* ListPlayerFavorite.swift */; };
@@ -194,6 +198,8 @@
 		252C45612298681900F9084D /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		252C4566229868ED00F9084D /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		252C4567229868ED00F9084D /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		2545BF3F22CD441500A99176 /* String+SqlDateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SqlDateFormat.swift"; sourceTree = "<group>"; };
+		2545BF4122D0132900A99176 /* ViewProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileRequest.swift; sourceTree = "<group>"; };
 		254D9977228E127D00AA44AA /* Mukta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-SemiBold.ttf"; sourceTree = "<group>"; };
 		254D9978228E127E00AA44AA /* Mukta-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Bold.ttf"; sourceTree = "<group>"; };
 		254D9979228E127F00AA44AA /* Mukta-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -255,6 +261,8 @@
 		25C51569229F73F3004AD584 /* Standing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Standing.storyboard; sourceTree = "<group>"; };
 		25C5156A229F73F3004AD584 /* StandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingPresenter.swift; sourceTree = "<group>"; };
 		25C5156B229F73F3004AD584 /* StandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewController.swift; sourceTree = "<group>"; };
+		25CE9A0F22C95A0700A1D5AA /* SaveProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProfileRequest.swift; sourceTree = "<group>"; };
+		25CE9A1122C95AEB00A1D5AA /* ApiSaveProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSaveProfile.swift; sourceTree = "<group>"; };
 		25D4A07922C108ED00DE37FC /* PlayerFavoriteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFavoriteRequest.swift; sourceTree = "<group>"; };
 		25D4A07B22C1090B00DE37FC /* ApiPlayerFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPlayerFavorite.swift; sourceTree = "<group>"; };
 		25D4A07E22C10A3E00DE37FC /* ListPlayerFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayerFavorite.swift; sourceTree = "<group>"; };
@@ -669,6 +677,9 @@
 			children = (
 				25D4A07922C108ED00DE37FC /* PlayerFavoriteRequest.swift */,
 				25D4A07B22C1090B00DE37FC /* ApiPlayerFavorite.swift */,
+				25CE9A0F22C95A0700A1D5AA /* SaveProfileRequest.swift */,
+				25CE9A1122C95AEB00A1D5AA /* ApiSaveProfile.swift */,
+				2545BF4122D0132900A99176 /* ViewProfileRequest.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -1043,6 +1054,7 @@
 				25C51548229A674F004AD584 /* UIImage+Gradient.swift */,
 				25BF0114229F88D500A1775D /* UIView+constraints.swift */,
 				25BF012922A17B2900A1775D /* UIColor+RGB.swift */,
+				2545BF3F22CD441500A99176 /* String+SqlDateFormat.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1153,6 +1165,7 @@
 				2516968B22588CA20024DBC8 /* Frameworks */,
 				2516968C22588CA20024DBC8 /* Resources */,
 				824F5524479404F560DFD0A6 /* [CP] Embed Pods Frameworks */,
+				EC56668D6629B097EC5F8862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1315,6 +1328,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MU/Pods-MU-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EC56668D6629B097EC5F8862 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MU/Pods-MU-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MU/Pods-MU-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MU/Pods-MU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1396,10 +1426,13 @@
 				FFB50872228742B900A1E03E /* String+Utilities.swift in Sources */,
 				25BF013922A2480E00A1775D /* ListSchedulesDAO.swift in Sources */,
 				FF0FB96A2291353600A614F7 /* NewsRequest.swift in Sources */,
+				2545BF4022CD441500A99176 /* String+SqlDateFormat.swift in Sources */,
 				25E8F72A22B19F00008F8216 /* AccountSection.swift in Sources */,
 				25ED69F52292E184000E6D0D /* Date+ConvTimePost.swift in Sources */,
 				FF1DD0472287B8BD001362B6 /* UITextFieldHelper.swift in Sources */,
 				2596CE23228FF2DE0072A407 /* UIApplication+statusBar.swift in Sources */,
+				25CE9A1022C95A0700A1D5AA /* SaveProfileRequest.swift in Sources */,
+				2545BF4222D0132900A99176 /* ViewProfileRequest.swift in Sources */,
 				25E8F73B22B2FA51008F8216 /* AddNobarPresenter.swift in Sources */,
 				25C51549229A674F004AD584 /* UIImage+Gradient.swift in Sources */,
 				FF1DD0432287B8BD001362B6 /* NSLayoutHelper.swift in Sources */,
@@ -1418,6 +1451,7 @@
 				25E8F76D22B30447008F8216 /* MerchandiseTranDetailViewController.swift in Sources */,
 				25E8F77322B30460008F8216 /* HistoryMerchandiseViewController.swift in Sources */,
 				FFB5085A2286C8AA00A1E03E /* OnBoardingViewController.swift in Sources */,
+				25CE9A1222C95AEB00A1D5AA /* ApiSaveProfile.swift in Sources */,
 				FF9211602292D96500624330 /* UITableView+InfiniteScroll.swift in Sources */,
 				255B4C7E22A3B7E000E95C52 /* NextSchedulesRequest.swift in Sources */,
 				25ADB7F722A9B31C00C2DF6F /* LoginViewController.swift in Sources */,

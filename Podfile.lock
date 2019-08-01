@@ -52,6 +52,10 @@ PODS:
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleToolboxForMac/DebugUtils (2.2.1):
     - GoogleToolboxForMac/Defines (= 2.2.1)
   - GoogleToolboxForMac/Defines (2.2.1)
@@ -93,6 +97,7 @@ DEPENDENCIES:
   - Firebase/Core (~> 4.9.0)
   - Firebase/Database
   - Firebase/Storage
+  - GoogleSignIn
   - Hero
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
@@ -117,6 +122,7 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseInstanceID
     - FirebaseStorage
+    - GoogleSignIn
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - Hero
@@ -144,6 +150,7 @@ SPEC CHECKSUMS:
   FirebaseDatabase: de4446507ccd3257fca37d16f40e1540324571fd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
   FirebaseStorage: 181bb543d39ee3c53e0558de7ba86b1286a0427f
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
@@ -160,6 +167,6 @@ SPEC CHECKSUMS:
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: bcd96186000c93167dff183d271e8cb5047f1239
+PODFILE CHECKSUM: 2f1955c901fc4c2863d2a8d7b458bde3944b6006
 
 COCOAPODS: 1.7.0.rc.2

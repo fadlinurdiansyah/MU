@@ -24,6 +24,7 @@ class MUAPI {
         #else
         static let baseUrl = "https://api.muid.site"
         static let sportsDBUrl = "https://www.thesportsdb.com/api/v1/json/1/"
+        static let localUrl = "http://192.168.0.4:80/muid/public/api/"
         #endif
     }
     

@@ -46,6 +46,9 @@
                                                 <state key="normal" backgroundImage="img-btnGoogle">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnLoginTapped:" destination="1dX-N7-XUl" eventType="touchUpInside" id="92V-YT-N8n"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZg-2M-4LD" userLabel="Center View">
                                                 <rect key="frame" x="0.0" y="50" width="334" height="58.5"/>
@@ -70,7 +73,7 @@
                                                             <constraint firstAttribute="width" secondItem="gB0-YM-gSZ" secondAttribute="height" multiplier="50:25" id="xdH-yz-ECa"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atau" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6e2-W1-HZG">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atau" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6e2-W1-HZG">
                                                         <rect key="frame" x="151" y="15.5" width="32" height="27"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="16"/>
@@ -143,6 +146,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
+                    <connections>
+                        <outlet property="btnGoogleLogin" destination="H8w-ta-aEP" id="qRe-gJ-5Sh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
